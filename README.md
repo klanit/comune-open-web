@@ -1,12 +1,12 @@
-# WebPA 
+# Comune Open Web 
 
 
-WebPA è l'evoluzione del progetto che ha ideato e sviluppato <a href="https://www.klan.it">Klan.IT</a> una piattaforma conforme alle nuove <a class="XqQF9c" href="https://www.google.com/url?q=https%3A%2F%2Fdocs.italia.it%2Fitalia%2Fdesigners-italia%2Fdesign-linee-guida-docs%2Fit%2Fstabile%2Findex.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHvpOY6rd3bcMGG6I9e5PrmByqzdw" target="_blank">linee guida AGID</a>
+Comune Open Web è l'evoluzione del progetto che ha ideato e sviluppato <a href="https://www.klan.it">Klan.IT</a> una piattaforma conforme alle nuove <a class="XqQF9c" href="https://www.google.com/url?q=https%3A%2F%2Fdocs.italia.it%2Fitalia%2Fdesigners-italia%2Fdesign-linee-guida-docs%2Fit%2Fstabile%2Findex.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHvpOY6rd3bcMGG6I9e5PrmByqzdw" target="_blank">linee guida AGID</a>
 
 
 ## Descrizione
 
-WebPA permette alle amministrazioni pubbliche di utilizzare una piattaforma CMS conforme alle normative vigenti, accessibile e in linea con le direttive AgID.
+Comune Open Web permette alle amministrazioni pubbliche di utilizzare una piattaforma CMS conforme alle normative vigenti, accessibile e in linea con le direttive AgID.
 I redattori (funzionari, dirigenti, amministrazioni, associazioni) possono inserire e organizzare facilmente i contenuti, che saranno visualizzati anche con calendari, mappe, elenchi di documenti.
 
 ## Altri riferimenti
@@ -51,7 +51,7 @@ Lo stack minimo di WebPA è il seguente:
   * PHP 7.1
 
 
-Il prototipo di Comunweb sarà disponibile ai seguenti indirizzi:
+Il prototipo di Comune Open Web sarà disponibile ai seguenti indirizzi:
 
 * [agid2.klan.it/](https://agid2.klan.it/)
 
