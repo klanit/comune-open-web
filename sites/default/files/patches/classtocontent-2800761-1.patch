@@ -1,0 +1,27 @@
+﻿diff --git a/block_attributes.module b/block_attributes.module
+index cfb7d91..b613454 100644
+--- a/block_attributes.module
++++ b/block_attributes.module
+@@ -148,12 +148,12 @@ function block_attributes_block_attribute_info() {
+       BLOCK_ATTRIBUTES_CONTENT,
+     ),
+   );
+-  // Define the class attribute for all scopes but content which already has a
+-  // fixed class in block.tpl.php called 'content'.
++  // Define the class attribute for all scopes, also for content which already has a
++  // fixed class in block.tpl.php called 'content' you must remove.
+   $info['class'] = array(
+     'label' => t('CSS class(es)'),
+     'description' => t('Customize the styling of this block by adding CSS classes. Separate multiple classes by spaces.'),
+-    'scope' => array(BLOCK_ATTRIBUTES_BLOCK, BLOCK_ATTRIBUTES_TITLE),
++    'scope' => array(BLOCK_ATTRIBUTES_BLOCK, BLOCK_ATTRIBUTES_TITLE, BLOCK_ATTRIBUTES_CONTENT),
+     'form' => array(
+       '#maxlength' => 255,
+     ),
+@@ -375,4 +375,4 @@ function block_attributes_form_submit($form, &$form_state) {
+       }
+     }
+   }
+-}
++}
+\ No newline at end of file

@@ -1,0 +1,130 @@
+body.adminimal-skin-material #branding{
+	background-color: #0066CC;
+}
+
+#branding div.breadcrumb{
+	color:#FFF;
+}
+
+#branding div.breadcrumb a{
+	color:#FFF;
+}
+
+.form-item label {
+	font-size:16px;
+}
+
+a.button:link {
+    color: #FFF;
+}
+
+input.form-autocomplete, input.form-text, input.form-file, textarea.form-textarea, select.form-select{
+	font-size:15px;
+}
+
+html.js fieldset.collapsed{
+	height:0em;
+}
+
+body.adminimal-skin-material fieldset{
+	padding-top:36px;
+}
+
+#page{
+	width:70%;
+	margin:5px auto 0px auto;
+}
+
+.page-admin-structure #page{
+	width:auto;
+	margin:5px auto 0px auto;
+}
+
+#ui-datepicker-div{
+	width:300px;
+	border: 5px solid #878787;
+}
+
+.ui-widget-header{
+	background-image:none;
+	background-color:#878787;
+	border-bottom:5px solid #878787;
+}    
+
+body.adminimal-skin-material table th {
+    background: #878787;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #06c;
+   background-image:none;
+	background-color:#06c;
+	color:#FFF;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	text-align:center;
+}
+
+#media-browser-tabset .clearfix.has-primary-tabs{
+	height: 39px;
+}
+
+#media-browser-tabset ul.tabs.primary li a:link {
+    padding: 15px 20px;
+}
+
+.media-widget .preview{
+	margin-right:0px;
+}
+
+#block-system-main{
+	padding:20px;
+}
+
+#block-system-main .form-submit{
+	margin-right:10px;
+}
+
+body.adminimal-skin-material table th{
+	color:#FFF;
+}
+
+body.adminimal-skin-material table th a{
+	color:#FFF;
+}
+
+body.adminimal-skin-material table th.active {
+    background: #b8babb;
+}
+
+body.adminimal-skin-material table td .ctools-modal-media-file-edit{
+	padding: 6px 16px;
+    margin-right: 10px;
+}
+
+.media-widget .form-submit{
+	margin-left:15px;
+}
+
+.form-item-field-indirizzo-und-0-locpick-user-latitude{
+	margin-top:15px;
+}
+
+body.adminimal-skin-material a {
+    color: #0066cc;
+}
+
+.tabs.secondary {
+	background-color:transparent;
+}
+
+.tabs.primary,
+.tabs.secondary .tabs.secondary
+{
+	width: 70%;
+    margin: 0px auto 0px auto;
+    float: none;
+	text-align:left;
+	background-color:#FFF;
+}

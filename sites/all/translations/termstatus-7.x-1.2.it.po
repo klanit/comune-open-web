@@ -1,0 +1,28 @@
+# Italian translation of Taxonomy Term Status (7.x-1.2)
+# Copyright (c) 2015 by the Italian translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Taxonomy Term Status (7.x-1.2)\n"
+"POT-Creation-Date: 2015-12-14 12:09+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Status"
+msgstr "Stato"
+msgid "Taxonomy term"
+msgstr "Termine della tassonomia"
+msgid "action"
+msgstr "azione"
+msgid "Published"
+msgstr "Pubblicato"
+msgid "Publishing options"
+msgstr "Opzioni di pubblicazione"
+msgid "Not published"
+msgstr "Non pubblicato"
+msgid "Published status"
+msgstr "Stato pubblicazione"
