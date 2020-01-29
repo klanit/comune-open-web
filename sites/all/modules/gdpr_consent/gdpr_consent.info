@@ -1,0 +1,13 @@
+name = GDPR consent
+description = Display GDPR consent statement on the registration page.
+configure = admin/config/people/gdpr_consent
+core = 7.x
+
+files[] = views/gdpr_consent_views_handler_field_exploded_list.inc
+files[] = views/gdpr_consent_views_handler_field_unserialized_list.inc
+
+; Information added by Drupal.org packaging script on 2018-07-05
+version = "7.x-1.0"
+core = "7.x"
+project = "gdpr_consent"
+datestamp = "1530788024"

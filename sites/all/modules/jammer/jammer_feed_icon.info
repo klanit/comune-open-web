@@ -1,0 +1,12 @@
+name = Feed Icon Jammer
+description = "Remove the feed icon from themes that use the PHPTemplate engine. No configuration needed."
+package = Jammer
+core = 7.x
+
+
+; Information added by Drupal.org packaging script on 2017-08-23
+version = "7.x-1.5"
+core = "7.x"
+project = "jammer"
+datestamp = "1503482647"
+

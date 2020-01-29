@@ -1,0 +1,32 @@
+<?php
+/**
+ * Implementation of hook_requirements().
+ */
+function klan_opendata_requirements($phrase) {
+  $requirements = array();
+  if ($phrase == 'runtime') {
+    $requirements['klan_opendata'] = array('title' => 'klan_opendata');
+    if (!klan_opendata_classloader()) {
+      $requirements['klan_opendata']['value'] = t('Not installed');
+      $requirements['klan_opendata']['description'] = t('The <a href="@url" target="_blank">klan_opendata</a> was not found.', array('@url' => 'https://github.com/socrata/soda-php'));
+      $requirements['klan_opendata']['severity'] = REQUIREMENT_WARNING;
+    }
+    else {
+      $requirements['klan_opendata']['value'] = '1.1';
+      $requirements['klan_opendata']['description'] = t('A simple library to make it easier to access SODA services from PHP');
+      $requirements['klan_opendata']['severity'] = REQUIREMENT_OK;
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function klan_opendata_uninstall() {
+  variable_del('klan_opendata_view_uid');
+  variable_del('klan_opendata_root_url');
+  variable_del('klan_opendata_user_name');
+  variable_del('klan_opendata_password');
+  variable_del('klan_opendata_app_token');
+}

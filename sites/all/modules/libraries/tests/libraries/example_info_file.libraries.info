@@ -1,0 +1,9 @@
+; This is an example info file of a library used for testing purposes.
+name = Example info file
+
+
+; Information added by Drupal.org packaging script on 2018-09-10
+version = "7.x-2.4"
+core = "7.x"
+project = "libraries"
+datestamp = "1536581584"

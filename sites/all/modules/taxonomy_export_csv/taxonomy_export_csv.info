@@ -1,0 +1,10 @@
+name = Taxonomy export csv
+description = Taxonomy terms export in csv formate for Drupal 7 to 8 migration.
+core = 7.x
+configure = admin/config/system/migrate_taxonomy
+
+; Information added by Drupal.org packaging script on 2019-10-16
+version = "7.x-1.1"
+core = "7.x"
+project = "taxonomy_export_csv"
+datestamp = "1571210589"

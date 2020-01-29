@@ -1,0 +1,7 @@
+.iconpicker-popover {
+  z-index: 10000;
+}
+.iconpicker-popover .popover-title input{
+  min-height: 30px;
+  width: 100%;
+}

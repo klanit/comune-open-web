@@ -1,0 +1,287 @@
+<?php
+
+function klan_comuneinforma_menu() {
+
+    $items = array();
+
+    $items['admin/config/content/klan_comuneinforma_integration'] = array(
+        'title' => 'Config Comune Informa Integration',
+        'description' => 'Config Comune Informa Integration',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('klan_comuneinforma_integration'),
+        'access arguments' => array('access administration pages'),
+        'type' => MENU_NORMAL_ITEM,
+    ); 
+
+    $items['comuneinforma_integration/add_event'] = array(
+        'type' => MENU_CALLBACK,
+        'title' => 'Comune Informa Integration',
+        'page callback' => '_klan_comuneinforma_menu_page',
+        'page arguments' => array('notvalid'),
+        'access arguments' => array('comune informa integration'),
+    );  
+
+    $items['comuneinforma_integration/add_event/%'] = array(
+        'type' => MENU_CALLBACK,
+        'title' => 'Comune Informa Integration',
+        'page callback' => '_klan_comuneinforma_menu_page',
+        'page arguments' => array(2),
+        'access arguments' => array('comune informa integration'),
+    );  
+
+    return $items;
+
+}
+
+
+function klan_comuneinforma_integration($form, &$form_state) {
+  $form['global_comune_informa_integration_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Service URL'),
+    '#default_value' => variable_get('global_comune_informa_integration_url', ''),
+    '#description' => t('Service URL.'),
+    '#required' => TRUE,
+  );
+  $form['global_comune_informa_integration_token'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Secure Token'),
+    '#default_value' => variable_get('global_comune_informa_integration_token', ''),
+    '#description' => t('Secure Token.'),
+    '#required' => TRUE,
+  );
+
+  $form['global_comune_informa_integration_com_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('City ID'),
+    '#default_value' => variable_get('global_comune_informa_integration_com_id', ''),
+    '#description' => t('City ID.'),
+    '#required' => TRUE,
+  );
+  $form['global_comune_informa_integration_op_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Operator ID'),
+    '#default_value' => variable_get('global_comune_informa_integration_op_id', ''),
+    '#description' => t('Operator ID.'),
+    '#required' => TRUE,
+  );
+    
+  $toppings = array(
+    'Y' => t('Yes'),
+    'N' => t('No')
+  );  
+  $form['global_comune_informa_integration_log'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Log'),
+    '#default_value' => variable_get('global_comune_informa_integration_log', ''),
+    '#description' => t('Log.'),
+    '#required' => FALSE,
+  );
+
+  return system_settings_form($form);
+}
+
+function klan_comuneinforma_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id == 'comune_informa_node_form') {
+	$query_parameters = drupal_get_query_parameters();
+	if (!empty($query_parameters['i'])) {
+		$i = $query_parameters['i'];
+		$node = node_load((int) $i);
+		if ($node != null) {
+			global $base_url;   // Will point to http://www.example.com
+			global $base_path;  // Will point to at least "/" or the subdirectory where the drupal in installed.
+			$link = $base_url . $base_path . 'node/add';
+			$form["title_field"][LANGUAGE_NONE][0]['value']['#default_value'] = $node->title;
+			$form["body"][LANGUAGE_NONE][0]['#default_value'] = $node->body[LANGUAGE_NONE][0]['value'];
+			$form["body"][LANGUAGE_NONE][0]['summary']['#default_value'] = $node->body[LANGUAGE_NONE][0]['summary'];
+			$form["field_evento_link"][LANGUAGE_NONE][0]['#default_value']['url'] = $base_url . $base_path  . drupal_get_path_alias('node/' . $node->nid);
+			if ($node->type == 'evento') {
+				$form["field_evento_data"][LANGUAGE_NONE][0]['#default_value'] = $node->field_data_evento[LANGUAGE_NONE][0];				
+				$form["body"][LANGUAGE_NONE][0]['#default_value'] = $node->body[LANGUAGE_NONE][0]['value'];				
+			}
+			else {
+				$form["field_evento_data"][LANGUAGE_NONE][0]['#default_value'] = $node->field_data_articolo[LANGUAGE_NONE][0];				
+			}
+		}
+	}
+  	if(user_access('comune informa integration')) {
+      		$form['actions']['submitcominf'] = array(
+		        '#type' => 'submit',
+		        '#value' => t('Save & send comune informa'),
+		        '#weight' => -10,
+		        '#validate' => array('node_form_validate'),
+        		'#submit' => array('node_form_submit', '_klan_comuneinforma_on_postsave'),
+      		);
+      		$form['actions']['submitcominfnotify'] = array(
+		        '#type' => 'submit',
+		        '#value' => t('Save & notify comune informa'),
+		        '#weight' => -8,
+		        '#validate' => array('node_form_validate'),
+        		'#submit' => array('node_form_submit', '_klan_comuneinforma_on_postsave_notify'),
+      		);
+	}
+    }
+}
+
+function _klan_comuneinforma_on_postsave($form, &$form_state) {
+    $nid = $form_state['values']['nid'];
+    _klan_comuneinforma_menu_page("0-" . $nid);
+}
+
+function _klan_comuneinforma_on_postsave_notify($form, &$form_state) {
+    $nid = $form_state['values']['nid'];
+    _klan_comuneinforma_menu_page("1-" . $nid);
+}
+
+function _klan_comuneinforma_menu_page($contentall = NULL) {
+	$vcontent = explode("-", $contentall);
+	$content = $vcontent[1];
+	$push = $vcontent[0];
+    $output = "Invio a comune informa";
+    $ci_url = variable_get('global_comune_informa_integration_url', '');
+    $token = variable_get('global_comune_informa_integration_token', '');
+    $ci_nodetype = "comune_informa";
+    $ci_comune = variable_get('global_comune_informa_integration_com_id', ''); 
+    $ci_operatore = variable_get('global_comune_informa_integration_op_id', ''); 
+    $log = variable_get('global_comune_informa_integration_log', ''); 
+    if (!empty($content) && ((int) $content) > 0) {
+//$output .= "<br /> $content";
+        $node = node_load((int) $content);
+        if ($node != null) {
+//$output .= "<br /> $contenti NID: " . $node->nid;
+            $user_timezone_name = date_default_timezone(TRUE);
+            $nid = $node->nid;
+            $title = addslashes($node->title);
+            $body = addslashes(drupal_html_to_text($node->body['und'][0]['value']));
+
+            $unixdate = strtotime($node->field_evento_data['und'][0]['value'].' '.$node->field_evento_data['und'][0]['timezone_db']);
+            $eve_date  =  format_date($unixdate,'full_database','',$node->field_evento_data['und'][0]['timezone']);
+            $unixdate = strtotime($node->field_evento_data_push['und'][0]['value'].' '.$node->field_evento_data_push['und'][0]['timezone_db']);
+            $eve_date_push = format_date($unixdate,'full_database','',$node->field_evento_data_push['und'][0]['timezone']);
+	    if (!empty($node->field_evento_parolechiave['und'][0]['value'])) {
+            	$eve_keyword = $node->field_evento_parolechiave['und'][0]['value'];
+	    }
+	    else {
+		$eve_keyword = '';
+	    }
+
+            if (!empty($node->field_evento_link['und'][0]['url'])) {
+                $link = $node->field_evento_link['und'][0]['url'];
+            }
+            else {
+                $link = '';
+            }
+
+            $tid = $node->field_evento_tipo['und'][0]['tid'];
+
+            $term = taxonomy_term_load($tid);
+            if(is_object($term)) {
+                $evtype_id = $term->field_id['und'][0]['value'];
+            }  
+            else {
+                $evtype_id = "";
+            }  
+
+            $msg = ""
+                . "{                                                "
+                . "    \"token\"    : \"$token\",                   "
+                . "    \"data\"     : [{                            "
+                . "        \"event_id\"     : \"$nid\",             "
+                . "        \"evtype_id\"    : \"$evtype_id\",       "
+                . "        \"title\"        : \"$title\",           "
+                . "        \"content\"      : \"$body\",            "
+                . "        \"date\"         : \"$eve_date\",        "
+                . "        \"date_push\"    : \"$eve_date_push\",   "
+                . "        \"parolechiave\" : \"$eve_keyword\",     "
+                . "        \"link\"         : \"$link\",            "
+                . "        \"operatore\"    : $ci_operatore,        "
+                . "        \"comune\"       : $ci_comune,           "
+                . "        \"push\"       	: $push            		"
+                . "    }]                                           "
+                . "}                                                ";
+            $opts = array('http' =>
+            array(
+                'method'  => 'POST',
+                'header'  => 'Content-type: application/json\r\n',
+                'content' => $msg
+            )
+            );
+
+            $context  = stream_context_create($opts);
+            $result  = 'OK';
+            $result = file_get_contents($ci_url, false, $context);
+//$output .= "<br /> $contenti ($result) $msg";
+            if ($result == 'OK') {
+                if ($log == "1") {
+                    watchdog("comune informa", print_r($msg, true));
+                }
+                drupal_set_message(t('Sending done correctly'), 'info');
+            } 
+            else{
+                drupal_set_message(t('Error sending'), 'error');
+            }
+        }
+        else {
+            drupal_set_message(t('Error node no found'), 'error');
+        }
+
+
+        
+
+    }
+    else {
+        drupal_set_message(t('Node not valid'), 'error');
+    }
+    return $output;
+}
+
+function klan_comuneinforma_permission() {
+    return array(
+      'comune informa integration' => array(
+        'title' => t('Comune Informa Integration'),
+        'description' => t('Comune Informa Integration.'),
+      ),
+    );
+  }
+  
+function klan_comuneinforma_cron()
+{
+	$result = '';
+    watchdog('comune informa','cron in esecuzione');
+    $ci_url = variable_get('global_comune_informa_integration_url', '');
+    $token = variable_get('global_comune_informa_integration_token', '');
+    $ci_operatore = variable_get('global_comune_informa_integration_op_id', ''); 
+    $log = variable_get('global_comune_informa_integration_log', ''); 	
+	$eve_date = date("Y-m-d H:i:s");
+	$msg = ""
+		. "{                                                "
+		. "    \"token\"    : \"$token\",                   "
+		. "    \"data\"     : [{                            "
+		. "        \"event_id\"     : \"push\",             "
+		. "        \"evtype_id\"    : \"0\",       			"
+		. "        \"title\"        : \"push\",           	"
+		. "        \"content\"      : \"push\",            	"
+		. "        \"date\"         : \"$eve_date\",        "
+		. "        \"date_push\"    : \"$eve_date\",   		"
+		. "        \"parolechiave\" : \"\",     			"
+		. "        \"link\"         : \"\",            		"
+		. "        \"operatore\"    : $ci_operatore,        "
+		. "        \"comune\"       : 0,           			"
+		. "        \"push\"       	: \"1\"            		"
+		. "    }]                                           "
+		. "}                                                ";
+	$opts = array('http' =>
+	array(
+		'method'  => 'POST',
+		'header'  => 'Content-type: application/json\r\n',
+		'content' => $msg
+	)
+	);
+	watchdog('comune informa','---: ' . "1");
+	watchdog('comune informa','---: ' . $msg);
+	watchdog('comune informa','---: ' . "2");
+	$context  = stream_context_create($opts);
+	$result  = 'OK';
+	$result = file_get_contents($ci_url, false, $context);
+	   
+	watchdog('comune informa','cron eseguito: ' . $result);
+}

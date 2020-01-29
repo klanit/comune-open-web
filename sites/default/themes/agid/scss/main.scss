@@ -1,0 +1,106 @@
+/**
+ * Cityweb – CMS per siti web istituzionali dei comuni italiani
+ * Copyright (C)  2016 CSI-Piemonte - C.so Unione Sovietica 216, 10134, Turin, Italy.– piattaformeweb@csi.it
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by  the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/
+ */
+
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+// Reset and dependencies
+@import "normalize";
+@import "print";
+
+// Core CSS
+@import "fonts";
+@import "scaffolding";
+@import "type";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+
+// Components
+@import "push-menu";
+@import "navgoco";
+@import "carousel";
+@import "lightbox";
+@import "tooltip";
+
+// Utility classes
+@import "utilities";
+@import "responsive-utilities";
+
+// Custom
+@import "colors";
+@import "style";
+@import "sections";
+@import "boxes";
+@import "isotope";
+@import "share-buttons";
+@import "media";
+@import "calendar";
+@import "map";
+@import "footer";
+@import "post-content";
+@import "sidebar";
+@import "pager";
+@import "clndr";
+@import "accordion";
+@import "nav";
+@import "focus";
+
+
+// Override variables
+@import "drupal-boostrap-variables";
+
+// BOOTSTRAP more element
+
+//Core variables and mixins   
+@import "../bootstrap/assets/stylesheets/bootstrap/mixins/labels";
+@import "../bootstrap/assets/stylesheets/bootstrap/mixins/alerts";
+@import "../bootstrap/assets/stylesheets/bootstrap/mixins/panels";
+@import "../bootstrap/assets/stylesheets/bootstrap/mixins/nav-divider";
+
+//Components
+@import "../bootstrap/assets/stylesheets/bootstrap/component-animations";
+//@import "../bootstrap/assets/stylesheets/bootstrap/dropdowns";
+//@import "../bootstrap/assets/stylesheets/bootstrap/button-groups";
+//@import "../bootstrap/assets/stylesheets/bootstrap/input-groups";
+@import "../bootstrap/assets/stylesheets/bootstrap/navs";
+//@import "../bootstrap/assets/stylesheets/bootstrap/navbar";
+@import "../bootstrap/assets/stylesheets/bootstrap/breadcrumbs";
+//@import "../bootstrap/assets/stylesheets/bootstrap/pagination";
+//@import "../bootstrap/assets/stylesheets/bootstrap/pager";
+@import "../bootstrap/assets/stylesheets/bootstrap/labels";
+@import "../bootstrap/assets/stylesheets/bootstrap/badges";
+//@import "../bootstrap/assets/stylesheets/bootstrap/jumbotron";
+//@import "../bootstrap/assets/stylesheets/bootstrap/thumbnails";
+@import "../bootstrap/assets/stylesheets/bootstrap/alerts";
+//@import "../bootstrap/assets/stylesheets/bootstrap/progress-bars";
+//@import "../bootstrap/assets/stylesheets/bootstrap/media";
+//@import "../bootstrap/assets/stylesheets/bootstrap/list-group";
+@import "../bootstrap/assets/stylesheets/bootstrap/panels";
+@import "../bootstrap/assets/stylesheets/bootstrap/responsive-embed";
+@import "../bootstrap/assets/stylesheets/bootstrap/wells";
+@import "../bootstrap/assets/stylesheets/bootstrap/close";
+
+//Components w/ JavaScript
+@import "../bootstrap/assets/stylesheets/bootstrap/modals";
+//@import "../bootstrap/assets/stylesheets/bootstrap/tooltip";
+//@import "../bootstrap/assets/stylesheets/bootstrap/popovers";
+//@import "../bootstrap/assets/stylesheets/bootstrap/carousel";
+
+// END BOOSTRAP
+
+// add-on AGID
+@import "../css/spid-button.min.css";
+
+// Override
+@import "drupal-boostrap";
+
+
+

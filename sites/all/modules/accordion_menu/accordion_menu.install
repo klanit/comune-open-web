@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * @file
+ * Provides install, update, and uninstall functions.
+ *
+ * @author Jim Berry ("solotandem", http://drupal.org/user/240748)
+ */
+
+/**
+ * Update module settings to jQuery UI 1.10 accordion.
+ */
+function accordion_menu_update_7101(&$sandbox) {
+  $old_items = array('animated', 'fill_space', 'auto_height', 'selected_icon');
+  $new_items = array('animate', 'height_style', 'active_icon');
+
+  $count = 0;
+  for ($delta = 1; $delta <= variable_get('accordion_menu_count', '2'); $delta++) {
+    $old_config = _accordion_menu_config_0106($delta);
+    if (!$old_config) {
+      continue;
+    }
+    $count++;
+
+    $animate = $old_config['animated'] == 'slide' ? 'swing' : $old_config['animated'];
+    $new_config['animate'] = $animate;
+    $height = 'content';
+    if ($old_config['fill_space']) {
+      $height = 'fill';
+    }
+    elseif ($old_config['auto_height']) {
+      $height = 'auto';
+    }
+    $new_config['height_style'] = $height;
+    $new_config['active_icon'] = $old_config['selected_icon'];
+
+    foreach ($old_items as $key) {
+      variable_del("accordion_menu_{$delta}_{$key}");
+    }
+    foreach ($new_items as $key) {
+      variable_set("accordion_menu_{$delta}_{$key}", $new_config[$key]);
+    }
+  }
+
+  return t('Converted module settings for @count accordion menus', array('@count' => $count));
+}
+
+/**
+ * Returns the block configuration settings for update to new settings.
+ *
+ * @param string $delta
+ *   The delta that uniquely identifies the block in the block system. If not
+ *   specified, the default configuration will be returned.
+ *
+ * @return array
+ *   An associative array of configuration settings.
+ */
+function _accordion_menu_config_0106($delta = NULL) {
+  $config = array(
+    // jQuery UI 1.6 through 1.8 accordion settings.
+    'animated' => 'slide',
+    'auto_height' => FALSE,
+    'clear_style' => FALSE,
+    'fill_space' => FALSE,
+    'event' => 'mousedown',
+    'header' => 'h3',
+    'collapsible' => TRUE,
+    'navigation' => FALSE,
+    'icons' => TRUE,
+    'header_icon' => 'ui-icon-triangle-1-e',
+    'selected_icon' => 'ui-icon-triangle-1-s',
+    'empty_icon' => 'ui-icon-triangle-1-s',
+  );
+
+  if ($delta) {
+    $old_items = db_query("SELECT * FROM variable WHERE name LIKE 'accordion_menu_$delta%'")->fetchAllKeyed();
+    if (empty($old_items)) {
+      return FALSE;
+    }
+
+    // Get the block configuration settings.
+    foreach ($config as $key => $value) {
+      $config[$key] = variable_get("accordion_menu_{$delta}_{$key}", $config[$key]);
+
+      if (in_array($key, array('animated', 'event', 'script_scope'))) {
+        // Value may include letters only.
+        // This is not validating the string, but simply requiring one.
+        if (preg_match('@[^a-z]@', strtolower($config[$key]))) {
+          $config[$key] = $value;
+        }
+      }
+      elseif ($key == 'header') {
+        // Value may include letters and a digit only.
+        // This is not a true test for an HTML tag, but should prevent foul play.
+        preg_match('@^([a-z]+([1-9]|)).*@', strtolower($config[$key]), $matches);
+        if (empty($matches) || $matches[0] != $matches[1]) {
+          $config[$key] = $value;
+        }
+      }
+    }
+  }
+
+  return $config;
+}

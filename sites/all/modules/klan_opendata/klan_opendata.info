@@ -1,0 +1,5 @@
+name = Opendata Klan.it
+description = Configurazione parametri opendata per collegamento sito https://www.dati.lombardia.it
+php = 5.0
+package = Klan.it
+core = 7.x

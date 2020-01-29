@@ -1,0 +1,1125 @@
+<?php
+
+/**
+ * @file
+ * Module file for GDPR Consent.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function gdpr_consent_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case 'admin/help#gdpr_consent':
+      $output .= t('Display a GDPR consent statement on the registration page, asks visitor to accept GDPR consent to register.');
+      break;
+
+    case 'admin/settings/gdpr_consent':
+      $output .= t('Display a consent statement on the registration page, asks visitor to accept the GDPR consent to register. A <a href="@page">page</a> displaying your GDPR consent will be automatically created, access to this page can be set via the <a href="@access">permissions</a> administration page.', array(
+        '@page' => url('gdpr_consent'),
+        '@access' => url('admin/user/permissions'),
+      ));
+      break;
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function gdpr_consent_preprocess_page() {
+  global $user;
+
+  // Ensure user register has drupal collapse even if submit fails.
+  $args = arg();
+  $block_admin = variable_get('gdpr_consent_block_admin', 0);
+  // Do not block admin pages if set so.
+  if (!$block_admin && !empty($args[0]) && $args[0] == 'admin') {
+    return;
+  }
+  // Add collapse library at register.
+  if (!empty($args[1]) && $args[0] == 'user' && $args[1] == 'register') {
+    drupal_add_library('system', 'drupal.collapse');
+  }
+
+  // If role is exempt, ignore possible redirects.
+  if (gdpr_consent_user_is_exempt($user)) {
+    return;
+  }
+
+  // If Consent is forced, prevent user from using site before valid consent.
+  $forced_consent = variable_get('gdpr_consent_disallow_without');
+  if ($forced_consent || (!empty($_SESSION['no_consent_on_login']) && $_SESSION['no_consent_on_login'] == TRUE)) {
+    $destination = '';
+    gdpr_consent_redirect_to_consent($destination);
+  }
+}
+
+/**
+ * Custom function to handle redirects.
+ *
+ * @param string $destination
+ *   Destination URL of consent.
+ */
+function gdpr_consent_redirect_to_consent($destination) {
+  // Should not happen if user is anonymous.
+  if (!user_is_anonymous()) {
+    global $user;
+    $path = current_path();
+
+    if (stristr($path, 'admin/config/people/gdpr_consent')) {
+      $_SESSION['no_consent_on_login'] = FALSE;
+
+      return;
+    }
+
+    // TODO: Add admin form?
+    $safe_paths = array(
+      'user/logout',
+      'user/register',
+      'gdpr_consent',
+    );
+
+    // Handle password reset.
+    // TODO: Add consent check before editing password.
+    $is_reset = FALSE;
+    $accepted = FALSE;
+    if (empty($_SESSION['reset_token'])) {
+      $_SESSION['reset_token'] = '';
+    }
+
+    if (!empty($_SESSION['pass_reset_' . $user->uid])) {
+      $is_reset = TRUE;
+      if (!empty($_GET['pass-reset-token'])) {
+        // Store token for the session.
+        $_SESSION['reset_token'] = check_plain($_GET['pass-reset-token']);
+      }
+      if ($path != 'user/' . $user->uid . '/edit') {
+        drupal_goto('user/' . $user->uid . '/edit', array('query' => array('pass-reset-token' => $_SESSION['reset_token'])));
+      }
+    }
+
+    $gdpr_consent_account = gdpr_consent_get_accept($user->uid);
+    if (!empty($gdpr_consent_account)) {
+      $conditions = gdpr_consent_get_conditions($gdpr_consent_account['language']);
+      $accepted = gdpr_consent_version_check($user->uid, $conditions['version'], $conditions['revision'], $gdpr_consent_account);
+    }
+    else {
+      $conditions = gdpr_consent_get_conditions();
+    }
+    if (!$is_reset && !$accepted && (!in_array($path, $safe_paths) || $_SESSION['no_consent_on_login'] == TRUE)) {
+      $forced = variable_get('gdpr_consent_disallow_without');
+      if ($forced) {
+        $message = $forced = variable_get('gdpr_consent_nag_message');
+        drupal_set_message(t('@message', array('@message' => $message)), 'error');
+      }
+      else {
+        drupal_set_message(t('We recommend you to give your consent to process your data.'), 'warning');
+      }
+
+      // See if we have query target and no destination was passed.
+      if (!empty($_GET['q']) && empty($destination)) {
+        $destination = check_plain($_GET['q']);
+      }
+      $options = array();
+
+      if (!empty($destination)) {
+        $options = array('query' => array('destination' => $destination));
+      }
+
+      // Single use, reset.
+      $_SESSION['no_consent_on_login'] = FALSE;
+      drupal_goto('gdpr_consent', $options);
+    }
+  }
+}
+
+/**
+ * Consent acceptance form.
+ *
+ * @param array $form_state
+ *   Array of form elements.
+ *
+ * @return string
+ *   HTML code of form.
+ */
+function gdpr_consent_accept_form(array $form_state) {
+  global $language, $user;
+
+  if (!empty($user->language)) {
+    $lang = $user->language;
+  }
+  else {
+    // Fallback to global language if user doesn't have one.
+    $lang = $language->language;
+  }
+  $form = array();
+  $accepted = FALSE;
+
+  $gdpr_consent_account = gdpr_consent_get_accept($user->uid);
+
+  if (!empty($gdpr_consent_account)) {
+    $conditions = gdpr_consent_get_conditions($lang);
+    $accepted = gdpr_consent_version_check($user->uid, $conditions['version'], $conditions['revision'], $gdpr_consent_account);
+  }
+  else {
+    $conditions = gdpr_consent_get_conditions($lang);
+  }
+  $changes = gdpr_consent_display_changes($form, $user->uid);
+
+  drupal_add_library('system', 'drupal.collapse');
+
+  $form['gdpr_consent']['conditions'] = array(
+    '#type'   => 'markup',
+    '#markup' => $conditions['conditions'],
+    '#weight' => 0,
+    '#prefix' => '<div class="gdpr_consent-terms">',
+    '#suffix' => '</div>',
+  );
+
+  if (!empty($conditions['data_details'])) {
+    $form['gdpr_consent']['data_container'] = array(
+      '#type'       => 'fieldset',
+      '#title'      => t('Details on data we collect'),
+      '#attributes' => array(
+        'class' => array(
+          'collapsible',
+          'collapsed',
+        ),
+      ),
+    );
+    $form['gdpr_consent']['data_container']['data_details'] = array(
+      '#type'   => 'markup',
+      '#markup' => $conditions['data_details'],
+      '#weight' => 0,
+      '#prefix' => '<div class="gdpr_consent-data_details">',
+      '#suffix' => '</div>',
+    );
+  }
+
+  if (!empty($changes['changes']['bullet_points']['#markup'])) {
+    $form['gdpr_consent']['changes'] = array(
+      '#type' => 'markup',
+      '#markup' => t('<label>Description of changes to consent:</label> @bullet_points', array('@bullet_points' => $changes['changes']['bullet_points']['#markup'])),
+      '#weight' => 1,
+    );
+  }
+
+  $form['gdpr_consent']['gdpr_consent_accept'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => theme('gdpr_consent_accept_label'),
+    '#default_value' => $accepted,
+    '#weight'        => 50,
+  );
+
+  $form['save'] = array(
+    '#type'  => 'submit',
+    '#value' => t('Save'),
+  );
+  $form = theme('gdpr_consent_display', array('form' => $form));
+
+  return $form;
+}
+
+/**
+ * Implements hook_form_id_submit().
+ */
+function gdpr_consent_accept_form_submit($form, &$form_state) {
+  global $language, $user;
+
+  if (!empty($user->language)) {
+    $lang = $user->language;
+  }
+  else {
+    // Fallback to global language if user doesn't have one.
+    $lang = $language->language;
+  }
+
+  $values = $form_state['values'];
+  $conditions = gdpr_consent_get_conditions($lang);
+  $accepted = $values['gdpr_consent_accept'];
+
+  if ($accepted) {
+    gdpr_consent_save_accept($conditions['version'], $conditions['revision'], $conditions['language'], $conditions['tc_id'], $user->uid);
+  }
+  else {
+    gdpr_consent_save_removal($conditions['version'], $conditions['revision'], $conditions['language'], $conditions['tc_id'], $user->uid);
+  }
+}
+
+/**
+ * Implements hook_perm().
+ */
+function gdpr_consent_permission() {
+  return array(
+    'administer gdpr consent' => array(
+      'title' => t('Administer GDPR consent'),
+    ),
+    'view gdpr consent' => array(
+      'title' => t('View GDPR consent'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_access().
+ */
+function gdpr_consent_access($op, $node, $account) {
+  return ($op == 'view' && (user_access('view gdpr consent') || user_access('administer gdpr consent')));
+}
+
+/**
+ * Implements hook_menu().
+ */
+function gdpr_consent_menu() {
+  $items = array();
+
+  $items['admin/config/people/gdpr_consent'] = array(
+    'title' => 'Data processing consent',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gdpr_consent_administration'),
+    'access arguments' => array('administer gdpr consent'),
+    'description' => 'GDPR data processing consent statement options.',
+    'file' => 'gdpr_consent.admin.inc',
+  );
+  $items['admin/config/people/gdpr_consent/terms'] = array(
+    'title' => 'Add consent',
+    'access arguments' => array('administer gdpr consent'),
+    'description' => 'Add a new data processing consent for users to approve.',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+  $items['admin/config/people/gdpr_consent/languages'] = array(
+    'title' => 'Languages',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('gdpr_consent_languages'),
+    'access callback' => 'gdpr_consent_languages_access',
+    'access arguments' => array('administer gdpr consent'),
+    'description' => 'Language options for consent.',
+    'weight' => 10,
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'gdpr_consent.admin.inc',
+  );
+  $items['gdpr_consent'] = array(
+    'title'  => 'Data processing consent',
+    'page callback' => 'gdpr_consent_page',
+    'access arguments' => array('view gdpr consent'),
+    'type' => MENU_CALLBACK,
+    'file' => 'gdpr_consent.pages.inc',
+  );
+  $items['admin/config/people/gdpr_consent/configuration'] = array(
+    'title' => 'Data processing consent configuration',
+    'page callback' => 'drupal_get_form',
+    'page arguments'  => array('gdpr_consent_configuration'),
+    'access arguments' => array('administer gdpr consent'),
+    'description' => 'Consent configuration options.',
+    'weight' => 0,
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'gdpr_consent.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function gdpr_consent_theme() {
+  return array(
+    'gdpr_consent_administration' => array('render element' => 'form'),
+    'gdpr_consent_display'        => array('variables' => array('form' => NULL)),
+    'gdpr_consent_page'           => array('render element' => 'form'),
+    'gdpr_consent_accept_label'   => array('variables' => array('link' => FALSE)),
+    'gdpr_consent_target_link'    => array('variables' => array('form' => FALSE)),
+  );
+}
+
+/**
+ * Displaying fields for consent.
+ *
+ * @param array $conditions
+ *   TODO.
+ *
+ * @return array
+ *   TODO.
+ */
+function gdpr_consent_display_fields(array $conditions) {
+  $form = array();
+  $accept_label = theme('gdpr_consent_accept_label');
+
+  $form['current_id'] = array(
+    '#type'  => 'value',
+    '#value' => $conditions['version'],
+  );
+  $form['language_value'] = array(
+    '#type'  => 'value',
+    '#value' => $conditions['language'],
+  );
+  $form['revision_id'] = array(
+    '#type'  => 'value',
+    '#value' => $conditions['revision'],
+  );
+  $form['current_date'] = array(
+    '#type'  => 'value',
+    '#value' => $conditions['date'],
+  );
+  $form['display_header'] = array(
+    '#type' => 'value',
+  );
+  $form['display_header']['display'] = array(
+    '#type'  => 'value',
+    '#value' => variable_get('gdpr_consent_display', '1'),
+  );
+  $form['display_header']['link_target'] = array(
+    '#type'  => 'value',
+    '#value' => variable_get('gdpr_consent_link_target', 'new_window'),
+  );
+  $form['gdpr_consent'] = array(
+    '#type'   => 'fieldset',
+    '#weight' => 29,
+  );
+
+  drupal_add_library('system', 'drupal.collapse');
+
+  switch (variable_get('gdpr_consent_display', '1')) {
+    case 1:
+      $form['gdpr_consent']['conditions'] = array(
+        '#markup' => check_markup($conditions['conditions'], $conditions['format']),
+      );
+
+      if (!empty($conditions['data_details'])) {
+        $form['gdpr_consent']['data_container'] = array(
+          '#type' => 'fieldset',
+          '#title' => t('Details on data we collect'),
+          '#attributes' => array(
+            'class' => array(
+              'collapsible',
+              'collapsed',
+            ),
+          ),
+        );
+        $form['gdpr_consent']['data_container']['data_details'] = array(
+          '#type'   => 'markup',
+          '#markup' => $conditions['data_details'],
+          '#weight' => 0,
+          '#prefix' => '<div class="gdpr_consent-data_details">',
+          '#suffix' => '</div>',
+        );
+      }
+      break;
+
+    case 2:
+      $form['gdpr_consent']['conditions'] = array(
+        '#markup' => '',
+      );
+
+      $target_link = variable_get('gdpr_consent_link_target', 'new_window');
+      $accept_label = theme('gdpr_consent_accept_label', array(
+        'link'        => TRUE,
+        'target_link' => $target_link,
+      ));
+      break;
+
+    default:
+      $form['gdpr_consent']['conditions'] = array(
+        '#type'          => 'textarea',
+        '#title'         => t('Consent'),
+        '#default_value' => $conditions['conditions'],
+        '#value'         => $conditions['conditions'],
+        '#rows'          => 10,
+        '#weight'        => 0,
+        '#attributes'    => array('readonly' => 'readonly'),
+      );
+
+      if (!empty($conditions['data_details'])) {
+        $form['gdpr_consent']['data_container'] = array(
+          '#type'       => 'fieldset',
+          '#title'      => t('Details on data we collect'),
+          '#attributes' => array(
+            'class' => array(
+              'collapsible',
+              'collapsed',
+            ),
+          ),
+        );
+        $form['gdpr_consent']['data_container']['data_details'] = array(
+          '#type'   => 'markup',
+          '#markup' => check_markup($conditions['data_details'], $conditions['format']),
+          '#weight' => 0,
+          '#prefix' => '<div class="gdpr_consent-data_details">',
+          '#suffix' => '</div>',
+        );
+      }
+  }
+
+  $form['gdpr_consent']['gdpr_consent_accept'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => $accept_label,
+    '#default_value' => 0,
+    '#weight'        => 50,
+  );
+
+  return $form;
+}
+
+/**
+ * Theme function for consent display.
+ *
+ * @param array $variables
+ *   Array of form elements.
+ *
+ * @return array
+ *   Array of form elements.
+ */
+function theme_gdpr_consent_display(array $variables) {
+  $form = $variables['form'];
+
+  if (!empty($form['gdpr_consent']['conditions']['#markup'])) {
+    // Scroll box (CSS).
+    $mode = variable_get('gdpr_consent_display', '1');
+    if ($mode == 0) {
+      $form['gdpr_consent']['#attached']['css'][] = drupal_get_path('module', 'gdpr_consent') . '/gdpr_consent.css';
+      $form['gdpr_consent']['conditions']['#prefix'] = '<div class="gdpr_consent-terms">';
+      $form['gdpr_consent']['conditions']['#suffix'] = '</div>';
+    }
+  }
+
+  return $form;
+}
+
+/**
+ * Theme the accept consent label.
+ *
+ * @param array $variables
+ *   An associative array of variables for themeing.
+ *
+ * @ingroup themeable
+ */
+function theme_gdpr_consent_accept_label(array $variables) {
+
+  if ($variables['link']) {
+    // Display a link to the consent.
+    switch ($variables['target_link']) {
+      case 'new_window':
+        return t('<a href="@terms" target="_blank">I give consent to gather and process my data</a>.', array('@terms' => url('gdpr_consent')));
+
+      case 'lightbox2':
+        return t('<a href="@terms" rel="lightmodal">I give consent to gather and process my data</a>.', array('@terms' => url('gdpr_consent')));
+
+      default:
+        return t('<strong>Accept</strong> <a href="@terms">consent of use</a>.', array('@terms' => url('gdpr_consent')));
+    }
+  }
+  else {
+    return t('I give consent to gather and process my data.');
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function gdpr_consent_form_user_register_form_alter(&$form, &$form_state) {
+  global $language, $user;
+
+  if (!empty($user->language)) {
+    $lang = $user->language;
+  }
+  // Fallback to global language if user doesn't have one.
+  else {
+    $lang = $language->language;
+  }
+
+  $conditions = gdpr_consent_get_conditions($lang);
+
+  // Do nothing if there's no GDPR Consent text set.
+  if (empty($conditions['conditions'])) {
+    return;
+  }
+
+  $form = array_merge($form, gdpr_consent_display_fields($conditions));
+
+  // Disable checkbox if:
+  // - user is already registered (administer users);
+  // - users with 'administer users' can access registration on
+  //   admin/user/user/create.
+  if (!empty($user->uid)) {
+    $form['gdpr_consent']['gdpr_consent_accept']['#attributes'] = array('disabled' => 'disabled');
+  }
+
+  $form = theme('gdpr_consent_display', array('form' => $form));
+
+  // Force giving consent before sending PII classified data on registering.
+  $path = current_path();
+  if (!empty($form['gdpr_consent']['gdpr_consent_accept']) && $path != 'admin/people/create') {
+    $form['gdpr_consent']['gdpr_consent_accept']['#required'] = TRUE;
+  }
+  // Add submit function to handle on register consent. Only for not registered.
+  if (empty($user->uid)) {
+    $form['#submit'][] = 'gdpr_consent_accept_form_submit';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function gdpr_consent_form_user_profile_form_alter(&$form, $form_state) {
+  global $language, $user;
+
+  if (!empty($user->language)) {
+    $lang = $user->language;
+  }
+  // Fallback to global language if user doesn't have one.
+  else {
+    $lang = $language->language;
+  }
+
+  $accepted = FALSE;
+  $account = $form['#user'];
+  // If this profile belongs to user 1 or if it has an exempt user role we don't
+  // display Consent. Pass the user of the profile being viewed, not
+  // the current user.
+  if (gdpr_consent_user_is_exempt($account)) {
+    return;
+  }
+
+  if ($form['#user_category'] != 'account') {
+    return;
+  }
+
+  // Set reminder to change password if coming from one time login link and
+  // user hasn't changed his/her password yet.
+  if (isset($_REQUEST['pass-reset-token']) && isset($_COOKIE['Drupal_visitor_gdpr_consent_pass_reset'])) {
+    user_cookie_delete('gdpr_consent_pass_reset');
+
+    $messages = drupal_get_messages('status', FALSE);
+    $status_messages = isset($messages['status']) ? $messages['status'] : array();
+    $reminder = t('You have just used your one-time login link. It is no longer necessary to use this link to log in. Please change your password.');
+
+    if (!in_array($reminder, $status_messages)) {
+      drupal_set_message($reminder);
+    }
+  }
+  // Get last accepted version for this account.
+  $gdpr_consent_account = gdpr_consent_get_accept($account->uid);
+
+  // If no version has been accepted yet, get version with current
+  // language revision.
+  if (empty($gdpr_consent_account['version'])) {
+    $conditions = gdpr_consent_get_conditions($lang);
+    // No conditions set yet.
+    if (empty($conditions['conditions'])) {
+      return;
+    }
+  }
+  else {
+    // Get version / revision of last accepted language.
+    $conditions = gdpr_consent_get_conditions($lang);
+    // No conditions set yet.
+    if (empty($conditions['conditions'])) {
+      return;
+    }
+
+    // Check latest version of Consent has been accepted.
+    $accepted = gdpr_consent_version_check($account->uid, $conditions['version'], $conditions['revision'], $gdpr_consent_account);
+
+    // Enable language switching if version accepted and revision up to date.
+    if ($accepted && $gdpr_consent_account['language'] != $lang) {
+      $conditions = gdpr_consent_get_conditions($lang);
+    }
+  }
+
+  $form = array_merge($form, gdpr_consent_display_fields($conditions));
+  if ($accepted === TRUE) {
+    $form['gdpr_consent']['gdpr_consent_accept']['#default_value'] = 1;
+  }
+
+  // Disable checkbox if user is not account owner.
+  if ($account->uid != $user->uid) {
+    $form['gdpr_consent']['gdpr_consent_accept']['#attributes'] = array('disabled' => 'disabled');
+  }
+
+  // Show last changes.
+  $form = gdpr_consent_display_changes($form, $user->uid);
+  $form['gdpr_consent']['#description'] = '<label>' . t('Data processing consent') . '</label>';
+  if (!empty($form['changes']['bullet_points']['#markup'])) {
+    $form['gdpr_consent']['#description'] .= t('Changes since last approval:<br />@bullet_points<br/>', array('@bullet_points' => $form['changes']['bullet_points']['#markup']));
+  }
+
+  $form['#submit'][] = 'gdpr_consent_accept_form_submit';
+  $form = theme('gdpr_consent_display', array('form' => $form));
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function gdpr_consent_user_login(&$edit, $account) {
+  global $language, $user;
+
+  if (!empty($user->language)) {
+    $lang = $user->language;
+  }
+  // Fallback to global language if user doesn't have one.
+  else {
+    $lang = $language->language;
+  }
+
+  // If this profile belongs to user 1 or if it has an exempt user role we don't
+  // display Consent.
+  if (gdpr_consent_user_is_exempt($user)) {
+    return;
+  }
+
+  // Get last accepted version for this account.
+  $gdpr_consent_account = gdpr_consent_get_accept($user->uid);
+
+  // If no version has been accepted yet, get version with current
+  // language revision.
+  if (!isset($gdpr_consent_account['version'])) {
+    $conditions = gdpr_consent_get_conditions($lang);
+    // No conditions set yet.
+    if (empty($conditions['conditions'])) {
+      return;
+    }
+  }
+  else {
+    // Get version / revision of last accepted language.
+    $conditions = gdpr_consent_get_conditions($lang);
+    // No conditions set yet.
+    if (empty($conditions['conditions'])) {
+      return;
+    }
+
+    // Check latest version of Consent has been accepted.
+    $accepted = gdpr_consent_version_check($user->uid, $conditions['version'], $conditions['revision'], $gdpr_consent_account);
+
+    if ($accepted) {
+      return;
+    }
+  }
+
+  // Init hook handles this. In place to handle single request.
+  $_SESSION['no_consent_on_login'] = TRUE;
+}
+
+/**
+ * Implements hook_user_insert().
+ */
+function gdpr_consent_user_insert(&$edit, $account, $category) {
+  global $user;
+
+  $conditions = gdpr_consent_get_conditions($account->language);
+
+  if (empty($conditions['conditions'])) {
+    return;
+  }
+
+  // Record the accepted state before removing gdpr_consent_accept from $edit.
+  $accepted = isset($edit['gdpr_consent_accept']) ? $edit['gdpr_consent_accept'] : FALSE;
+  $edit['gdpr_consent_accept'] = NULL;
+  $edit['conditions'] = NULL;
+
+  // Don't insert if user is already registered (administrator).
+  if (!empty($user->uid)) {
+    return;
+  }
+
+  if ($accepted) {
+    gdpr_consent_save_accept($conditions['version'], $conditions['revision'], $conditions['language'], $conditions['tc_id'], $account->uid);
+  }
+}
+
+/**
+ * Implements hook_user_update().
+ */
+function gdpr_consent_user_update(&$edit, $account, $category) {
+  global $user;
+
+  if (isset($edit['user_cancel_method'])) {
+    // Do not act on cancel.
+    return;
+  }
+
+  // We only care about the account category.
+  if ($category != 'account') {
+    return;
+  }
+
+  $conditions = gdpr_consent_get_conditions($account->language);
+
+  if (empty($conditions['conditions'])) {
+    return;
+  }
+
+  // Record the accepted state before removing gdpr_consent_accept from $edit.
+  $accepted = isset($edit['gdpr_consent_accept']) ? $edit['gdpr_consent_accept'] : FALSE;
+  $edit['gdpr_consent_accept'] = NULL;
+  $edit['conditions'] = NULL;
+
+  if ($account->uid == 1 || $account->uid != $user->uid) {
+    return;
+  }
+
+  if ($accepted) {
+    gdpr_consent_save_accept($conditions['version'], $conditions['revision'], $conditions['language'], $conditions['tc_id'], $account->uid);
+  }
+  else {
+    gdpr_consent_save_removal($conditions['version'], $conditions['revision'], $conditions['language'], $conditions['tc_id'], $account->uid);
+  }
+}
+
+/**
+ * Function to get accept.
+ *
+ * @param int $uid
+ *   User id.
+ *
+ * @return array
+ *   Return info about acceptance.
+ */
+function gdpr_consent_get_accept($uid) {
+  global $language, $user;
+
+  if (!empty($user->language)) {
+    $lang = $user->language;
+  }
+  // Fallback to global language if user doesn't have one.
+  else {
+    $lang = $language->language;
+  }
+
+  $keys = array(
+    'gdpr_consent_id',
+    'version',
+    'revision',
+    'language',
+    'uid',
+    'accepted',
+    'revoked',
+  );
+  $result = db_select('gdpr_consent_accepted', 'c')
+    ->fields('c')
+    ->condition('uid', $uid)
+    ->condition('revoked', 0, '=')
+    ->condition('language', $lang, '=')
+    ->orderBy('version', 'DESC')
+    ->orderBy('revision', 'DESC')
+    ->addTag('gdpr_consent_get_accepted')
+    ->execute()
+    ->fetchAllAssoc('gdpr_consent_id');
+  $result = count($result) ? array_shift($result) : array();
+
+  $accept = array();
+
+  foreach ($keys as $key) {
+    if (isset($result->$key)) {
+      $accept[$key] = $result->$key;
+    }
+  }
+
+  return $accept;
+}
+
+/**
+ * Function to save acceptance.
+ *
+ * @param int $version
+ *   Version number.
+ * @param int $revision
+ *   Revision number.
+ * @param string $language
+ *   Language code.
+ * @param int $tc_id
+ *   Conditions identifier.
+ * @param int $uid
+ *   User uid.
+ */
+function gdpr_consent_save_accept($version, $revision, $language, $tc_id, $uid) {
+  $gdpr_consent_account = gdpr_consent_get_accept($uid);
+  if (!empty($gdpr_consent_account['language'])) {
+    $conditions = gdpr_consent_get_conditions($gdpr_consent_account['language']);
+  }
+  else {
+    $conditions = gdpr_consent_get_conditions();
+  }
+  $accept_exists = gdpr_consent_version_check($uid, $conditions['version'], $conditions['revision'], $gdpr_consent_account);
+  if ($accept_exists) {
+    return;
+  }
+
+  $accepted = time();
+  $data = array(
+    'version'  => $version,
+    'revision' => $revision,
+    'language' => $language,
+    'tc_id'    => $tc_id,
+    'uid'      => $uid,
+    'accepted' => $accepted,
+    'revoked' => 0,
+  );
+  db_insert('gdpr_consent_accepted')
+    ->fields($data)
+    ->execute();
+  module_invoke_all('gdpr_consent_accepted', $data);
+}
+
+/**
+ * Function to save removals.
+ *
+ * @param int $version
+ *   Version id.
+ * @param int $revision
+ *   Revision id.
+ * @param string $language
+ *   Language code.
+ * @param int $tc_id
+ *   Conditions id.
+ * @param int $uid
+ *   User id.
+ */
+function gdpr_consent_save_removal($version, $revision, $language, $tc_id, $uid) {
+  db_update('gdpr_consent_accepted')
+    ->expression('revoked', time())
+    ->condition('uid', $uid, '=')
+    ->condition('version', $version, '=')
+    ->condition('revision', $revision, '=')
+    ->condition('tc_id', $tc_id, '=')
+    ->condition('language', $language, '=')
+    ->execute();
+
+}
+
+/**
+ * Helper function for rules.
+ *
+ * @param array $data
+ *   Array of data about acceptance.
+ */
+function gdpr_consent_gdpr_consent_accepted(array $data) {
+  if (module_exists('rules')) {
+    $user = user_load($data['uid']);
+    $conditions = gdpr_consent_get_conditions($data['language']);
+    rules_invoke_event('gdpr_consent_accepted', $user, $conditions['conditions'], $data['accepted']);
+  }
+}
+
+/**
+ * Function to get conditions.
+ *
+ * @param string $language
+ *   Language code.
+ * @param bool $raw
+ *   TODO.
+ *
+ * @return array
+ *   Return array about conditions.
+ */
+function gdpr_consent_get_conditions($language = NULL, $raw = FALSE) {
+  $keys = array(
+    'tc_id',
+    'version',
+    'revision',
+    'language',
+    'conditions',
+    'data_details',
+    'date',
+    'changes',
+    'format',
+    'format_details',
+  );
+
+  if (!empty($language)) {
+    $result = db_select('gdpr_consent_conditions', 'lc')
+      ->fields('lc')
+      ->condition('language', $language)
+      ->orderBy('version', 'DESC')
+      ->orderBy('revision', 'DESC')
+      ->range(0, 1)
+      ->addTag('gdpr_consent_conditions_by_language')
+      ->execute()
+      ->fetchAllAssoc('tc_id');
+    $result = (array) array_shift($result);
+  }
+  else {
+    $result = db_select('gdpr_consent_conditions', 'lc')
+      ->fields('lc')
+      ->orderBy('tc_id', 'DESC')
+      ->addTag('gdpr_consent_all_conditions')
+      ->execute()
+      ->fetchAllAssoc('tc_id');
+    $result = (array) array_shift($result);
+  }
+
+  foreach ($keys as $key) {
+    $conditions[$key] = isset($result[$key]) ? $result[$key] : '';
+  }
+
+  $conditions['format'] = empty($conditions['format']) ? filter_default_format() : $conditions['format'];
+
+  return $conditions;
+}
+
+/**
+ * Get all changes since user last accepted.
+ *
+ * @param array $form
+ *   Form array.
+ * @param int $uid
+ *   User uid.
+ *
+ * @return array
+ *   Returns changes to form.
+ */
+function gdpr_consent_display_changes(array $form, $uid) {
+  $bullet_points = array();
+  $last_accepted = gdpr_consent_get_accept($uid);
+
+  if (empty($last_accepted)) {
+    return $form;
+  }
+
+  $result = db_select('gdpr_consent_conditions', 'lc')
+    ->fields('lc')
+    ->condition(db_or()
+      ->condition('version', $last_accepted['version'], '>')
+      ->condition(db_and()
+        ->condition('version', $last_accepted['version'])
+        ->condition('revision', $last_accepted['revision'], '>')
+      )
+    )
+    ->condition('language', $last_accepted['language'])
+    ->orderBy('revision', 'ASC')
+    ->orderBy('version', 'ASC')
+    ->execute()
+    ->fetchAllAssoc('tc_id');
+
+  if (empty($result)) {
+    return $form;
+  }
+
+  foreach ($result as $term) {
+    $changes = filter_xss_admin($term->changes);
+
+    if (!empty($changes)) {
+      $bullet_points = array_merge($bullet_points, explode("\r\n", $changes));
+    }
+  }
+
+  if (empty($bullet_points)) {
+    return $form;
+  }
+
+  $form['changes'] = array(
+    '#type'        => 'fieldset',
+    '#title'       => t('Changes list'),
+    '#description' => t('Changes to the consent since last accepted:'),
+    '#collapsible' => TRUE,
+    '#collapsed'   => TRUE,
+    '#tree'        => TRUE,
+  );
+
+  $form['changes']['bullet_points'] = array(
+    '#markup' => theme('item_list', array('items' => $bullet_points)),
+  );
+
+  return $form;
+}
+
+/**
+ * Check if user has accepted latest version of consent.
+ *
+ * @param int $uid
+ *   User id.
+ * @param int $version
+ *   Version id.
+ * @param int $revision
+ *   Revision id.
+ * @param array $gdpr_consent_account
+ *   Array of GDPR details on account.
+ *
+ * @return bool
+ *   Returns boolean if user has accepted version or not.
+ */
+function gdpr_consent_version_check($uid, $version, $revision, array $gdpr_consent_account) {
+  $accepted = FALSE;
+
+  if (empty($gdpr_consent_account)) {
+    $gdpr_consent_account = gdpr_consent_get_accept($uid);
+  }
+
+  // Major version check.
+  $query = db_select('gdpr_consent_conditions');
+  $query->addExpression('MAX(version)');
+  $latest_version = $query->execute()->fetchField();
+  if ($latest_version > $version) {
+    return FALSE;
+  }
+
+  if (array_key_exists('version', $gdpr_consent_account) && array_key_exists('revision', $gdpr_consent_account)) {
+    if ($gdpr_consent_account['version'] == $version && $gdpr_consent_account['revision'] == $revision) {
+      $accepted = TRUE;
+    }
+  }
+
+  return $accepted;
+}
+
+/**
+ * Access control callback.
+ *
+ * @param string $perm
+ *   Permission name.
+ *
+ * @return bool
+ *   Returns info if user has access or not.
+ */
+function gdpr_consent_languages_access($perm) {
+  if (!module_exists('locale')) {
+    return FALSE;
+  }
+
+  if (!user_access($perm)) {
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function gdpr_consent_views_api() {
+  return array(
+    'api'  => 2,
+    'path' => drupal_get_path('module', 'gdpr_consent') . '/views',
+  );
+}
+
+/**
+ * Check if user is exempt from consent.
+ *
+ * @param object $account
+ *   A user object.
+ *
+ * @return bool
+ *   True if the passed user is exempt.
+ */
+function gdpr_consent_user_is_exempt($account) {
+  // User 1 is exempt from accepting Consents, no need to display consents.
+  if (!is_object($account)) {
+    return FALSE;
+  }
+  if ($account->uid === 1) {
+    return TRUE;
+  }
+
+  $exempt_roles = variable_get('gdpr_consent_except_roles', array());
+  $account_roles = $account->roles;
+  $exempt_user_roles = array_intersect_key((array) $account_roles, $exempt_roles);
+
+  if (count($exempt_user_roles)) {
+    return TRUE;
+  }
+
+  return FALSE;
+}

@@ -1,0 +1,4 @@
+name = Klan Comune Informa
+description = Integrazione con comune informa
+package = Klan.IT modules
+core = 7.x

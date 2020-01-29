@@ -1,0 +1,258 @@
+<?php
+
+/**
+ * @file
+ * Integrates fontawesome-iconpicker plugin with Drupal.
+ */
+
+define('FONTAWESOME_ICONPICKER_LIBRARY', 'fontawesome-iconpicker');
+define('FONTAWESOME_ICONPICKER_NAME', 'Font Awesome Iconpicker');
+define('FONTAWESOME_ICONPICKER_URL', 'https://github.com/farbelous/fontawesome-iconpicker');
+define('FONTAWESOME_ICONPICKER_DOWNLOAD_URL', 'https://github.com/farbelous/fontawesome-iconpicker/archive/1.4.1.zip');
+
+define('FONTAWESOME_ICONPICKER_ICON_PREFIX', 'fa-');
+define('FONTAWESOME_ICONPICKER_JQUERY_MIN_VER', '1.10');
+
+/**
+ * Implements hook_libraries_info().
+ */
+function fontawesome_iconpicker_libraries_info() {
+  $libraries[FONTAWESOME_ICONPICKER_LIBRARY] = array(
+    'name' => FONTAWESOME_ICONPICKER_NAME,
+    'vendor url' => FONTAWESOME_ICONPICKER_URL,
+    'download url' => FONTAWESOME_ICONPICKER_DOWNLOAD_URL,
+    'version callback' => 'fontawesome_iconpicker_get_version',
+    'version arguments' => array(
+      'file' => 'package.json',
+    ),
+    'files' => array(
+      'css' => array(
+        'dist/css/fontawesome-iconpicker.css',
+      ),
+      'js' => array(
+        'dist/js/fontawesome-iconpicker.js',
+      ),
+    ),
+    'dependencies' => array(
+      'fontawesome-iconpicker',
+    ),
+    'variants' => array(
+      'minified' => array(
+        'files' => array(
+          'css' => array(
+            'dist/css/fontawesome-iconpicker.min.css',
+          ),
+          'js' => array(
+            'dist/js/fontawesome-iconpicker.min.js',
+          ),
+        ),
+      ),
+    ),
+  );
+  return $libraries;
+}
+
+/**
+ * Reads version of installed fontawesome iconpicker library.
+ *
+ * @see fontawesome_iconpicker_libraries_info()
+ */
+function fontawesome_iconpicker_get_version($library, $options) {
+  // Provide defaults.
+  $options += array(
+    'file' => '',
+  );
+
+  $file = DRUPAL_ROOT . '/' . $library['library path'] . '/' . $options['file'];
+  if (empty($options['file']) || !file_exists($file)) {
+    return;
+  }
+  $f = file_get_contents($file);
+  $data = json_decode($f);
+  return (isset($data->version)) ? $data->version : NULL;
+}
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function fontawesome_iconpicker_field_widget_info() {
+  return array(
+    'fontawesome_iconpicker_textfield' => array(
+      'label' => t('Font Awesome iconpicker'),
+      'field types' => array('text'),
+      'settings' => array('size' => '60'),
+      'behaviors' => array(
+        'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+        'default value' => FIELD_BEHAVIOR_DEFAULT,
+      ),
+    ),
+    'fontawesome_iconpicker_icon_field' => array(
+      'label' => t('Font Awesome iconpicker'),
+      'field types' => array('icon_field'),
+      'settings' => array('size' => '60'),
+      'behaviors' => array(
+        'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+        'default value' => FIELD_BEHAVIOR_DEFAULT,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_widget_form().
+ */
+function fontawesome_iconpicker_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  switch ($instance['widget']['type']) {
+    case 'fontawesome_iconpicker_textfield':
+      $element += array(
+        '#type' => 'fontawesome_iconpicker_textfield',
+        '#default_value' => isset($items[$delta]['value']) ? $items[$delta]['value'] : NULL,
+        '#size' => $instance['widget']['settings']['size'],
+        '#maxlength' => $field['settings']['max_length'],
+        '#attributes' => array('class' => array('text-full')),
+      );
+      return array('value' => $element);
+      break;
+
+    case 'fontawesome_iconpicker_icon_field':
+      $element['bundle'] = array(
+        '#type' => 'value',
+        '#value' => 'fontawesome',
+      );
+      $element['icon'] = array(
+        '#type' => 'fontawesome_iconpicker_textfield',
+        '#title' => $element['#title'],
+        '#description' => $element['#description'],
+        '#value_callback' => 'fontawesome_iconpicker_icon_field_icon_value_callback',
+        '#default_value' => isset($items[$delta]['icon']) ? FONTAWESOME_ICONPICKER_ICON_PREFIX . $items[$delta]['icon'] : NULL,
+        '#attributes' => array(
+          'class' => array('text-full'),
+        ),
+      );
+
+      break;
+  }
+  return $element;
+}
+
+/**
+ * Helper function to remove the fontawesome prefix for icon api fields.
+ */
+function fontawesome_iconpicker_icon_field_icon_value_callback($element, $input = FALSE, $form_state = array()) {
+
+  if ($input !== FALSE) {
+    $prefix = FONTAWESOME_ICONPICKER_ICON_PREFIX;
+    $str = trim($input);
+    if (substr($str, 0, strlen($prefix)) == $prefix) {
+      $str = substr($str, strlen($prefix));
+      return $str;
+    }
+  }
+  else {
+    return isset($element['#default_value']) ? $element['#default_value'] : NULL;
+  }
+
+  return $input;
+}
+
+/**
+ * Implements hook_element_info().
+ */
+function fontawesome_iconpicker_element_info() {
+  $types['fontawesome_iconpicker_textfield'] = array(
+    '#input' => TRUE,
+    '#size' => 60,
+    '#maxlength' => 128,
+    '#autocomplete_path' => FALSE,
+    '#process' => array('ajax_process_form', 'fontawesome_iconpicker_process_element'),
+    '#theme' => 'textfield',
+    '#theme_wrappers' => array('form_element'),
+  );
+  return $types;
+}
+
+/**
+ * Attaches javascript and css to the text element.
+ *
+ * @see fontawesome_iconpicker_element_info()
+ */
+function fontawesome_iconpicker_process_element($element, $form_state, $form) {
+  libraries_load(FONTAWESOME_ICONPICKER_LIBRARY);
+  $js_path = drupal_get_path('module', 'fontawesome_iconpicker') . '/fontawesome_iconpicker.js';
+  $css_path = drupal_get_path('module', 'fontawesome_iconpicker') . '/fontawesome_iconpicker.css';
+  $element['#attributes']['data-iconpicker'] = '';
+  $element['#attributes']['class'][] = 'fontawesome-iconpicker-element';
+  $element['#attached']['js'][] = $js_path;
+  $element['#attached']['css'][] = $css_path;
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function fontawesome_iconpicker_field_formatter_info() {
+  $info = array(
+    'fontawesome_iconpicker_icon' => array(
+      'label' => t('Font Awesome Icon'),
+      'field types' => array('text', 'icon_field'),
+      'description' => t('Displays the selected Font Awesome icon.'),
+      'settings'  => array(
+        'size' => '1x',
+      ),
+    ),
+  );
+  return $info;
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function fontawesome_iconpicker_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $element = array();
+  $element['size'] = array(
+    '#type'           => 'select',
+    '#title'          => t('Icon Size'),
+    '#description'    => t('Select an icon size.'),
+    '#default_value'  => $settings['size'],
+    '#options'        => array(
+      '1x'  => '1x',
+      '2x'  => '2x',
+      '3x'  => '3x',
+      '4x'  => '4x',
+      '5x'  => '5x',
+    ),
+  );
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function fontawesome_iconpicker_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = t('Size: @size', array(
+    '@size'     => $settings['size'],
+  ));
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function fontawesome_iconpicker_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'fontawesome_iconpicker_icon':
+      $size = $display['settings']['size'];
+      foreach ($items as $key => $item) {
+        $element[$key]['#markup'] = '<i class="fa '. $item['safe_value'] . ' fa-'. $size . '" aria-hidden="true"></i>';
+      }
+      break;
+  }
+
+  return $element;
+}

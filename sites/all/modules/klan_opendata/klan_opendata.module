@@ -1,0 +1,248 @@
+<?php
+/**
+ * Implements hook_init().
+ */
+function klan_opendata_init() {
+  klan_opendata_classloader();
+}
+
+/**
+  * Implements hook_menu().
+  */
+function klan_opendata_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#klan_opendata':
+      return '<p>'. t('A simple library to make it easier to access SODA services from PHP') .'</p>';
+  }
+}
+
+/**
+ * Initiaites the Zend Framework class loader.
+ */
+function klan_opendata_classloader() {
+  static $loader = NULL;
+  if (!isset($loader)) {
+    $path = dirname(__FILE__);
+    $loader = @include $path . '/socrata/socrata.php';
+    if ($loader === FALSE) {
+      $loader = @include dirname(dirname($path)) . '/socrata/socrata.php';
+    }
+  }
+  return $loader;
+}
+
+function klan_opendata_menu()
+{
+	$items['admin/config/content/klan_opendata'] = array(
+		'title'=> 'Configurazione parametri opendata',
+		'description'=> 'Form d\'inserimento per i parametri di configurazione',
+		'page callback'   => 'drupal_get_form',
+		'page arguments' => array('klan_opendata_form'),
+		'access arguments' => array('administer klan_opendata'),
+	);
+
+	return $items;
+}
+// fine menu
+
+function klan_opendata_form($form, &$form_state)
+{
+	$form['klan_opendata_promemoria'] = array(
+		'#type' => 'markup',
+		'#markup' => '<div class="form-item form-group"><label>Configura i parametri opendata per collegarti al sito <a href="https://www.dati.lombardia.it">https://www.dati.lombardia.it</a></label></div>'
+	);
+	$form['klan_opendata_view_uid'] = array(
+		'#type' => 'textfield',
+		'#title' => 'Uid Catalogo',
+		'#description' => 'Collezione di dati di destinazione',
+		'#required' => TRUE,
+		'#default_value' => variable_get('klan_opendata_view_uid')
+	);
+	$form['klan_opendata_root_url'] = array(
+		'#type' => 'textfield',
+		'#title' => 'Dominio sito',
+		'#description' => 'Dominio senza protocollo (Ex. www.dati.lombardia.it)',
+		'#required' => TRUE,
+		'#default_value' => variable_get('klan_opendata_root_url')
+  	);
+	$form['klan_opendata_user_name'] = array(
+		'#type' => 'textfield',
+		'#title' => 'Username sito',
+		'#description' => 'Username del sito di collegamento',
+		'#required' => TRUE,
+		'#default_value' => variable_get('klan_opendata_user_name')
+  	);
+	$form['klan_opendata_password'] = array(
+		'#type' => 'textfield',
+		'#title' => 'Password sito',
+		'#description' => 'Passowrd del sito di collegamento',
+		'#required' => TRUE,
+		'#default_value' => variable_get('klan_opendata_password')
+  	);
+	$form['klan_opendata_app_token'] = array(
+		'#type' => 'textfield',
+		'#title' => 'Application Token della App',
+		'#description' => 'Token di collegamento della App creata nel sito',
+		'#required' => TRUE,
+		'#default_value' => variable_get('klan_opendata_app_token')
+  	);
+	$form['submit_button'] = array(
+		'#type' => 'submit',
+		'#value'=> t('Edit'),
+	);
+	$form['reset_button'] = array(
+		'#type'  => 'submit',
+		'#value' => t('Reset'),
+		'#submit' => array('klan_opendata_form_reset'),
+	);
+	return $form;
+}
+// fine form
+
+function klan_opendata_form_validate($form, &$form_state)
+{
+	
+}
+// fine form validate
+
+function klan_opendata_form_submit($form, &$form_state)
+{
+	$klan_opendata_view_uid = $form_state['values']['klan_opendata_view_uid'];
+	variable_set('klan_opendata_view_uid', $klan_opendata_view_uid);
+	
+	$klan_opendata_root_url = $form_state['values']['klan_opendata_root_url'];
+	variable_set('klan_opendata_root_url', $klan_opendata_root_url);
+	
+	$klan_opendata_user_name = $form_state['values']['klan_opendata_user_name'];
+	variable_set('klan_opendata_user_name', $klan_opendata_user_name);
+	
+	$klan_opendata_password = $form_state['values']['klan_opendata_password'];
+	variable_set('klan_opendata_password', $klan_opendata_password);
+	
+	$klan_opendata_app_token = $form_state['values']['klan_opendata_app_token'];
+	variable_set('klan_opendata_app_token', $klan_opendata_app_token);
+}
+// fine form submit
+
+function klan_opendata_form_reset($form, &$form_state)
+{
+	$form_state['rebuild'] = FALSE;
+	$form_state['values']['klan_opendata_view_uid'] = variable_get('klan_opendata_view_uid');
+	
+	$form_state['values']['klan_opendata_root_url'] = variable_get('klan_opendata_root_url');
+	
+	$form_state['values']['klan_opendata_user_name'] = variable_get('klan_opendata_user_name');
+	
+	$form_state['values']['klan_opendata_password'] = variable_get('klan_opendata_password');
+	
+	$form_state['values']['klan_opendata_app_token'] = variable_get('klan_opendata_app_token');
+}
+// fine form clear field
+
+function klan_opendata_connect() {
+	$root_url = variable_get('klan_opendata_root_url');
+	$user_name = variable_get('klan_opendata_user_name');
+	$password = variable_get('klan_opendata_password');
+	$app_token = variable_get('klan_opendata_app_token');
+	
+	return new Socrata($root_url, $app_token, $user_name, $password);
+}
+
+function klan_opendata_evento_mapping($node) {
+	$array = array(
+		'Nid' => 'nid',
+		'Ubicazione' => array('field_indirizzo' => array('street', 'postal_code', 'city', 'province')),
+		'Periodo_Rif' => array('field_data_evento' => 'value'),
+		'Denominazione' => 'title',
+		'Tipo' => 'field_tipo',
+		'N_Edizione' => 'field_n_edizione',
+		'Descrizione' => 'body',
+		'Data_inizio' => array('field_data_evento' => 'value'),
+		'Ora_inizio' => array('field_data_evento' => 'value'),
+		'Data_fine' => array('field_data_evento' => 'value2'),
+		'Ora_fine' => array('field_data_evento' => 'value2'),
+		'Sito_Web' => 'field_sito_web_dell_evento',
+		'Programma' => 	'field_programma',
+		'Nome_organizzatore' => 'field_nome_organizzatore',
+		'Email_organizzatore' => 'field_email_organizzatore',
+		'Telefono_organizzatore' => 'field_telefono_organizzatore',
+		'Gratuito' => 'field_gratuito',
+		'Prezzo' => 'field_prezzo',
+		'Longitudine' => array('field_indirizzo' => 'locpick'),
+		'Latitudine' => array('field_indirizzo' => 'locpick'),
+	);
+	
+	$row = array();
+	foreach($array as $filed => $value) {
+		switch($filed) {
+			case 'Ubicazione':
+				$row[$filed] = '';
+				$k = array_keys($value)['0'];
+				foreach($value[$k] as $v) { $row[$filed] .= $node->$k['und'][0][$v] .' '; }
+				break;
+			case 'Periodo_Rif':
+				$row[$filed] = '';
+				foreach($value as $k => $v) { $date = new DateTime($node->$k['und'][0][$v]); $row[$filed] = $date->format('Y'); }
+				break;
+			case 'Data_inizio':
+			case 'Data_fine':
+				$row[$filed] = '';
+				foreach($value as $k => $v) { $date = new DateTime($node->$k['und'][0][$v]); $row[$filed] .= $date->format('Y-m-d H:i:s'); }
+				break;
+			case 'Ora_inizio':
+			case 'Ora_fine':
+				$row[$filed] = '';
+				foreach($value as $k => $v) { $date = new DateTime($node->$k['und'][0][$v]); $row[$filed] .= $date->format('H:i'); }
+				break;
+			case 'Longitudine':
+				$row[$filed] = '';
+				foreach($value as $k => $v) { $row[$filed] .= $node->$k['und'][0][$v]['user_longitude']; }
+				break;
+			case 'Latitudine':
+				$row[$filed] = '';
+				foreach($value as $k => $v) { $row[$filed] .= $node->$k['und'][0][$v]['user_latitude']; }
+				break;
+			case 'Nid':
+				$row[$filed] = $node->$value;
+				break;
+			case 'Denominazione':
+				$row[$filed] = trim($node->$value);
+				break;
+				case 'Descrizione':
+				$row[$filed] = strip_tags($node->$value['und'][0]['value']);
+				break;
+			case 'Gratuito':
+				$row[$filed] = $node->$value ? 'SI' : 'NO';
+				break;
+			default:
+				$row[$filed] = trim($node->$value['und'][0]['value']);
+				break;
+		}
+	}
+	
+	return $row;
+}
+
+function klan_opendata_cron() {
+	watchdog('cron', 'Klan Opendata Cron Start');
+	$date = new DateTime();
+	$query = new EntityFieldQuery();
+	$query->entityCondition('entity_type', 'node')
+	->propertyCondition('type', 'evento')
+    ->propertyCondition('status', 1)
+	->fieldCondition('field_data_evento', 'value2', $date->format('Y-m-d H:i:s'), '>=');
+	$result = $query->execute();
+	$event = 0;
+	foreach ($result['node'] as $nid => $node) {
+		$node = node_load($nid);
+		if($node->status == 1) {
+			$row = klan_opendata_evento_mapping($node);
+			$socrata = klan_opendata_connect();
+			$view_uid = variable_get('klan_opendata_view_uid');
+			if($event == 0) $socrata->put($view_uid, json_encode($row));
+			else $socrata->post($view_uid, json_encode($row));
+			$event++;
+		}
+	}
+	watchdog('cron', 'Klan Opendata Cron Stop');
+}

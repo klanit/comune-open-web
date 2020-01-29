@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Taxonomy export csv module file.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function taxonomy_export_csv_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Taxonomy export csv module create taxonomy csv file. <a href="@blocks">Taxonomy export csv page</a>, see the online handbook entry for <a href="@block">Taxonomy export csv module</a>.', array('@block' => '#', '@blocks' => url('admin/config/system/migrate_taxonomy'))) . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function taxonomy_export_csv_menu() {
+  $items = array();
+  $items['admin/config/system/migrate_taxonomy'] = array(
+    'title' => 'Taxonomy export settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('taxonomy_export_csv_admin_settings'),
+    'access arguments' => array('administer users'),
+    'file' => 'taxonomy_export_csv.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function taxonomy_export_csv_form_alter(&$form, &$form_state, $form_id) {
+  if ('taxonomy_export_csv_admin_settings' == $form_id) {
+    $form['actions']['submit']['#value'] = 'Export terms';
+    unset($form['#submit']);
+    $form['#submit'] = array('taxonomy_export_csv_submit');
+  }
+}

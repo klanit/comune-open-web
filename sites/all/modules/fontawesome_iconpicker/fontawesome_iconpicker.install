@@ -1,0 +1,57 @@
+<?php
+/**
+ * @file
+ * Install file for install, uninstall and update hooks.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function fontawesome_iconpicker_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  // Set runtime requirements.
+  if ($phase === 'runtime') {
+    $requirements['fontawesome_iconpicker'] = array(
+      'title' => $t('Font Awesome Icon Picker Library'),
+    );
+
+    $requirements['fontawesome_iconpicker_jquery_version'] = array(
+      'title' => $t('Font Awesome Icon Picker jQuery Version'),
+    );
+
+    $fa_iconpicker_library = libraries_detect('fontawesome-iconpicker');
+    $jquery_admin_version = variable_get('jquery_update_jquery_admin_version', FALSE);
+
+    if (!$fa_iconpicker_library || !$fa_iconpicker_library['installed']) {
+      $requirements['fontawesome_iconpicker'] += array(
+        'value' => $t('Not found'),
+        'description' => $t('The Font Awesome Icon Picker library could not be found. Please install the library in <em class="placeholder">sites/all/libraries/fontawesome-iconpicker</em>'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+    else {
+      $requirements['fontawesome_iconpicker'] += array(
+        'value' => $t('Found'),
+        'requirement' => REQUIREMENT_OK,
+      );
+    }
+
+    if (!$jquery_admin_version || !version_compare($jquery_admin_version, FONTAWESOME_ICONPICKER_JQUERY_MIN_VER, '>=')) {
+      $requirements['fontawesome_iconpicker_jquery_version'] += array(
+        'value' => $t('Incompatible'),
+        'description' => $t('The Font Awesome Icon Picker library requires at least version !version of jQuery', array('!version' => FONTAWESOME_ICONPICKER_JQUERY_MIN_VER)),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+    else {
+      $requirements['fontawesome_iconpicker_jquery_version'] += array(
+        'value' => $t('Compatible'),
+        'severity' => REQUIREMENT_OK,
+      );
+    }
+  }
+
+  return $requirements;
+}

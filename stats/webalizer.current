@@ -1,0 +1,2930 @@
+# Webalizer V2.23-08 Incremental Data - 05/31/2018 23:15:45
+2018 5 31 23 15 45
+11268 10219 93 866 344 42 134196378 2796 426 0 0 0
+11 2 1012 1 31
+7 7 47458 1 4 4 0 0
+152 130 2126611 3 8 4 0 0
+762 698 8646445 4 280 15 0 0
+34 34 317142 4 13 9 0 0
+93 93 1115097 3 12 8 0 0
+64 62 863509 3 4 4 0 0
+6 6 37324 2 3 3 0 0
+510 478 5584302 5 61 10 0 0
+1891 1577 22313403 6 645 22 0 0
+267 242 4347208 3 82 8 0 0
+89 88 1002966 10 17 13 0 0
+111 110 1374298 8 10 10 0 0
+108 108 1341771 6 5 5 0 0
+74 72 914177 4 5 5 0 0
+737 686 6633368 30 141 7 0 0
+288 272 2822248 4 72 11 0 0
+32 31 437838 2 2 2 0 0
+598 506 7983294 4 167 12 0 0
+36 34 481434 2 4 4 0 0
+118 114 1684549 5 4 4 0 0
+312 284 3075763 11 34 13 0 0
+120 113 1479457 4 11 3 0 0
+786 727 12178937 13 132 13 0 0
+627 555 7039222 6 258 18 0 0
+599 531 6617914 10 266 25 0 0
+207 204 2513144 16 28 23 0 0
+378 373 4828526 16 43 35 0 0
+694 603 6956666 23 273 41 0 0
+1086 1022 13649794 22 127 42 0 0
+281 260 3341206 9 45 29 0 0
+201 199 2441307 11 40 24 0 0
+129 127 1500018 13 0 0
+62 61 629590 19 0 0
+107 105 1120384 24 0 0
+111 109 1488319 13 0 0
+54 53 563659 12 0 0
+291 287 3909927 11 0 0
+107 105 1355551 13 0 0
+84 82 1202713 14 0 0
+42 41 492499 10 0 0
+1019 886 8455623 305 0 0
+694 631 8103109 170 0 0
+1740 1617 18145679 429 0 0
+1959 1682 26598608 536 0 0
+146 129 1458567 49 0 0
+798 714 8838545 229 0 0
+765 695 10871387 236 0 0
+1131 1015 13022501 255 0 0
+1279 1152 17387692 320 0 0
+135 120 1621226 46 0 0
+153 151 1790841 20 0 0
+154 152 1950695 18 0 0
+142 140 1926242 16 0 0
+86 85 981114 18 0 0
+80 80 781889 20 0 0
+6
+0
+0
+10219
+0
+0
+0
+0
+0
+4
+0
+4
+355
+0
+450
+0
+0
+0
+0
+0
+145
+85
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/sites/all/modules/linkit/js/linkit.js
+0 10 0 23311 0 0 0 0
+/node/152/edit
+0 1 0 15133 0 0 0 0
+/admin/reports/updates/update
+0 1 0 5320 0 0 0 0
+/admin/structure/menu/manage/menu-amm-trasparente
+0 1 0 24730 1 1 0 0
+/sites/all/modules/calendar/css/calendar-overlap.css
+0 10 0 25005 0 0 0 0
+/misc/ajax.js
+0 52 0 423801 0 0 0 0
+/admin/content/file
+0 20 0 181195 4 1 0 0
+/js/admin_menu/cache/63ea806eae2e2f2a10dfad143ce50c05
+0 2 0 39149 0 0 0 0
+/news/mauris-pagus
+0 3 0 31062 1 0 0 0
+/modules/file/icons/x-office-spreadsheet.png
+1 2 0 930 0 0 0 0
+/admin/structure/taxonomy/settore_comunale_uffici_
+0 2 0 10637 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/alnwick-cemetery.jpg
+1 9 0 23487 0 0 0 0
+/area-tematica/patrimonio
+0 6 0 60274 2 2 0 0
+/amministrazione/sindaco
+0 8 0 64277 4 3 0 0
+/modules/field_ui/field_ui.css
+0 4 0 3452 0 0 0 0
+/admin/update/ready
+0 1 0 4445 0 0 0 0
+/admin/structure/block/add-menu-block
+0 1 0 11017 0 0 0 0
+/sites/all/modules/gmap/markers/small/gray.png
+1 1 0 493 0 0 0 0
+/area-tematica/alloggi-erp-housing-sociale
+0 22 0 221094 6 3 0 0
+/js/admin_menu/cache/27b034fd12f7bad2d513316e284d4930
+0 1 0 19569 0 0 0 0
+/user/242/password
+0 2 0 12761 0 0 0 0
+/sites/all/modules/ckeditor/plugins/drupalbreaks/images/drupalbreak.png
+1 8 0 3785 0 0 0 0
+/sites/all/modules/pathauto/pathauto.js
+0 10 0 6172 0 0 0 0
+/admin/structure/types/manage/pagina
+0 1 0 9382 1 0 0 0
+/node/266/edit
+0 2 0 30133 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_WIeE73.png
+1 31 0 4246654 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_mHabmc.gif
+1 1 0 49166 0 0 0 0
+/batch
+0 41 0 181293 0 1 0 0
+/node/284/outline
+0 1 0 5262 0 1 0 0
+/node/271/edit
+0 2 0 30249 0 0 0 0
+/media/browser
+0 17 0 165086 0 0 0 0
+/sites/all/modules/ctools/css/dropbutton.css
+0 18 0 13709 0 0 0 0
+/galleria/lorem-ipsum-dolor
+0 5 0 40307 2 3 0 0
+/js/admin_menu/cache/33dd3229c86c746719a61e21b2228ec7
+0 1 0 19669 0 0 0 0
+/admin/content/file/edit-multiple/525
+0 1 0 5954 0 0 0 0
+/node/284/webform
+0 3 0 14936 0 0 0 0
+/admin/structure/menu/manage/main-menu/edit
+0 1 0 5114 0 0 0 0
+/admin/content/book
+0 1 0 7035 0 0 0 0
+/admin/structure/types/manage/evento/fields/field_teaser_image
+0 1 0 7932 0 0 0 0
+/news/lorem-ipsum-dolor-sit-amet-consectetuer-adipiscing-elit
+0 10 0 104570 8 7 0 0
+/sites/default/files/languages/it_UpOHK18XlghBhKCyEINi52veG5KANZ6u0nLkuacqceA.js
+0 153 0 430046 0 0 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_4.jpg
+1 5 0 34747 0 0 0 0
+/sites/all/modules/webform/js/webform-admin.js
+0 23 0 94903 0 0 0 0
+/node/268/edit
+0 2 0 31185 0 0 0 0
+/amministrazione-trasparente
+0 4 0 52241 2 2 0 0
+/admin/structure/block/add
+0 1 0 115066 0 0 0 0
+/node/277/edit
+0 2 0 30287 0 0 0 0
+/lavori-pubblici-mobilita-urbana
+0 1 0 9053 0 0 0 0
+/area-tematica/ambiente
+0 1 0 9646 6 2 0 0
+/servizi
+0 9 0 71307 3 4 0 0
+/admin/config/media/image-styles
+0 1 0 4972 0 0 0 0
+/admin/structure/types/manage/evento/fields/field_image
+0 1 0 7926 0 0 0 0
+/sites/all/themes/bootstrap/js/bootstrap.js
+0 126 0 323534 0 0 0 0
+/sites/all/libraries/masonry/masonry.pkgd.min.js
+0 2 0 17749 0 0 0 0
+/sites/all/modules/ckeditor/plugins/drupalbreaks/plugin.js
+0 7 0 16271 0 0 0 0
+/sites/all/modules/plupload/images/delete.gif
+1 2 0 926 0 0 0 0
+/media/ajax/field_teaser_image/und/0/form-eangKh1f5uV1oS9S_sj72MsfNVoFWeGyAH4vR5OcmJg
+0 1 0 7545 0 0 0 0
+/sites/all/modules/ctools/css/export-ui-list.css
+0 9 0 6329 0 0 0 0
+/admin/structure/types/manage/feed
+0 1 0 9392 0 0 0 0
+/misc/message-24-error.png
+1 6 0 3585 0 0 0 0
+/sites/all/modules/views/js/ajax_view.js
+0 66 0 160247 0 0 0 0
+/sites/all/modules/date/date_popup/jquery.timeentry.pack.js
+0 7 0 38451 0 0 0 0
+/admin/structure/types/manage/articolo/fields/field_data_scadenza_in_evidenza_
+0 2 0 16737 0 0 0 0
+/polizia-locale
+0 1 0 8993 0 0 0 0
+/node/263/delete
+0 1 0 4474 0 0 0 0
+/calendario-eventi/mese/2018-06
+0 11 0 119518 6 3 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.tabs.js
+0 7 0 45214 0 0 0 0
+/sites/default/files/wg_blurred_backgrounds_2.jpg
+1 1 0 278975 0 0 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_3.jpg
+1 5 0 31028 0 0 0 0
+/admin/structure/block/manage/block/17/configure
+0 2 0 235801 0 0 0 0
+/galleriaimmagini/fere-ullamcorper
+0 6 0 53292 3 3 0 0
+/sites/all/modules/media/js/util/ba-debug.min.js
+0 8 0 8114 0 0 0 0
+/modules/system/system.base.css
+0 120 0 264711 0 0 0 0
+/sites/default/files/styles/large/public/wg_blurred_backgrounds_16.jpg
+1 43 0 374011 0 0 0 0
+/modules/locale/locale.datepicker.js
+0 8 0 7633 0 0 0 0
+/js/admin_menu/cache/b25c6f824a3e30bc38b32c3cdf6644e0
+0 1 0 19737 0 0 0 0
+/misc/favicon.ico
+0 11 0 63031 0 0 0 0
+/admin/structure/block/manage/menu_block/4/configure
+0 1 0 120588 0 0 0 0
+/file/524/edit
+0 1 0 6082 0 0 0 0
+/sites/default/files/styles/medium/public/medio-ambiente-960x430-1.jpg
+1 27 0 427916 0 0 0 0
+/node/177/edit
+0 1 0 14229 0 0 0 0
+/admin/structure/views/view/elenco_settori_comunali/edit
+0 4 0 74688 0 0 0 0
+/sites/all/modules/gmap/js/gmap_marker.js
+0 11 0 8052 0 0 0 0
+/sites/all/modules/media/js/media.admin.js
+0 2 0 2726 0 0 0 0
+/aree-tematiche/lavori-pubblici-mobilita-urbana
+0 2 0 40236 0 0 0 0
+/scheda-personale/cognome-nome
+0 8 0 73491 5 2 0 0
+/js/admin_menu/cache/277666ae37aa22fa09744dd034e0ca6f
+0 1 0 19603 0 0 0 0
+/admin/structure/types/manage/evento/fields/field_area_tematica/widget-type
+0 2 0 10200 0 0 0 0
+/admin/structure/views/ajax/add-item/aree/block_1/filter
+0 4 0 488272 0 0 0 0
+/sites/all/libraries/magnific-popup/dist/magnific-popup.css
+0 117 0 250251 0 0 0 0
+/sites/default/files/styles/thumbnail/public/imagefield_q7ozls_0.jpeg
+0 1 0 1487 0 0 0 0
+/admin/structure/types/manage/articolo/fields/field_area_tematica/field-settings
+0 1 0 5320 0 0 0 0
+/js/admin_menu/cache/74f5d0238804b93c577ff7b5b2481b06
+0 2 0 39345 0 1 0 0
+/misc/autocomplete.js
+0 8 0 24482 0 0 0 0
+/sites/all/modules/ctools/css/ctools.css
+0 118 0 67098 0 0 0 0
+/settore-comunale-uffici/settore-comunale-uno
+0 12 0 109309 4 5 0 0
+/sites/all/modules/module_filter/css/dynamic_position.css
+0 16 0 8805 0 0 0 0
+/alloggi-erp-housing-sociale
+0 1 0 28201 0 0 0 0
+/sites/default/files/styles/medium/public/negociacion.jpg
+1 27 0 362161 0 0 0 0
+/themes/seven/images/ui-icons-454545-256x240.png
+1 6 0 20112 0 0 0 0
+/aree-tematiche/servizi-scolastici-linfanzia
+0 2 0 40343 0 0 0 0
+/eventi/gemino-iusto-lucidus-quia-ratis-tation-virtus
+0 5 0 60907 2 3 0 0
+/sites/default/files/styles/small/public/imagefield_QTrhSo.jpg
+1 1 0 2131 0 0 0 0
+/admin/structure/views/ajax/rearrange-filter/aree/block_1/filter
+0 2 0 55439 0 0 0 0
+/notizie
+0 17 0 183020 12 10 0 0
+/node/284/webform/components/new/textfield
+0 1 0 6541 0 1 0 0
+/misc/drupal.js
+0 155 0 1127473 0 0 0 0
+/js/admin_menu/cache/807008ce1323174463f064ffa4bb19da
+0 3 0 58066 0 2 0 0
+/modules/file/icons/x-office-document.png
+1 2 0 956 0 0 0 0
+/node/158/delete
+0 1 0 4603 0 0 0 0
+/sites/all/modules/gmap/gmap.css
+0 10 0 9033 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/polizia-locale.jpg
+1 9 0 22746 0 0 0 0
+/patrimonio
+0 1 0 8990 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/manutenzione.jpg
+1 9 0 25039 0 0 0 0
+/admin/structure/menu/item/3045/edit
+0 1 0 8839 0 0 0 0
+/admin/structure/file-types/manage/document/fields/field_settore_comunale
+0 1 0 6160 0 0 0 0
+/sites/default/themes/agid/img/icon_survey.svg
+0 29 0 43670 0 0 0 0
+/admin/structure/views/view/aree/edit
+0 4 0 75715 0 1 0 0
+/sites/all/modules/gmap/js/markerloader_static.js
+0 9 0 7758 0 0 0 0
+/modules/image/image.admin.css
+0 1 0 735 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.dialog.js
+0 10 0 59280 0 0 0 0
+/admin/structure/types/manage/comune_informa
+0 2 0 18782 0 0 0 0
+/js/admin_menu/cache/87a1b2811ac96a1b52d540437d6b360f
+0 1 0 19676 0 0 0 0
+/misc/watchdog-warning.png
+1 2 0 1202 0 0 0 0
+/js/admin_menu/cache/e05c286f68167c59466cc32a43836827
+0 3 0 58576 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.resizable.js
+0 10 0 76310 0 0 0 0
+/misc/tableselect.js
+0 5 0 8650 0 0 0 0
+/admin/config/content/node_export
+0 1 0 100373 0 0 0 0
+/js/admin_menu/cache/3b2f146a6024aa03d498c50e71fec26d
+0 1 0 19737 0 0 0 0
+/misc/message-16-warning.png
+1 1 0 725 0 0 0 0
+/sites/all/modules/ctools/css/button.css
+0 18 0 10196 0 0 0 0
+/admin/structure/views/view/schede_personali/preview/page_3/ajax
+0 2 0 10638 0 0 0 0
+/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.eot
+0 7 0 537523 0 0 0 0
+/misc/watchdog-error.png
+1 1 0 1063 0 0 0 0
+/gallerie
+0 9 0 68120 8 7 0 0
+/misc/collapse.js
+0 28 0 42873 0 0 0 0
+/admin/structure/views/ajax/config-item/schede_personali/page_4/filter/field_organi_di_governo_tid
+0 4 0 109555 0 0 0 0
+/calendario-eventi/mese/2018-07
+0 8 0 88945 3 4 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.mouse.js
+0 10 0 18170 0 0 0 0
+/sites/all/modules/token/token.js
+0 15 0 21574 0 0 0 0
+/sites/default/files/wg_blurred_backgrounds_20.jpg
+1 1 0 254719 0 0 0 0
+/sites/default/files/styles/small/public/wg_blurred_backgrounds_2.jpg
+1 1 0 2272 0 0 0 0
+/modulistica
+0 21 0 161104 10 8 0 0
+/sites/all/modules/module_filter/js/module_filter.js
+0 21 0 53577 0 0 0 0
+/permessi-ztl-invalidi
+0 1 0 8956 0 0 0 0
+/sites/default/files/styles/medium/public/film_archive_storage_-_br-byen_6498610179.jpg
+1 27 0 525937 0 0 0 0
+/user/241/password
+0 2 0 12773 0 0 0 0
+/calendario-eventi/giorno/2018-05-10
+0 4 0 35510 1 2 0 0
+/modules/node/content_types.js
+0 3 0 2356 0 0 0 0
+/sites/default/files/styles/medium/public/futbol.jpg
+1 27 0 373957 0 0 0 0
+/sites/all/modules/menu_block/menu-block.admin.css
+0 2 0 1782 0 0 0 0
+/modules/dblog/dblog.css
+0 5 0 4455 0 0 0 0
+/modules/block/block.css
+0 7 0 4908 0 0 0 0
+/admin/people
+0 11 0 86797 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.widget.js
+0 14 0 69473 0 0 0 0
+/views/ajax
+0 17 0 331983 1 0 0 0
+/js/admin_menu/cache/dfc723030b5869f2354ff08d320505d7
+0 2 0 39155 0 1 0 0
+/admin/structure/views/view/schede_personali/edit/page_4
+0 2 0 18550 0 0 0 0
+/calendario-eventi/giorno
+0 7 0 62904 5 4 0 0
+/sites/default/files/styles/media_thumbnail/public/old-young-holding-hands.jpg
+1 9 0 16609 0 0 0 0
+/sites/all/modules/gmap/markers/blue.png
+1 7 0 27244 0 0 0 0
+/taxonomy/term/12/edit
+0 1 0 7641 0 0 0 0
+/aree-tematiche/patrimonio
+0 2 0 40350 0 0 0 0
+/sites/default/files/styles/slideshow/public/house.jpg
+1 14 0 767813 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_10.jpg
+1 4 0 6135 0 0 0 0
+/js/admin_menu/cache/68ba2cbb0eb8471e0a7cd073c2568d9b
+0 1 0 19751 0 0 0 0
+/admin/config/development/logging
+0 2 0 9871 1 0 0 0
+/sites/all/modules/plupload/plupload.js
+0 3 0 6596 0 0 0 0
+/sites/default/files/styles/slideshow/public/imagefield_fbsuXT.jpeg
+0 1 0 12580 0 0 0 0
+/sites/all/modules/date/date_views/css/date_views.css
+0 54 0 59773 0 0 0 0
+/node/262/delete
+0 1 0 4473 0 0 0 0
+/media/ajax/field_allegati/und/form--dJIOhvsRRQ_vuUuSlHtjLRlwdW7odXwK-Cp64dWF8I
+0 1 0 17081 0 0 0 0
+/sites/all/modules/location/location_autocomplete.js
+0 4 0 3938 0 0 0 0
+/eventi/valetudo
+0 3 0 37849 1 0 0 0
+/themes/bartik/screenshot.png
+1 1 0 19944 0 0 0 0
+/js/admin_menu/cache/c1a246a5907034f4b9e989ce0cabb6c6
+0 2 0 39067 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/js/adminimal_admin_menu.js
+0 62 0 69440 0 0 0 0
+/admin/structure/types/manage/evento
+0 3 0 28167 0 0 0 0
+/sites/all/modules/jquery_update/replace/misc/1.9/jquery.ba-bbq.js
+0 8 0 108922 0 0 0 0
+/admin/structure/views/ajax/display/calendario/page/row_options
+0 1 0 21690 0 0 0 0
+/sites/all/modules/ctools/js/modal.js
+0 8 0 55888 0 0 0 0
+/admin/structure/types/manage/articolo/fields/field_teaser_image
+0 1 0 7934 0 0 0 0
+/node/284/webform/emails/new
+0 1 0 6443 1 0 0 0
+/sites/all/modules/webform/css/webform.css
+0 6 0 5161 0 0 0 0
+/sites/all/modules/views/js/views-admin.js
+0 12 0 132110 0 0 0 0
+/js/admin_menu/cache/9bfb608b9d93e9fc59fe77a9236e4e9a
+0 1 0 19701 0 0 0 0
+/admin/structure/block/manage/menu_block/7/configure
+0 1 0 116897 0 0 0 0
+/sites/default/files/wg_blurred_backgrounds_8.jpg
+1 29 0 5819927 0 0 0 0
+/admin/structure/taxonomy/aree_tematiche
+0 25 0 170419 0 1 0 0
+/admin/structure/block/manage/block/16/configure
+0 3 0 354408 1 0 0 0
+/admin/structure/types/manage/comune-informa
+0 1 0 9354 0 0 0 0
+/sites/all/modules/ckeditor/includes/ckeditor.utils.js
+0 14 0 51661 0 0 0 0
+/ambiente-ed-ecologia
+0 2 0 18109 0 0 0 0
+/admin/reports/updates
+0 2 0 16706 0 0 0 0
+/admin/structure/block/manage/taxonomy_menu_block/1/configure
+0 2 0 228169 0 0 0 0
+/sites/all/libraries/plupload/js/plupload.full.js
+0 3 0 55311 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_PgmHTP.png
+1 1 0 66677 0 0 0 0
+/servizi-demografici
+0 1 0 8870 0 0 0 0
+/sites/default/themes/agid/css/main.css
+0 141 0 6201697 0 0 0 0
+/sites/all/modules/calendar/js/calendar_colorpicker.js
+0 1 0 764 0 0 0 0
+/node/add/articolo
+0 13 0 168817 0 0 0 0
+/amministrazione/giunta-comunale
+0 2 0 17514 0 0 0 0
+/modules/book/book.css
+0 23 0 17676 0 0 0 0
+/node/add/comune-informa
+0 2 0 19769 0 0 0 0
+/sites/default/files/styles/large/public/foto_placeholder_2500x1000_0.jpg
+1 1 0 12667 0 0 0 0
+/scheda-personale/autem-singularis
+0 8 0 78876 5 7 0 0
+/js/admin_menu/cache/41811b5bd882abc63758c20ab1ad7a14
+0 3 0 59038 0 1 0 0
+/taxonomy/term/10/edit
+0 1 0 7619 0 0 0 0
+/admin/structure/types/manage/galleria_immagini
+0 2 0 18841 0 0 0 0
+/sites/all/modules/gmap/js/poly.js
+0 10 0 11222 0 0 0 0
+/node
+0 7 0 200552 1 0 0 0
+/admin/structure/views/view/news/edit
+0 6 0 114254 0 0 0 0
+/admin/structure/views/view/banner_homepage/preview/block/ajax
+0 4 0 47831 0 0 0 0
+/admin/structure/views/ajax/display/banner_homepage/block/style_options
+0 5 0 187906 0 0 0 0
+/sites/all/modules/linkit/editors/ckeditor/icons/linkit.png
+1 8 0 5933 0 0 0 0
+/admin/structure/block/add-taxonomy-menu-block
+0 2 0 15408 0 0 0 0
+/js/admin_menu/cache/0d53eff6acdb8e79f41c00bd43181734
+0 1 0 19744 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_i6hzWT.jpg
+1 1 0 1891 0 0 0 0
+/modules/file/file.js
+0 4 0 10107 0 0 0 0
+/admin/structure/file-types/manage/document/fields/field_descrizione/field-settings
+0 1 0 5007 0 0 0 0
+/sites/all/modules/views/js/base.js
+0 68 0 105745 0 0 0 0
+/sites/default/files/styles/large/public/wg_blurred_backgrounds_13.jpg
+1 29 0 313259 0 0 0 0
+/calendario-eventi/giorno/2019-03-06
+0 2 0 17538 0 0 0 0
+/modules/image/sample.png
+1 1 0 168398 0 0 0 0
+/sites/all/themes/bootstrap/js/modules/views/js/ajax_view.js
+0 55 0 33671 0 0 0 0
+/js/admin_menu/cache/25a81910b6467750ed462209f67cb571
+0 3 0 58586 0 0 0 0
+/node/220/revisions
+0 2 0 9503 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/2018-05/sample-1.jpg
+1 7 0 11228 0 0 0 0
+/misc/arrow-desc.png
+1 2 0 801 0 0 0 0
+/sites/default/files/styles/slideshow/public/futbol.jpg
+1 5 0 234364 0 0 0 0
+/sites/all/modules/module_filter/js/update_status.js
+0 2 0 2691 0 0 0 0
+/modules/file/icons/application-pdf.png
+1 2 0 1258 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_jlnvzQ.jpeg
+0 1 0 2059 0 0 0 0
+/area-tematica/comunicare-lamministrazione
+0 12 0 119612 1 2 0 0
+/node/284/webform/conditionals
+0 3 0 16127 1 1 0 0
+/sites/all/libraries/imagesloaded/imagesloaded.pkgd.min.js
+0 2 0 4231 0 0 0 0
+/admin/structure/types/manage/struttura-organizzativa/fields/field_area_tematica/widget-type
+0 2 0 10249 0 0 0 0
+/misc/tableheader.js
+0 40 0 87925 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.draggable.js
+0 10 0 80141 0 0 0 0
+/admin/structure/views/view/aree/edit/block_1
+0 5 0 46571 0 0 0 0
+/sites/default/files/styles/slideshow/public/wg_blurred_backgrounds_4.jpg
+1 2 0 29432 0 0 0 0
+/themes/seven/images/task-item.png
+1 2 0 774 0 0 0 0
+/sites/all/modules/date/date_api/date_year_range.js
+0 2 0 4772 0 0 0 0
+/js/admin_menu/cache/8a8ef458a3f9dafa474267fcebabf082
+0 1 0 19668 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_Sxwcxa.png
+1 1 0 15424 0 0 0 0
+/sites/all/modules/linkit/editors/ckeditor/plugin.js
+0 10 0 25510 0 0 0 0
+/sites/default/themes/agid/js/scripts-min.js
+0 128 0 23717751 0 0 0 0
+/users/admin
+0 22 0 581190 3 3 0 0
+/node/add/struttura-organizzativa
+0 2 0 25669 0 0 0 0
+/admin/structure/file-types/manage/document/fields/field_descrizione
+0 1 0 6491 0 0 0 0
+/js/admin_menu/cache/a459f2baf37aa271b6ba48257b200d83
+0 1 0 19695 0 0 0 0
+/sites/default/files/styles/slideshow/public/imagefield_IhAMN8.gif
+1 1 0 68049 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/negociacion.jpg
+1 9 0 20552 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/ztl-2.jpg
+1 9 0 23526 0 0 0 0
+/sites/all/modules/media/js/media.core.js
+0 9 0 5142 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_8fTxP6.gif
+1 2 0 74596 0 0 0 0
+/taxonomy/term/16/edit
+0 1 0 7670 0 0 0 0
+/area-tematica/servizi-cimiteriali
+0 10 0 96745 4 5 0 0
+/modules/block/block.js
+0 8 0 18972 0 0 0 0
+/misc/batch.js
+0 25 0 20105 0 0 0 0
+/admin/structure/types/manage/scheda_personale
+0 2 0 18890 1 0 0 0
+/misc/jquery.cookie.js
+0 23 0 20776 0 0 0 0
+/sites/all/modules/views/images/loading-small.gif
+1 5 0 11983 0 0 0 0
+/sites/default/themes/agid/js/search.js
+0 128 0 80083 0 0 0 0
+/js/admin_menu/cache/3dcd7bcd6d2c52648ccfac22d2afed9f
+0 1 0 19330 0 0 0 0
+/node/add/pagina
+0 6 0 84047 2 0 0 0
+/servizi-sociali
+0 1 0 9291 0 0 0 0
+/js/admin_menu/cache/3f2b811836a59969b204376fb37922e7
+0 6 0 116125 0 0 0 0
+/sites/all/themes/adminimal_theme/screenshot.png
+1 1 0 31064 0 0 0 0
+/node/132/edit
+0 1 0 19298 0 0 0 0
+/admin/structure/block/manage/views/news-articles/configure
+0 1 0 114884 0 0 0 0
+/admin/structure/views/view/banner_homepage/edit/block
+0 5 0 46001 0 0 0 0
+/sites/default/files/js/gmap_markers.js
+0 13 0 23895 0 0 0 0
+/node/274/edit
+0 2 0 30192 1 0 0 0
+/misc/draggable.png
+1 7 0 2742 0 0 0 0
+/modules/contextual/contextual.js
+0 38 0 36979 0 0 0 0
+/admin/structure/types/manage/evento/fields/field_area_tematica/field-settings
+0 1 0 5319 0 0 0 0
+/sites/all/modules/views/js/views-contextual.js
+0 9 0 5863 0 0 0 0
+/admin/structure/views/view/calendario/edit
+0 6 0 112448 0 0 0 0
+/sites/all/modules/admin_views/admin_views.css
+0 9 0 4680 0 0 0 0
+/node/220/edit
+0 13 0 196457 3 2 0 0
+/admin/modules/install
+0 5 0 23175 0 0 0 0
+/sites/default/files/styles/medium/public/ztl-2.jpg
+1 27 0 415816 0 0 0 0
+/themes/seven/vertical-tabs.css
+0 16 0 18280 0 0 0 0
+/sites/all/modules/calendar/js/calendar_overlap.js
+0 11 0 13109 0 0 0 0
+/sites/all/modules/date/date_api/date.css
+0 118 0 179105 0 0 0 0
+/admin/config/user-interface/jammer
+0 3 0 16857 0 0 0 0
+/favicon.ico
+0 4 0 30632 0 0 0 0
+/admin/people/permissions
+0 16 0 923274 4 1 0 0
+/sites/all/modules/menu_block/menu-block.js
+0 2 0 1958 0 0 0 0
+/sites/default/files/styles/small/public/wg_blurred_backgrounds_20.jpg
+1 2 0 4141 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_Sxwcxa.png
+1 3 0 27897 0 0 0 0
+/sites/default/themes/agid/fonts/governo.eot
+0 43 0 340947 0 0 0 0
+/sites/all/modules/jquery_update/replace/misc/jquery.form.js
+0 49 0 417867 0 0 0 0
+/modules/search/search.css
+0 23 0 13026 0 0 0 0
+/sites/all/modules/webform/js/webform.js
+0 5 0 31228 0 0 0 0
+/sites/all/modules/views/css/views-admin.seven.css
+0 22 0 60766 0 0 0 0
+/segreteria-generale
+0 1 0 9028 0 0 0 0
+/sites/all/modules/token/jquery.treeTable.js
+0 7 0 17687 0 0 0 0
+/aree-tematiche/servizi-demografici
+0 2 0 40235 0 0 0 0
+/sites/default/files/styles/banner/public/imagefield_q7ozls.jpeg
+0 29 0 73939 0 0 0 0
+/authorize.php
+0 19 0 21986 1 0 0 0
+/admin/config/media/image-styles/edit/medium/add/image_scale_and_crop
+0 1 0 5162 0 0 0 0
+/file/523/edit
+0 2 0 11200 0 0 0 0
+/area-tematica/segreteria-generale
+0 6 0 58323 3 1 0 0
+/modules/system/system.maintenance.css
+0 10 0 7374 0 0 0 0
+/calendario-eventi/mese
+0 20 0 219399 9 9 0 0
+/admin/structure/views/ajax/config-item/news/events/field/field_image
+0 2 0 110229 0 0 0 0
+/misc/throbber-inactive.png
+1 8 0 3976 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_zrvXSX.png
+1 3 0 7307 0 0 0 0
+/sites/all/modules/media/js/util/json2.js
+0 8 0 45825 0 0 0 0
+/area-tematica/certificati-e-documenti
+0 5 0 49484 11 9 0 0
+/js/admin_menu/cache/542171e2fcb4d7ace3d40c940e94b697
+0 1 0 19682 0 0 0 0
+/calendario-eventi/giorno/2018-05-01
+0 4 0 36246 4 2 0 0
+/sites/all/libraries/fontawesome/css/font-awesome.css
+0 118 0 867884 0 0 0 0
+/admin/structure/types/manage/banner
+0 3 0 28066 1 0 0 0
+/admin/appearance
+0 1 0 6021 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_4.jpg
+1 5 0 8783 0 0 0 0
+/admin/structure/views/view/news/edit/events
+0 2 0 19182 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/images/home.svg
+0 23 0 20080 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_ZMEV4z.jpeg
+0 29 0 306934 0 0 0 0
+/themes/seven/images/list-item.png
+1 4 0 1908 0 0 0 0
+/modules/user/user.permissions.js
+0 10 0 14886 0 0 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_20.jpg
+1 5 0 31573 0 0 0 0
+/admin/people/permissions/5
+0 1 0 20825 0 0 0 0
+/ambiente/raccolta-dei-rifiuti/isole-ecologiche
+0 5 0 46425 4 4 0 0
+/file/525/edit
+0 1 0 6103 0 0 0 0
+/modules/menu/menu.css
+0 6 0 2570 0 0 0 0
+/node/269/edit
+0 2 0 30410 1 0 0 0
+/area-tematica/tempo-libero-sport-cultura
+0 8 0 78662 3 3 0 0
+/modules/system/system.messages.css
+0 25 0 17921 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.button.js
+0 10 0 34304 0 0 0 0
+/modules/system/system.admin.css
+0 50 0 84873 0 0 0 0
+/sites/all/modules/module_filter/js/module_filter_tab.js
+0 15 0 69721 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.accordion.js
+0 8 0 35776 0 0 0 0
+/misc/farbtastic/farbtastic.css
+0 1 0 584 0 0 0 0
+/misc/machine-name.js
+0 7 0 13661 0 0 0 0
+/misc/menu-collapsed.png
+1 10 0 3243 0 0 0 0
+/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.woff2
+0 47 0 3009071 0 0 0 0
+/js/admin_menu/cache/ae02e6cd58f87f1f4e5a6995fa155a23
+0 4 0 78049 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_2.jpg
+1 4 0 7195 0 0 0 0
+/admin/structure/block/manage/views/calendario-block_1/configure
+0 2 0 225436 0 0 0 0
+/node/add/galleria-immagini
+0 2 0 21904 0 0 0 0
+/calendario-eventi/anno
+0 6 0 81755 3 3 0 0
+/sites/default/themes/agid/fonts/governo.woff
+0 62 0 301405 0 0 0 0
+/sites/all/modules/ckeditor/ckeditor.config.js
+0 10 0 19872 0 0 0 0
+/area-tematica/servizi-scolastici-linfanzia
+0 10 0 97137 3 4 0 0
+/sites/default/files/styles/large/public/imagefield_Q7oZLs.jpeg
+0 29 0 254104 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/images/menu-arrows.svg
+0 21 0 16644 0 0 0 0
+/admin/structure/views/view/calendario/edit/block_1
+0 1 0 9225 0 0 0 0
+/admin/structure/types/manage/pagina/fields
+0 3 0 41708 0 0 0 0
+/misc/tabledrag.js
+0 23 0 265357 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_wgX1Lq.png
+1 1 0 7560 0 0 0 0
+/eventi/abluo-metuo-odio-patria-utinam-velit
+0 5 0 70645 4 4 0 0
+/js/admin_menu/cache/adc85627456c66ff698a339a02f4ac6e
+0 1 0 19551 0 0 0 0
+/js/admin_menu/cache/52807134753f886e7ac0277dcf26dfab
+0 2 0 39149 0 0 0 0
+/misc/configure.png
+1 7 0 2654 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_vJD2lr.png
+1 2 0 14022 0 0 0 0
+/sites/all/modules/ctools/css/modal.css
+0 9 0 9778 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.datepicker.css
+0 9 0 11450 0 0 0 0
+/sites/default/files/styles/slideshow/public/manutenzione.jpg
+1 6 0 448107 0 0 0 0
+/admin/structure/views/ajax/display/calendario/page_2/menu
+0 1 0 8703 0 0 0 0
+/node/284/edit
+0 1 0 9659 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_F8gSWa.jpeg
+0 2 0 26960 0 0 0 0
+/eventi/elit-enim-premo-proprius-singularis-te
+0 3 0 39849 1 1 0 0
+/sites/all/modules/views_bootstrap/js/views-bootstrap-carousel.js
+0 3 0 1716 0 0 0 0
+/sites/all/modules/views/js/views-list.js
+0 10 0 6875 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_ZMEV4z.jpeg
+0 2 0 4343 0 0 0 0
+/js/admin_menu/cache/c304c0333676ea99b573f8c8cd0f6fab
+0 1 0 19743 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_q2D0Ij.jpg
+1 29 0 274413 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_wgX1Lq.png
+1 4 0 9995 0 0 0 0
+/admin/structure/types/manage/feed-item
+0 1 0 9398 0 0 0 0
+/misc/message-16-error.png
+1 1 0 802 0 0 0 0
+/area-tematica/polizia-locale
+0 8 0 78797 2 3 0 0
+/modules/contextual/images/gear-select.png
+1 28 0 19043 0 0 0 0
+/tributi
+0 1 0 8912 0 1 0 0
+/sites/all/modules/views_bulk_operations/js/views_bulk_operations.js
+0 14 0 27606 0 0 0 0
+/evento/humo-velit
+0 11 0 130686 2 3 0 0
+/sites/default/files/styles/slideshow/public/medio-ambiente-960x430-1.jpg
+1 12 0 697039 0 0 0 0
+/image_captcha
+0 40 0 115860 0 0 0 0
+/misc/grippie.png
+1 14 0 4383 0 0 0 0
+/admin/structure/views
+0 16 0 153269 0 0 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_8.jpg
+1 5 0 31587 0 0 0 0
+/js/admin_menu/cache/9771abcba9280cef845eb8d136ce587a
+0 9 0 173494 0 0 0 0
+/admin/modules
+0 24 0 705819 0 1 0 0
+/js/admin_menu/cache/7eaa7e83bbae7d113b4a2fb516e6c795
+0 3 0 58978 0 1 0 0
+/admin/structure/menu/manage/main-menu/list
+0 1 0 11016 0 0 0 0
+/sites/default/files/styles/slideshow/public/maxresdefault.jpg
+1 6 0 406352 0 0 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_2.jpg
+1 5 0 34728 0 0 0 0
+/js/admin_menu/cache/55f3766858387ca79e1633da1d692e33
+0 3 0 3340 0 0 0 0
+/area-tematica/tributi
+0 9 0 85635 4 1 0 0
+/admin/structure/views/view/archivio_documenti/edit
+0 2 0 38085 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_vTDF4O.png
+1 3 0 323554 0 0 0 0
+/js/admin_menu/cache/4e8cb30e32e11626f1a211816bea7194
+0 1 0 19664 0 0 0 0
+/js/admin_menu/cache/4a84bdbe1223852d9359ae3e0a918429
+0 1 0 19738 0 0 0 0
+/themes/garland/screenshot.png
+1 1 0 11236 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_q7ozls.jpeg
+0 5 0 7949 0 0 0 0
+/misc/progress.js
+0 15 0 23265 0 0 0 0
+/sites/all/modules/ctools/js/collapsible-div.js
+0 11 0 30581 0 0 0 0
+/user/241/edit
+0 3 0 24399 0 0 0 0
+/node/153/delete
+0 1 0 4692 0 0 0 0
+/sites/default/files/styles/medium/public/alnwick-cemetery.jpg
+1 27 0 642066 0 0 0 0
+/js/admin_menu/cache/34ce6f95a52d21a3865efc8fa8e3ab75
+0 2 0 39059 0 0 0 0
+/modules/menu/menu.admin.js
+0 3 0 2989 0 0 0 0
+/modules/node/node.js
+0 11 0 10538 0 0 0 0
+/sites/all/modules/module_filter/css/update_status.css
+0 2 0 1068 0 0 0 0
+/modules/update/update.css
+0 2 0 1994 0 0 0 0
+/node/261/delete
+0 1 0 4473 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_o1zBbp.png
+1 30 0 4055095 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.tabs.css
+0 12 0 11165 0 0 0 0
+/admin/structure/types/manage/pagina/fields/field_image
+0 1 0 7950 0 0 0 0
+/area-tematica/casa
+0 2 0 20132 0 0 0 0
+/admin/structure/taxonomy/organo_istituzionale
+0 1 0 5525 0 0 0 0
+/sites/default/files/styles/medium/public/imagefield_Sxwcxa.png
+1 10 0 579179 0 0 0 0
+/admin/structure/types/manage/scheda-personale
+0 1 0 9407 0 1 0 0
+/taxonomy/term/9/edit
+0 1 0 7602 0 1 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.position.js
+0 10 0 44120 0 0 0 0
+/admin/structure/feeds/eventi/mapping
+0 1 0 8293 0 0 0 0
+/misc/farbtastic/farbtastic.js
+0 1 0 1938 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_YUkZTP.gif
+1 2 0 87324 0 0 0 0
+/misc/jquery.once.js
+0 137 0 192341 0 0 0 0
+/admin/structure/types/manage/articolo/fields
+0 10 0 143425 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_zrvXSX.png
+1 1 0 7936 0 0 0 0
+/aree-tematiche/ambiente-ed-ecologia
+0 2 0 40563 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/film_archive_storage_-_br-byen_6498610179.jpg
+1 9 0 26598 0 0 0 0
+/area-tematica/permessi-ztl-invalidi
+0 10 0 97094 2 3 0 0
+/themes/seven/images/ui-icons-888888-256x240.png
+1 5 0 16125 0 0 0 0
+/misc/message-24-warning.png
+1 8 0 5718 0 0 0 0
+/sites/default/files/styles/slideshow/public/ztl-2.jpg
+1 6 0 243184 0 0 0 0
+/js/admin_menu/cache/b36e62e95807f5c0555c28872057a1b9
+0 2 0 39457 0 0 0 0
+/admin/structure/types/manage/articolo/display
+0 3 0 34115 0 0 0 0
+/sites/all/modules/module_filter/js/modules.js
+0 15 0 25981 0 0 0 0
+/sites/all/modules/taxonomy_menu_block/taxonomy_menu_block_admin.css
+0 4 0 1717 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_ZOQfc8.gif
+1 3 0 137616 0 0 0 0
+/themes/seven/images/add.png
+1 7 0 2038 0 0 0 0
+/admin/structure/feeds
+0 1 0 5049 0 0 0 0
+/sites/all/modules/masonry_views/css/masonry_views.css
+0 1 0 458 0 0 0 0
+/node/add
+0 4 0 18356 0 1 0 0
+/sites/all/modules/masonry/masonry.js
+0 2 0 1907 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.button.css
+0 15 0 17367 0 0 0 0
+/sites/all/modules/plupload/images/transp50.png
+1 3 0 2046 0 0 0 0
+/misc/watchdog-ok.png
+1 2 0 1316 0 0 0 0
+/calendario-eventi/giorno/2018-05-16
+0 3 0 27299 1 1 0 0
+/themes/seven/jquery.ui.theme.css
+0 17 0 50810 0 0 0 0
+/area-tematica/ambiente-ed-ecologia
+0 17 0 170733 3 5 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_8.jpg
+1 5 0 8210 0 0 0 0
+/node/add/feed
+0 1 0 8902 0 0 0 0
+/admin/structure/types/manage/webform
+0 1 0 9391 0 0 0 0
+/node/add/webform
+0 2 0 18886 0 0 0 0
+/servizi-cimiteriali
+0 1 0 9003 0 0 0 0
+/sites/default/themes/agid/logo.svg
+0 33 0 31781 0 0 0 0
+/file/add
+0 2 0 9240 0 0 0 0
+/themes/seven/images/arrow-asc.png
+1 5 0 1463 0 0 0 0
+/admin/structure/menu/manage/main-menu
+0 6 0 98016 0 0 0 0
+/system/ajax
+0 10 0 416852 0 1 0 0
+/admin/config/system/eu-cookie-compliance
+0 2 0 22370 0 0 0 0
+/amministrazione/statuto-comunale
+0 10 0 85716 5 4 0 0
+/sites/default/files/styles/slideshow/public/old-young-holding-hands.jpg
+1 6 0 204714 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/275435_l_srgb_s_gl.jpg
+1 9 0 18984 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_rWzp8X.jpeg
+0 1 0 2069 0 0 0 0
+/modules/system/system.theme.css
+0 25 0 38896 0 0 0 0
+/admin/structure/views/view/calendario/edit/page_1
+0 1 0 9263 0 0 0 0
+/sites/all/modules/date/date_popup/date_popup.js
+0 9 0 9504 0 0 0 0
+/sites/all/modules/views/js/ajax.js
+0 12 0 36266 0 0 0 0
+/vivere-comune
+0 18 0 141696 11 6 0 0
+/sites/default/files/styles/medium/public/imagefield_vTDF4O.png
+1 22 0 1139428 0 0 0 0
+/modules/file/icons/image-x-generic.png
+1 1 0 668 0 0 0 0
+/aree-tematiche/servizi-sociali
+0 2 0 41053 0 0 0 0
+/sites/all/modules/views/images/sprites.png
+1 8 0 10842 0 0 0 0
+/js/admin_menu/cache/f73107f7b49653e724566f54f50fcff9
+0 1 0 19529 0 0 0 0
+/sites/default/files/styles/photo/public/wg_blurred_backgrounds_20.jpg
+1 3 0 14085 0 0 0 0
+/sites/default/files/styles/medium/public/class5.jpg
+1 27 0 410168 0 0 0 0
+/js/admin_menu/cache/39c2fc1f551dccc0ab1f602ed3e0662e
+0 1 0 19361 0 0 0 0
+/admin/people/create
+0 2 0 14805 0 1 0 0
+/taxonomy/term/22/edit
+0 1 0 7717 0 0 0 0
+/node/284/webform/configure
+0 1 0 10200 0 0 0 0
+/sites/all/modules/module_filter/images/collapsed.png
+1 8 0 2887 0 0 0 0
+/misc/throbber-active.gif
+1 7 0 9286 0 0 0 0
+/sites/all/modules/plupload/images/backgrounds.gif
+1 2 0 6524 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.core.js
+0 14 0 47647 0 0 0 0
+/admin/structure/menu/manage/menu-sezioni-principali
+0 3 0 37672 0 1 0 0
+/js/admin_menu/cache/0b738c966500aef88c6fe500697cca51
+0 7 0 137943 0 1 0 0
+/sites/all/modules/jquery_update/js/jquery_update.js
+0 50 0 26538 0 0 0 0
+/sites/default/files/styles/medium/public/imagefield_F8gSWa.jpeg
+0 22 0 102607 0 0 0 0
+/servizi-scolastici-linfanzia
+0 1 0 9103 0 0 0 0
+/user
+0 61 0 495287 10 6 0 0
+/sites/default/themes/agid/js/custom.js
+0 127 0 170287 0 0 0 0
+/themes/seven/style.css
+0 25 0 123925 0 0 0 0
+/misc/jquery.js
+0 4 0 109708 0 0 0 0
+/taxonomy/term/11/edit
+0 1 0 7626 0 0 0 0
+/admin/structure/types/manage/articolo/fields/field_area_tematica/widget-type
+0 2 0 10202 0 0 0 0
+/taxonomy/term/17/edit
+0 1 0 7678 0 0 0 0
+/sites/all/libraries/magnific-popup/dist/jquery.magnific-popup.min.js
+0 124 0 952763 0 0 0 0
+/sites/all/modules/plupload/images/done.gif
+1 2 0 2616 0 0 0 0
+/news/abdo-commodo-euismod-iriure-pagus-probo-tum-utinam
+0 3 0 29635 0 0 0 0
+/js/admin_menu/cache/4776f09416c011ab5a1a9e7b045eff0d
+0 1 0 19561 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/images/shortcut.png
+1 23 0 17768 0 0 0 0
+/js/admin_menu/cache/992f485009e70de8520ee3d110310a4f
+0 1 0 19670 0 0 0 0
+/settore-comunale-uffici/settore-comunale-due
+0 10 0 97970 4 3 0 0
+/user/1/edit
+0 1 0 8240 0 0 0 0
+/sites/all/modules/token/arrow-right.png
+1 2 0 819 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_66HsCt.gif
+1 1 0 5052 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.accordion.css
+0 9 0 6504 0 0 0 0
+/area-tematica/lavori-pubblici-mobilita-urbana
+0 11 0 108275 5 3 0 0
+/sites/all/modules/media/js/plugins/media.views.js
+0 4 0 11047 0 0 0 0
+/sites/all/modules/date/date_popup/themes/datepicker.1.7.css
+0 116 0 142407 0 0 0 0
+/js/admin_menu/cache/6b45352cd8f3340b41048819c39eb6d7
+0 3 0 58033 0 0 0 0
+/sites/default/files/styles/medium/public/imagefield_8fTxP6.gif
+1 21 0 229906 0 0 0 0
+/admin/structure/types/manage/struttura-organizzativa/fields
+0 1 0 12963 0 0 0 0
+/admin/structure/types/manage/pagina/fields/field_teaser_image
+0 1 0 7941 0 0 0 0
+/sites/default/files/styles/medium/public/manutenzione.jpg
+1 27 0 598224 0 0 0 0
+/modules/node/node.css
+0 117 0 50178 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.core.css
+0 20 0 19865 0 0 0 0
+/node/260/edit
+0 1 0 14803 0 0 0 0
+/admin/config
+0 2 0 13498 0 0 0 0
+/media/ajax/field_image/und/form-yZ7y72TngaFld0IJVUre7NIM469c_EBsXsSecoupsNk
+0 3 0 49681 0 0 0 0
+/import
+0 1 0 4100 0 0 0 0
+/sites/all/themes/bootstrap/js/misc/_progress.js
+0 45 0 75657 0 0 0 0
+/admin/structure/menu
+0 2 0 9591 1 0 0 0
+/sites/all/modules/views/css/views-admin.ctools.css
+0 22 0 30639 0 0 0 0
+/node/278/edit
+0 3 0 45650 1 0 0 0
+/sites/all/modules/field_group/field_group.js
+0 43 0 102979 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_ZMEV4z.jpeg
+0 5 0 9579 0 0 0 0
+/admin/structure/views/view/calendario/edit/block_2
+0 1 0 9234 0 0 0 0
+/sites/all/modules/field_group/field_group.field_ui.css
+0 4 0 1951 0 0 0 0
+/sites/all/modules/captcha/captcha.js
+0 14 0 12924 0 0 0 0
+/js/admin_menu/cache/e9b8c4a3eb1a9982f022dc48c1a61fe8
+0 8 0 156114 1 2 0 0
+/admin/structure/types/manage/articolo/fields/field_area_tematica
+0 2 0 12646 0 0 0 0
+/sites/all/modules/module_filter/css/modules.css
+0 16 0 12100 0 0 0 0
+/modules/shortcut/shortcut.css
+0 27 0 26517 0 0 0 0
+/modules/file/icons/text-plain.png
+1 4 0 2008 0 0 0 0
+/node/170/edit
+0 1 0 15622 0 0 0 0
+/misc/help.png
+1 7 0 2049 0 0 0 0
+/themes/seven/logo.png
+1 2 0 8378 0 0 0 0
+/sites/default/files/styles/medium/public/modules/image/sample.png
+1 3 0 449499 0 0 0 0
+/tempo-libero-sport-cultura
+0 1 0 9333 0 0 0 0
+/sites/all/modules/linkit/editors/ckeditor/linkitDialog.js
+0 10 0 9731 0 0 0 0
+/admin/structure/views/import
+0 18 0 90313 3 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_rs0b9u.gif
+1 3 0 6986 0 0 0 0
+/sites/default/themes/agid/screenshot.png
+1 1 0 19779 0 0 0 0
+/calendario-eventi/giorno/2018-05-21
+0 1 0 9521 0 0 0 0
+/sites/default/files/styles/medium/public/polizia-locale.jpg
+1 27 0 402041 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/images/menu.svg
+0 11 0 10788 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/external/jquery.cookie.js
+0 137 0 230292 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_16.jpg
+1 5 0 8863 0 0 0 0
+/sites/all/modules/module_filter/css/module_filter.css
+0 20 0 11146 0 0 0 0
+/js/admin_menu/cache/c65568f1bc700bad32d3e6043f595399
+0 1 0 19575 0 1 0 0
+/admin/structure/types/manage/struttura-organizzativa/fields/field_area_tematica
+0 1 0 6343 0 0 0 0
+/taxonomy/term/21/edit
+0 1 0 7702 0 0 0 0
+/sites/all/modules/plupload/images/add.png
+1 3 0 1326 0 0 0 0
+/sites/all/modules/calendar/css/calendar_multiday.css
+0 128 0 504610 0 0 0 0
+/articolo/cms-piccoli-comuni-pa-locali
+0 26 0 297557 6 7 0 0
+/js/admin_menu/cache/e6d728b695cf470e6cc48e89654e0bce
+0 18 0 20018 0 1 0 0
+/sites/all/modules/adminimal_admin_menu/images/house.svg
+0 21 0 16510 0 0 0 0
+/media/ajax/field_allegati/und/form-v17FF95a9vblhF92-zDxW9UlzoOjh7i3StLvMp9LDgQ
+0 1 0 12303 0 0 0 0
+/users/operatore
+0 25 0 222785 3 5 0 0
+/misc/message-24-ok.png
+1 11 0 10112 0 0 0 0
+/misc/permissions.png
+1 8 0 3846 0 0 0 0
+/sites/all/modules/plupload/js/i18n.js
+0 3 0 2758 0 0 0 0
+/node/156/edit
+0 1 0 14781 0 0 0 0
+/amministrazione/staff-del-sindaco
+0 7 0 53202 3 4 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/images/ui-bg_flat_75_ffffff_40x100.png
+1 4 0 1841 0 0 0 0
+/denunce/alloggi-erp-housing-sociale
+0 13 0 136234 0 0 0 0
+/admin/structure/views/ajax/config-item/aree/block_1/filter/status_1
+0 1 0 46271 0 0 0 0
+/sites/all/modules/views/css/views-admin.theme.css
+0 22 0 115471 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/class5.jpg
+1 9 0 24495 0 0 0 0
+/sites/all/modules/plupload/plupload.css
+0 3 0 4137 0 0 0 0
+/sites/default/files/styles/medium/public/275435_l_srgb_s_gl.jpg
+1 27 0 240289 0 0 0 0
+/sites/default/files/styles/small/public/wg_blurred_backgrounds_4.jpg
+1 1 0 2261 0 0 0 0
+/node/283/edit
+0 4 0 52460 2 0 0 0
+/admin/structure/views/view/schede_personali/preview/page_4/ajax
+0 2 0 22990 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_nd4UeC.gif
+1 2 0 107972 0 0 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_18.jpg
+1 6 0 34665 0 0 0 0
+/admin/structure/views/ajax/config-item/aree/block_1/filter/status
+0 1 0 48550 0 0 0 0
+/node/280/edit
+0 1 0 17257 1 0 0 0
+/sites/default/files/styles/photo/public/schede-personali/imagefield_yRKMiZ.png
+1 1 0 83301 0 0 0 0
+/admin/structure/block/manage/views/elenco_settori_comunali-block_1/configure
+0 2 0 225382 0 0 0 0
+/sites/default/themes/agid/bootstrap/assets/javascripts/bootstrap.min.js
+0 126 0 1281486 0 0 0 0
+/sites/default/themes/agid/css/spid-button.min.css
+0 104 0 95592 0 0 0 0
+/themes/stark/screenshot.png
+1 1 0 11949 0 0 0 0
+/node/284/webform/components
+0 2 0 10398 3 0 0 0
+/sites/all/modules/webform/css/webform-admin.css
+0 9 0 14424 0 0 0 0
+/admin/structure/block/manage/block/15/configure
+0 3 0 354990 0 1 0 0
+/admin/structure/views/ajax/config-item/schede_personali/page_3/filter/field_organi_di_governo_tid
+0 4 0 109634 0 0 0 0
+/admin/structure/views/ajax/display/calendario/page_1/tab_options
+0 1 0 7898 0 0 0 0
+/sites/all/modules/module_filter/images/expanded.png
+1 1 0 389 0 0 0 0
+/sites/all/modules/admin_menu/admin_menu.css
+0 38 0 70798 0 0 0 0
+/aree-tematiche/tributi
+0 2 0 39850 0 1 0 0
+/sites/default/files/styles/media_thumbnail/public/ritaglio_laptop1280.jpg
+1 13 0 48946 0 0 0 0
+/admin/structure/types/manage/struttura_organizzativa/display
+0 2 0 21599 0 1 0 0
+/sites/all/modules/gmap/js/highlight.js
+0 10 0 36434 0 0 0 0
+/admin/structure/types/manage/evento/fields
+0 4 0 56624 2 0 0 0
+/misc/menu-expanded.png
+1 10 0 3250 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/schede-personali/imagefield_X9d40B.jpg
+1 2 0 3240 0 0 0 0
+/sites/all/modules/module_filter/js/permissions.js
+0 10 0 10486 0 0 0 0
+/js/admin_menu/cache/80f7dd8a1c3bf9a18ad951b22cced1d7
+0 1 0 19569 0 0 0 0
+/sites/all/modules/module_filter/css/module_filter_tab.css
+0 16 0 29668 0 0 0 0
+/amministrazione
+0 29 0 254801 5 5 0 0
+/taxonomy/term/6/edit
+0 1 0 7613 1 0 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.dialog.css
+0 15 0 13268 0 0 0 0
+/calendario-eventi/giorno/2018-05-07
+0 4 0 35503 2 2 0 0
+/sites/all/modules/token/jquery.treeTable.css
+0 10 0 7648 0 0 0 0
+/aree-tematiche/tempo-libero-sport-cultura
+0 2 0 40540 1 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_vTDF4O.png
+1 4 0 37108 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_18.jpg
+1 9 0 9923 0 0 0 0
+/js/admin_menu/cache/739c7b8b0ba03a9bbe73d443d3dcab87
+0 1 0 19374 0 0 0 0
+/node/270/edit
+0 2 0 29968 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_MwngGK.jpg
+1 3 0 4476 0 0 0 0
+/admin/structure/feeds/eventi
+0 1 0 5189 0 0 0 0
+/node/add/evento
+0 3 0 46122 0 0 0 0
+/admin/config/search/path/patterns
+0 1 0 6478 0 0 0 0
+/js/admin_menu/cache/ddb730cf34a88ebe5dd9cfd0a6644837
+0 1 0 19681 0 0 0 0
+/vivere-comune/scheda-della-citta
+0 8 0 76550 3 1 0 0
+/js/admin_menu/cache/28a5d6086837505a273463636908ff97
+0 1 0 19524 0 0 0 0
+/sites/all/modules/module_filter/js/dynamic_position.js
+0 15 0 13920 0 0 0 0
+/themes/seven/reset.css
+0 25 0 40251 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/medio-ambiente-960x430-1.jpg
+1 7 0 24674 0 0 0 0
+/node/284/webform-results
+0 1 0 4480 0 0 0 0
+/modules/image/image.css
+0 1 0 486 0 0 0 0
+/evento/lorem-ipsum-dolor
+0 3 0 31369 1 2 0 0
+/aree-tematiche/servizi-cimiteriali
+0 2 0 40121 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/maxresdefault.jpg
+1 9 0 24022 0 0 0 0
+/admin/structure/block/manage/block/17
+0 1 0 115471 0 0 0 0
+/sites/default/files/styles/slideshow/public/imagefield_rs0b9u.gif
+1 1 0 36141 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/ui/jquery.ui.datepicker.js
+0 7 0 141232 0 0 0 0
+/area-tematica/servizi-sociali
+0 9 0 91605 3 3 0 0
+/admin/content/file/thumbnails
+0 3 0 23954 0 0 0 0
+/amministrazione/segretario
+0 4 0 30267 1 3 0 0
+/plupload-handle-uploads
+0 5 0 2497 0 0 0 0
+/modules/system/system.menus.css
+0 25 0 24889 0 0 0 0
+/themes/seven/screenshot.png
+1 1 0 12585 0 0 0 0
+/sites/all/modules/token/token.css
+0 10 0 5507 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_q7ozls_0.jpeg
+0 5 0 8028 0 0 0 0
+/articolo/test
+0 5 0 44086 1 0 0 0
+/sites/default/files/styles/medium/public/maxresdefault.jpg
+1 27 0 541526 0 0 0 0
+/sites/all/modules/taxonomy_menu_block/taxonomy_menu_block_admin.js
+0 4 0 2555 0 0 0 0
+/admin/people/permissions/roles
+0 4 0 22514 0 0 0 0
+/taxonomy/term/15/edit
+0 1 0 7663 0 0 0 0
+/js/admin_menu/cache/b81fe42494770442f39a00ae79b92a46
+0 1 0 19719 0 0 0 0
+/admin/structure/menu/manage/menu-amm-trasparente/list
+0 1 0 5547 0 0 0 0
+/sites/all/modules/views/css/views.css
+0 133 0 83986 0 0 0 0
+/admin/structure/views/ajax/rearrange-filter/admin_views_node/system_1/filter
+0 2 0 62904 0 0 0 0
+/js/admin_menu/cache/a53f8d0ab888370dcda3830afec3d7bd
+0 2 0 39449 0 0 0 0
+/js/admin_menu/cache/6ec493ed2c8e1010ed53612b569392c5
+0 1 0 19354 0 0 0 0
+/admin/structure/types/manage/struttura-organizzativa/fields/field_area_tematica/field-settings
+0 1 0 5343 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_Q7oZLs.jpeg
+0 1 0 1815 0 0 0 0
+/node/259/edit
+0 1 0 8296 0 0 0 0
+/js/admin_menu/cache/2e2c3dcaedb9aff95016242bc1ae6500
+0 1 0 1108 0 0 0 0
+/sites/default/files/styles/slideshow/public/imagefield_Snn6ZY.gif
+1 1 0 51919 0 0 0 0
+/modules/field_ui/field_ui.js
+0 4 0 16003 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/adminimal_admin_menu.css
+0 38 0 90708 0 0 0 0
+/taxonomy/term/8/edit
+0 1 0 7633 0 0 0 0
+/misc/textarea.js
+0 19 0 14554 0 0 0 0
+/webform/questionario
+0 9 0 87146 3 4 0 0
+/modules/taxonomy/taxonomy.js
+0 4 0 3660 0 0 0 0
+/aree-tematiche
+0 63 0 664782 10 5 0 0
+/sites/all/modules/ctools/js/auto-submit.js
+0 8 0 12076 0 0 0 0
+/sites/default/files/styles/slideshow/public/alnwick-cemetery.jpg
+1 6 0 743842 0 0 0 0
+/modules/field/modules/text/text.js
+0 11 0 11452 0 0 0 0
+/node/276/edit
+0 2 0 30310 0 0 0 0
+/admin/structure/views/view/schede_personali/edit/page_2
+0 3 0 47108 0 0 0 0
+/file/521/usage
+0 1 0 4024 0 0 0 0
+/node/284/webform-results/analysis
+0 2 0 9547 1 1 0 0
+/admin/structure/views/view/news/export
+0 1 0 8890 0 0 0 0
+/admin/reports/status
+0 4 0 43747 0 0 0 0
+/
+0 232 0 3721748 78 41 0 0
+/sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js
+0 151 0 417898 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_3.jpg
+1 1 0 1624 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_13.jpg
+1 3 0 5313 0 0 0 0
+/modules/filter/filter.js
+0 17 0 10813 0 0 0 0
+/modules/file/file.css
+0 4 0 2357 0 0 0 0
+/sites/all/libraries/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js
+0 3 0 7353 0 0 0 0
+/node/262/edit
+0 1 0 14975 1 0 0 0
+/sites/default/files/styles/slideshow/public/275435_l_srgb_s_gl.jpg
+1 8 0 224001 0 0 0 0
+/amministrazione/contatti-indirizzi
+0 7 0 61484 4 4 0 0
+/themes/seven/images/buttons.png
+1 11 0 6419 0 0 0 0
+/modules/shortcut/shortcut.png
+1 12 0 6782 0 0 0 0
+/aree-tematiche/polizia-locale
+0 2 0 40229 0 0 0 0
+/sites/all/modules/views/images/close.png
+1 4 0 2036 0 0 0 0
+/node/219/webform
+0 1 0 6282 0 0 0 0
+/admin/structure/views/view/schede_personali/edit
+0 2 0 37887 0 0 0 0
+/admin/modules/list/confirm
+0 1 0 4599 0 0 0 0
+/sites/all/modules/field_group/field_group.field_ui.js
+0 3 0 4218 0 0 0 0
+/sites/all/modules/media/js/media.popups.js
+0 8 0 28313 0 0 0 0
+/admin/structure/types/manage/articolo
+0 5 0 47122 0 0 0 0
+/admin/structure/views/view/primo_piano/edit
+0 2 0 37836 0 0 0 0
+/modules/field/theme/field.css
+0 116 0 64480 0 0 0 0
+/sites/all/modules/ckeditor/css/ckeditor.css
+0 115 0 58257 0 0 0 0
+/sites/all/modules/views/css/views-admin.contextual.css
+0 22 0 17198 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/planificacion-familiar-1.jpg
+1 9 0 16866 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/js/jquery.min.js
+0 62 0 2117302 0 0 0 0
+/misc/states.js
+0 12 0 67945 0 0 0 0
+/admin/structure/views/view/schede_personali/edit/page_3
+0 2 0 18520 0 0 0 0
+/sites/all/themes/bootstrap/js/bootstrap.admin.js
+0 1 0 2186 0 0 0 0
+/admin/config/media/image-styles/edit/medium/effects/1/delete
+0 1 0 4921 0 0 0 0
+/sezione-opzionale
+0 9 0 73944 5 2 0 0
+/sites/all/modules/gmap/js/locpick.js
+0 4 0 5110 0 0 0 0
+/amministrazione/consiglio-comunale
+0 10 0 84678 5 2 0 0
+/js/admin_menu/cache/9e3aa0d0aa65158007001d113919e958
+0 3 0 58693 0 1 0 0
+/taxonomy/term/5/edit
+0 5 0 38386 1 0 0 0
+/ckeditor/xss
+0 111 0 90307 1 3 0 0
+/node/282/edit
+0 2 0 33000 0 0 0 0
+/comunicare-lamministrazione
+0 1 0 9043 0 0 0 0
+/sites/default/files/styles/medium/public/old-young-holding-hands.jpg
+1 27 0 243908 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_rWzp8X.jpeg
+0 3 0 5663 0 0 0 0
+/sites/default/files/styles/large/public/imagefield_Dvs3qz.png
+1 2 0 549467 0 0 0 0
+/sites/all/modules/menu_block/menu-block-background-display-options.png
+1 2 0 1768 0 0 0 0
+/sites/default/files/styles/small/public/imagefield_q7ozls_0.jpeg
+0 1 0 1899 0 0 0 0
+/js/admin_menu/cache/8f68f38f8f83125bc8a980c4bd88575d
+0 6 0 115344 0 2 0 0
+/calendario-eventi
+0 8 0 86784 3 1 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.theme.css
+0 8 0 26251 0 0 0 0
+/admin/structure/file-types/manage/document/fields/field_settore_comunale/widget-type
+0 1 0 4887 0 0 0 0
+/js/admin_menu/cache/1284e9f92cc816de791e03f2b02ba1d2
+0 15 0 295038 1 1 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_16.jpg
+1 5 0 34574 0 0 0 0
+/admin/structure/views/view/galleria_media/edit
+0 2 0 37999 0 0 0 0
+/js/admin_menu/cache/285a2911512b17357bfec249c03cc595
+0 1 0 19374 0 0 0 0
+/cookie
+0 10 0 105149 6 8 0 0
+/sites/default/files/styles/slideshow/public/wg_blurred_backgrounds_8.jpg
+1 1 0 13541 0 0 0 0
+/admin/structure/types/manage/patch
+0 1 0 9390 0 0 0 0
+/admin/structure/views/view/galleria_media/edit/block
+0 1 0 9376 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/images/square.png
+1 8 0 2255 0 0 0 0
+/taxonomy/term/7/edit
+0 1 0 7636 0 0 0 0
+/sites/all/modules/gmap/js/gmap.js
+0 10 0 51434 0 0 0 0
+/admin/structure/types/manage/struttura-organizzativa
+0 1 0 9378 0 0 0 0
+/admin/structure/types/manage/galleria-immagini
+0 1 0 9384 0 0 0 0
+/admin/structure/taxonomy
+0 3 0 16902 0 1 0 0
+/sites/default/themes/agid/js/vendor/modernizr-2.6.2.min.js
+0 125 0 822924 0 0 0 0
+/admin/config/user-interface/shortcut/shortcut-set-1
+0 1 0 5990 0 0 0 0
+/admin/structure/views/view/aree/preview/block_1/ajax
+0 3 0 68137 0 0 0 0
+/sites/all/modules/ckeditor/css/ckeditor.editor.css
+0 13 0 8351 0 0 0 0
+/archivio-documenti
+0 13 0 112857 3 3 0 0
+/js/admin_menu/cache/b62cf7eaa2ecd8b9ec3c978245e72e56
+0 1 0 19227 0 0 0 0
+/user/242/edit
+0 4 0 31264 0 1 0 0
+/admin/structure/taxonomy/organo_istituzionale/add
+0 3 0 23327 0 1 0 0
+/js/admin_menu/cache/a08f4b760376e8364ce37c0b79ce48d1
+0 1 0 19674 0 0 0 0
+/admin/structure/block
+0 30 0 482000 2 1 0 0
+/admin/structure/types/manage/struttura_organizzativa
+0 1 0 9431 1 0 0 0
+/sites/all/modules/adminimal_admin_menu/js/slicknav/slicknav.css
+0 38 0 72127 0 0 0 0
+/admin/structure/views/view/news/preview/events/ajax
+0 1 0 17517 0 0 0 0
+/admin/structure/menu/item/977/edit
+0 1 0 8858 0 0 0 0
+/sites/all/modules/plupload/images/up_arrow.png
+1 3 0 1500 0 0 0 0
+/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.css
+0 115 0 130592 0 0 0 0
+/node/add/banner
+0 1 0 6419 0 0 0 0
+/area-tematica/servizi-demografici
+0 7 0 68203 2 2 0 0
+/modules/shortcut/shortcut.admin.js
+0 1 0 1878 0 0 0 0
+/sites/all/themes/bootstrap/js/misc/ajax.js
+0 53 0 95778 0 0 0 0
+/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.resizable.css
+0 15 0 11322 0 0 0 0
+/js/admin_menu/cache/be630227915ff40e008cf63814c8b02b
+0 3 0 58588 0 0 0 0
+/admin/structure/views/view/admin_views_node/edit
+0 2 0 37982 0 0 0 0
+/calendario-eventi/giorno/2018-05-22
+0 3 0 27693 0 1 0 0
+/js/admin_menu/cache/2e1f00010ff380714d572ca5bd128cdf
+0 1 0 19730 0 0 0 0
+/sites/all/modules/ctools/js/dropbutton.js
+0 16 0 23632 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_Ka9zga.png
+1 3 0 18216 0 0 0 0
+/sites/all/modules/media_library/media_library.js
+0 2 0 1168 0 0 0 0
+/sites/all/modules/date/date_admin.js
+0 2 0 2218 0 0 0 0
+/sites/default/files/styles/medium/public/wg_blurred_backgrounds_10.jpg
+1 5 0 28468 0 0 0 0
+/sites/all/modules/feeds/feeds_ui/feeds_ui.css
+0 1 0 996 0 0 0 0
+/modules/contextual/contextual.css
+0 40 0 40779 0 0 0 0
+/aree-tematiche/permessi-ztl-invalidi
+0 2 0 39774 0 0 0 0
+/calendario-eventi/anno/2019
+0 3 0 39295 0 0 0 0
+/sites/all/modules/gmap/location_gmap_find_address/location_gmap_find_address.js
+0 4 0 5956 0 0 0 0
+/admin/structure/menu/manage/main-menu/add
+0 1 0 8627 0 0 0 0
+/sites/default/files/styles/slideshow/public/film_archive_storage_-_br-byen_6498610179.jpg
+1 5 0 315709 0 0 0 0
+/js/admin_menu/cache/3a41f0250d8beaac9ce59ff0a518ba7a
+0 1 0 19672 0 0 0 0
+/webform/test-webform
+0 2 0 15647 0 0 0 0
+/taxonomy/term/13/edit
+0 1 0 7663 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/js/slicknav/jquery-no-conflict.slicknav.js
+0 64 0 263705 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_mHabmc.gif
+1 3 0 7824 0 0 0 0
+/admin/content/file/library
+0 4 0 24174 0 0 0 0
+/sites/default/files/styles/slideshow/public/polizia-locale.jpg
+1 5 0 240969 0 0 0 0
+/modules/shortcut/shortcut.admin.css
+0 1 0 427 0 0 0 0
+/js/admin_menu/cache/3cb0aa304a510ae8371446f62f93a58e
+0 1 0 19526 0 0 0 0
+/sites/default/files/styles/slideshow/public/negociacion.jpg
+1 5 0 204679 0 0 0 0
+/eventi
+0 7 0 66079 4 5 0 0
+/taxonomy/term/14/edit
+0 1 0 7648 0 0 0 0
+/admin/people/permissions/6
+0 5 0 123080 0 0 0 0
+/node/275/edit
+0 2 0 30201 0 0 0 0
+/admin/config/media/image-styles/edit/medium
+0 3 0 18562 0 0 0 0
+/sites/default/files/styles/slideshow/public/class5.jpg
+1 5 0 266349 0 0 0 0
+/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.js
+0 138 0 11243529 0 0 0 0
+/media/ajax/field_photo/und/0/form-_O4c5Jnq_LvGWr0bpxgcxfn0LqpRAc4wR7O16oKaYPI
+0 1 0 7401 0 0 0 0
+/sites/default/files/styles/large/public/wg_blurred_backgrounds_10.jpg
+1 35 0 309302 0 0 0 0
+/taxonomy/term/23/edit
+0 2 0 12245 0 0 0 0
+/news/accumsan-blandit-praesent-si-ullamcorper
+0 4 0 40240 1 2 0 0
+/misc/progress.gif
+1 5 0 30786 0 0 0 0
+/sites/default/files/wg_blurred_backgrounds_10.jpg
+1 1 0 240312 0 0 0 0
+/node/273/edit
+0 2 0 30205 0 0 0 0
+/node/add/node_export
+0 21 0 464194 0 0 0 0
+/admin/content
+0 38 0 366829 0 1 0 0
+/calendario-eventi/giorno/2018-05-31
+0 4 0 35515 2 1 0 0
+/js/admin_menu/cache/e0e0ec15402137c2be6f2d1c45badfef
+0 1 0 19691 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/futbol.jpg
+1 9 0 21999 0 0 0 0
+/sites/all/modules/admin_menu/admin_menu.uid1.css
+0 38 0 18585 0 0 0 0
+/sites/all/modules/gmap/js/icon.js
+0 10 0 25973 0 0 0 0
+/js/admin_menu/cache/84cbd4dbd041cdecabe5ecf3175bf42d
+0 2 0 38429 0 0 0 0
+/admin/structure/file-types/manage/document/fields/field_area_tematica/widget-type
+0 1 0 4884 0 0 0 0
+/sites/all/modules/gmap/js/marker.js
+0 10 0 21265 0 0 0 0
+/robots.txt
+0 149 0 359446 0 0 0 0
+/modules/user/user.js
+0 2 0 4906 0 0 0 0
+/admin/structure/file-types/manage/document/fields
+0 6 0 67056 0 0 0 0
+/themes/seven/images/task-check.png
+1 2 0 1088 0 0 0 0
+/sites/all/modules/webform/js/node-type-form.js
+0 4 0 2866 0 0 0 0
+/misc/vertical-tabs.js
+0 11 0 26588 0 0 0 0
+/sites/all/modules/media/js/media.browser.js
+0 4 0 9482 0 0 0 0
+/js/admin_menu/cache/980ca535a328a2cb5e611a973609af7e
+0 7 0 136795 0 0 0 0
+/sites/all/modules/admin_menu/admin_menu.admin.js
+0 10 0 13454 0 0 0 0
+/sites/all/modules/views_bulk_operations/css/views_bulk_operations.css
+0 13 0 7963 0 0 0 0
+/modules/filter/filter.css
+0 15 0 10804 0 0 0 0
+/sites/default/files/styles/slideshow/public/planificacion-familiar-1.jpg
+1 5 0 116404 0 0 0 0
+/news/commodo-genitus-patria-premo-tincidunt
+0 8 0 86356 6 5 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_F8gSWa.jpeg
+0 3 0 5496 0 0 0 0
+/misc/form.js
+0 36 0 48608 0 0 0 0
+/sites/all/modules/ctools/js/dependent.js
+0 11 0 30922 0 0 0 0
+/admin/structure/types/manage/evento/fields/field_area_tematica
+0 1 0 6321 0 0 0 0
+/sites/all/themes/bootstrap/screenshot.png
+1 1 0 19780 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_dE3FQ5.png
+1 3 0 25383 0 0 0 0
+/node/267/edit
+0 2 0 31224 0 0 0 0
+/sites/default/files/styles/slideshow/public/ritaglio_laptop1280.jpg
+1 7 0 224821 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/wg_blurred_backgrounds_20.jpg
+1 8 0 13253 0 0 0 0
+/admin/structure/views/view/admin_views_node/preview/system_1/ajax
+0 1 0 131062 0 0 0 0
+/sites/all/modules/file_entity/file_entity.js
+0 2 0 1274 0 0 0 0
+/media/ajax/field_allegati/und/form-H1j7Kj3sJmjeGpc3d9G1mrL5nGLygmAYeVnExZhKhr4
+0 1 0 457 1 0 0 0
+/modules/user/user.css
+0 23 0 23739 0 0 0 0
+/admin/structure/types/manage/articolo/fields/field_data_scadenza_in_evidenza_/field-settings
+0 1 0 6043 0 0 0 0
+/sites/default/files/styles/medium/public/house.jpg
+1 27 0 545187 0 0 0 0
+/modules/taxonomy/taxonomy.css
+0 4 0 1948 0 0 0 0
+/admin/appearance/settings/agid
+0 2 0 28304 0 0 0 0
+/node/284/webform/emails
+0 2 0 9575 0 0 0 0
+/node/add/scheda-personale
+0 2 0 29740 2 0 0 0
+/sites/default/files/styles/large/public/ritaglio_laptop1280.jpg
+1 35 0 1303942 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/house.jpg
+1 14 0 36583 0 0 0 0
+/js/admin_menu/cache/3741fb2e86232b70705d9356bd77f0b4
+0 1 0 19360 0 0 0 0
+/js/admin_menu/cache/7f5236ddd7e2f733f816e9393f0c0b83
+0 2 0 39121 0 0 0 0
+/sites/all/modules/views/css/views-admin.css
+0 22 0 44864 0 0 0 0
+/admin/structure/menu/parents
+0 34 0 42123 1 3 0 0
+/sites/all/modules/ckeditor/ckeditor.styles.js
+0 10 0 14250 0 0 0 0
+/sites/all/modules/admin_menu/admin_menu.js
+0 62 0 264071 0 0 0 0
+/sites/default/files/styles/slideshow/public/wg_blurred_backgrounds_18.jpg
+1 1 0 11513 0 0 0 0
+/sites/all/modules/location/location.css
+0 4 0 3200 0 0 0 0
+/admin/structure/views/view/calendario/edit/page_2
+0 1 0 9267 3 0 0 0
+/themes/seven/images/ui-icons-222222-256x240.png
+1 1 0 3987 0 0 0 0
+/admin/structure/views/ajax/display/banner_homepage/block/style_plugin
+0 8 0 255449 0 0 0 0
+/sites/all/modules/date/date_popup/themes/jquery.timeentry.css
+0 9 0 4191 0 0 0 0
+/sites/default/files/styles/medium/public/planificacion-familiar-1.jpg
+1 27 0 181284 0 0 0 0
+/aree-tematiche/segreteria-generale
+0 2 0 40039 0 0 0 0
+/sites/all/modules/media/css/media.css
+0 12 0 17188 0 0 0 0
+/js/admin_menu/cache/5c01dbc8d9db4e72fad5361770888276
+0 1 0 19694 0 0 0 0
+/sites/default/files/styles/media_thumbnail/public/imagefield_3AS6Ge.png
+1 3 0 22734 0 0 0 0
+/modules/menu/menu.js
+0 11 0 12914 0 0 0 0
+/sites/default/files/styles/banner/public/imagefield_q7ozls_0.jpeg
+0 40 0 78977 0 0 0 0
+/node/260/delete
+0 1 0 4479 0 1 0 0
+/aree-tematiche/comunicare-lamministrazione
+0 2 0 40211 0 0 0 0
+/calendario-eventi/settimana
+0 10 0 106723 6 5 0 0
+/themes/seven/images/fc.png
+1 10 0 3260 0 0 0 0
+/node/264/edit
+0 6 0 90686 0 0 0 0
+/modules/book/book.js
+0 13 0 8580 0 0 0 0
+/sites/all/modules/link/link.css
+0 8 0 3398 0 0 0 0
+/update.php
+0 7 0 14131 0 0 0 0
+/js/admin_menu/cache/e32bd12e30c6f0c5d60596050645cc32
+0 1 0 19668 0 0 0 0
+/admin/structure/types
+0 20 0 427839 0 1 0 0
+/admin/structure/types/manage/articolo/fields/field_image
+0 1 0 7980 0 0 0 0
+/admin/structure/views/view/settori_comunali/edit/page
+0 3 0 46814 0 0 0 0
+/sites/all/modules/adminimal_admin_menu/images/circledown.svg
+0 4 0 2917 0 0 0 0
+/admin/structure/views/view/calendario/edit/page
+0 1 0 9223 0 0 0 0
+/node/272/edit
+0 2 0 30271 0 0 0 0
+/sites/all/modules/media/js/media.js
+0 11 0 22969 0 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+81.88.253.198
+0 342 327 7366404 6 1527260285 0 0
+/
+188.255.28.126
+0 30 30 397428 1 1527404389 0 0
+/vivere-comune
+141.8.142.152
+0 3 3 11468 1 1527543093 0 0
+/galleria/lorem-ipsum-dolor
+89.178.91.242
+0 30 29 421394 1 1527563735 0 0
+/admin/content/file
+94.180.219.87
+0 39 39 503775 1 1525538981 0 0
+/node
+128.69.217.38
+0 30 29 421829 1 1527157646 0 0
+/admin/structure/menu/manage/menu-amm-trasparente
+176.193.141.56
+0 30 30 397976 1 1526060971 0 0
+/aree-tematiche
+77.37.227.104
+0 1 0 32877 1 1527339133 0 0
+/admin/structure/types/manage/evento/fields
+46.188.40.93
+0 30 30 397427 1 1527485602 0 0
+/vivere-comune
+52.71.155.178
+0 4 1 105482 2 1527597355 0 0
+/node/284/webform/emails/new
+109.173.58.50
+0 6 6 196121 0 0 0 0
+-
+77.37.234.225
+0 30 30 397428 1 1527727209 0 0
+/vivere-comune
+213.180.203.17
+0 2 2 15659 1 1526396863 0 0
+/sezione-opzionale
+46.242.123.20
+0 4 4 11257 0 0 0 0
+-
+5.45.207.45
+0 4 4 196913 1 1527378649 0 0
+/sezione-opzionale
+37.207.121.2
+0 263 258 1849420 1 1525797774 0 0
+/amministrazione/giunta-comunale
+5.45.207.89
+0 19 18 146415 11 1527804720 0 0
+/notizie
+141.8.142.17
+0 1 1 8289 1 1527473521 0 0
+/amministrazione/statuto-comunale
+178.154.171.23
+0 7 7 39004 3 1527378650 0 0
+/calendario-eventi
+141.8.132.20
+0 2 2 9098 0 0 0 0
+-
+178.140.155.33
+0 30 29 420904 1 1525586340 0 0
+/admin/structure/views/view/calendario/edit/page_2
+104.45.18.178
+0 2 1 96454 1 1525882748 0 0
+/
+46.147.187.27
+0 30 30 397431 1 1527312914 0 0
+/vivere-comune
+37.204.156.141
+0 29 28 415404 1 1525283777 0 0
+-
+66.249.93.217
+0 2 1 46297 1 1527591742 0 0
+/users/admin
+87.250.224.214
+0 32 32 211256 7 1527700647 0 0
+/archivio-documenti
+213.180.203.45
+0 2 2 18171 1 1527378652 0 0
+/area-tematica/tempo-libero-sport-cultura
+46.188.49.249
+0 30 29 421961 1 1527552872 0 0
+/admin/structure/types/manage/evento/fields
+213.180.203.14
+0 4 4 17479 0 0 0 0
+-
+77.37.161.253
+0 30 29 424047 1 1527727209 0 0
+/node/add/scheda-personale
+46.188.42.120
+0 30 29 421576 1 1527260377 0 0
+/admin/structure/views/import
+85.88.207.245
+0 7600 6742 85014552 68 1527696462 0 0
+/admin/appearance
+178.154.171.26
+0 2 2 8660 1 1527543094 0 0
+/amministrazione-trasparente
+141.8.142.124
+0 7 7 125080 5 1527661076 0 0
+/calendario-eventi/mese/2018-06
+46.42.173.232
+0 30 29 423957 1 1527369362 0 0
+/node/add/pagina
+95.108.181.96
+0 937 923 9321167 159 1527808545 0 0
+/area-tematica/segreteria-generale
+54.175.74.27
+0 5 0 161714 2 1527597357 0 0
+/node/284/webform/configure
+87.250.224.100
+0 2 2 4191 0 0 0 0
+-
+188.244.43.151
+0 30 29 421427 1 1526870777 0 0
+/admin/people/permissions
+46.188.90.33
+0 30 30 397432 1 1527680414 0 0
+/vivere-comune
+178.154.171.13
+0 3 3 24890 2 1527095402 0 0
+/area-tematica/polizia-locale
+95.84.128.249
+0 1 1 8312 1 1526002203 0 0
+/aree-tematiche
+95.27.46.220
+0 16 15 260977 1 1525864591 0 0
+/admin/structure/views/view/calendario/edit/page_2
+46.242.119.57
+0 30 30 471761 1 1527369359 0 0
+/modulistica
+95.221.145.230
+0 30 29 420904 1 1525793111 0 0
+/admin/structure/views/view/calendario/edit/page_2
+37.204.71.200
+0 39 39 501287 1 1527571856 0 0
+/area-tematica/alloggi-erp-housing-sociale
+77.37.161.20
+0 30 29 421399 1 1527485601 0 0
+/admin/content/file
+95.143.26.33
+0 30 30 399216 1 1527435382 0 0
+/calendario-eventi
+40.74.255.63
+0 2 2 904 1 1525781785 0 0
+/
+37.204.62.25
+0 30 29 421581 1 1527439384 0 0
+/admin/structure/views/import
+141.8.142.92
+0 20 20 298620 7 1527733892 0 0
+/area-tematica/tributi
+5.35.58.221
+0 30 29 421372 1 1526568829 0 0
+/admin/structure/block
+95.108.213.11
+0 9 9 129983 5 1527539517 0 0
+/calendario-eventi/giorno/2018-05-10
+178.154.171.35
+0 7 6 73117 4 1527727929 0 0
+/calendario-eventi/mese/2018-06
+128.72.212.204
+0 52 51 798526 1 1525589812 0 0
+-
+141.8.142.28
+0 1 1 1111 0 0 0 0
+-
+95.108.181.99
+0 2 2 4185 0 0 0 0
+-
+94.180.133.96
+0 30 29 424047 1 1527680416 0 0
+/node/add/scheda-personale
+188.32.224.167
+0 30 29 421432 1 1526794032 0 0
+/admin/people/permissions
+66.249.93.218
+0 1 0 727 0 0 0 0
+-
+128.69.230.59
+0 30 30 471759 1 1527434975 0 0
+/modulistica
+178.154.171.52
+0 2 2 9471 1 1527378652 0 0
+/calendario-eventi/giorno/2018-05-16
+79.111.59.159
+0 30 29 421576 1 1527625527 0 0
+/admin/structure/views/import
+37.110.145.54
+0 30 29 421432 1 1526754218 0 0
+/admin/people/permissions
+178.140.85.133
+0 39 39 501281 1 1527448643 0 0
+/area-tematica/alloggi-erp-housing-sociale
+5.167.210.133
+0 6 5 41914 1 1526820070 0 0
+/admin/people/permissions
+95.221.172.185
+0 30 29 421644 1 1526851376 0 0
+/node/269/edit
+141.8.142.149
+0 7 7 116733 3 1527539519 0 0
+/area-tematica/lavori-pubblici-mobilita-urbana
+95.108.181.54
+0 1 1 7369 0 0 0 0
+-
+94.180.143.204
+0 30 30 397427 1 1527563738 0 0
+/vivere-comune
+176.14.227.254
+0 37 36 446099 1 1525876149 0 0
+/area-tematica/ambiente
+128.72.228.27
+0 39 39 504460 1 1527571856 0 0
+/
+178.140.25.174
+0 30 30 397978 1 1526180606 0 0
+/aree-tematiche
+54.209.60.63
+0 1 1 8033 1 1527593747 0 0
+/user
+87.250.224.101
+0 1 1 2581 0 0 0 0
+-
+95.108.181.92
+0 3 3 203153 1 1527543093 0 0
+/notizie
+5.255.253.27
+0 10 10 114907 6 1527695918 0 0
+/scheda-personale/cognome-nome
+141.8.142.69
+0 2 2 21931 2 1527543092 0 0
+/user
+213.180.203.61
+0 355 349 4986626 27 1527792394 0 0
+/area-tematica/tributi
+37.112.32.213
+0 39 39 504468 1 1527448642 0 0
+/
+128.72.40.13
+0 30 29 421394 1 1527404388 0 0
+/admin/content/file
+37.146.178.110
+0 30 30 397979 1 1526123088 0 0
+/aree-tematiche
+128.68.40.232
+0 30 29 421399 1 1527312913 0 0
+/admin/content/file
+184.72.115.35
+0 4 0 129819 1 1527597486 0 0
+/node/284/webform-results
+54.85.182.120
+0 187 84 4026730 28 1527597488 0 0
+/node/284/webform-results/analysis
+37.9.113.179
+0 31 31 400272 13 1527804635 0 0
+/area-tematica/permessi-ztl-invalidi
+141.8.142.104
+0 4 4 77326 0 0 0 0
+-
+94.180.231.30
+0 30 29 423957 1 1527434975 0 0
+/node/add/pagina
+37.204.156.68
+0 30 29 421643 1 1526816589 0 0
+/node/274/edit
+178.154.200.21
+0 1 1 7285 0 0 0 0
+-
+37.9.113.197
+0 2 2 2546 0 0 0 0
+-
+213.180.203.63
+0 13 13 74160 6 1527557518 0 0
+/calendario-eventi/giorno
+37.146.179.124
+0 20 20 191851 1 1526878919 0 0
+/calendario-eventi
+# End Of Table - sites (monthly)
+# -sites- (daily)
+141.8.142.152
+0 1 1 1354 0 0 0 0
+-
+77.37.234.225
+0 30 30 397428 1 1527727209 0 0
+/vivere-comune
+5.45.207.89
+0 1 1 10967 1 1527804720 0 0
+/notizie
+87.250.224.214
+0 4 4 87475 0 0 0 0
+-
+77.37.161.253
+0 30 29 424047 1 1527727209 0 0
+/node/add/scheda-personale
+95.108.181.96
+0 104 103 1256291 15 1527808545 0 0
+/area-tematica/segreteria-generale
+141.8.142.92
+0 3 3 26758 2 1527733892 0 0
+/area-tematica/tributi
+95.108.213.11
+0 1 1 443 0 0 0 0
+-
+178.154.171.35
+0 1 1 10820 1 1527727929 0 0
+/calendario-eventi/mese/2018-06
+213.180.203.61
+0 22 22 212746 2 1527792394 0 0
+/area-tematica/tributi
+37.9.113.179
+0 4 4 12978 1 1527804635 0 0
+/area-tematica/permessi-ztl-invalidi
+# End Of Table - sites (daily)
+# -referrers- 
+http://www.agid.klan.it/admin/structure/types/manage/webform
+1 4
+http://www.agid.klan.it/area-tematica/tributi
+1 23
+http://www.agid.klan.it/ambiente-ed-ecologia
+1 9
+http://www.agid.klan.it/node/add/scheda-personale
+1 71
+http://www.agid.klan.it/servizi-sociali
+1 2
+http://www.agid.klan.it/node/170/edit
+1 1
+http://www.agid.klan.it/file/523/edit
+1 3
+http://www.agid.klan.it/admin/structure/types/manage/evento/fields/field_area_tematica
+1 1
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields/field_teaser_image
+1 2
+http://www.agid.klan.it/calendario-eventi/anno/2019
+1 1
+http://www.agid.klan.it/sites/all/modules/adminimal_admin_menu/adminimal_admin_menu.css
+1 54
+http://www.agid.klan.it/admin/structure/views/view/elenco_settori_comunali/edit
+1 12
+http://www.agid.klan.it/admin/structure/views/view/schede_personali/edit/page_2
+1 3
+http://www.agid.klan.it/sites/default/themes/agid/css/main.css
+1 65
+http://www.agid.klan.it/aree-tematiche/comunicare-lamministrazione
+1 3
+http://www.agid.klan.it/node/282/edit
+1 10
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields
+1 33
+http://www.agid.klan.it/admin/structure/block/manage/block/16/configure
+1 17
+http://www.agid.klan.it/themes/seven/vertical-tabs.css
+1 10
+http://www.agid.klan.it/authorize.php
+1 36
+http://www.agid.klan.it/settore-comunale-uffici/settore-comunale-uno
+1 7
+http://www.agid.klan.it/admin/structure/taxonomy/organo_istituzionale
+1 3
+http://www.agid.klan.it/users/admin
+1 121
+http://www.agid.klan.it/area-tematica/servizi-sociali
+1 12
+http://www.agid.klan.it/area-tematica/servizi-cimiteriali
+1 5
+http://www.agid.klan.it/admin/structure/types/manage/evento/fields/field_area_tematica/field-settings
+1 1
+http://www.agid.klan.it/admin/structure/block/add-taxonomy-menu-block
+1 5
+http://www.agid.klan.it/node/278/edit
+1 12
+http://www.agid.klan.it/admin/structure/block
+1 73
+http://www.agid.klan.it/admin/config/search/path/patterns
+1 1
+http://www.agid.klan.it/galleria/lorem-ipsum-dolor
+1 3
+http://www.agid.klan.it/admin/structure/taxonomy/organo_istituzionale/add
+1 17
+http://www.agid.klan.it/taxonomy/term/15/edit
+1 2
+http://www.agid.klan.it/admin/structure/types/manage/struttura-organizzativa/fields/field_area_tematica/widget-type
+1 2
+http://www.agid.klan.it/modules/contextual/contextual.css
+1 28
+http://www.agid.klan.it/node/268/edit
+1 10
+http://www.agid.klan.it/admin/structure/feeds/eventi
+1 1
+http://www.agid.klan.it/admin/modules/install
+1 11
+http://www.agid.klan.it/sites/all/modules/token/jquery.treeTable.css
+1 2
+http://www.agid.klan.it/admin/structure/file-types/manage/document/fields/field_settore_comunale
+1 2
+http://www.agid.klan.it/admin/structure/menu/manage/main-menu/list
+1 2
+http://www.agid.klan.it/area-tematica/ambiente
+1 44
+http://www.agid.klan.it/node/284/webform/components
+1 45
+http://www.agid.klan.it/amministrazione/contatti-indirizzi
+1 60
+http://www.agid.klan.it/area-tematica/servizi-demografici
+1 2
+http://www.agid.klan.it/admin/config/system/eu-cookie-compliance
+1 9
+http://www.agid.klan.it/taxonomy/term/23/edit
+1 3
+http://www.agid.klan.it/node/add/pagina
+1 132
+http://www.agid.klan.it/admin/structure/block/manage/taxonomy_menu_block/1/configure
+1 7
+http://www.agid.klan.it/admin/reports/updates/update
+1 3
+http://www.agid.klan.it/node/266/edit
+1 10
+http://www.agid.klan.it/admin/structure/types/manage/struttura-organizzativa/fields
+1 1
+http://www.agid.klan.it/admin/structure/block/manage/menu_block/7/configure
+1 4
+http://www.agid.klan.it/node/272/edit
+1 8
+http://www.agid.klan.it/admin/structure/views/view/news/edit
+1 17
+http://www.agid.klan.it/area-tematica/certificati-e-documenti
+1 2
+http://www.agid.klan.it/scheda-personale/cognome-nome
+1 45
+http://www.agid.klan.it/aree-tematiche/patrimonio
+1 3
+http://www.agid.klan.it/articolo/test
+1 7
+http://www.agid.klan.it/admin/config/media/image-styles/edit/medium/effects/1/delete
+1 2
+http://www.agid.klan.it/aree-tematiche/polizia-locale
+1 3
+http://www.agid.klan.it/admin/structure/views/view/calendario/edit/page
+1 6
+http://www.agid.klan.it/admin/structure/views/view/admin_views_node/edit
+1 42
+http://www.agid.klan.it/admin/structure/block/add
+1 8
+http://www.agid.klan.it/admin/structure/types/manage/pagina
+1 3
+http://www.agid.klan.it/admin/reports/status
+1 15
+http://www.agid.klan.it/articolo/cms-piccoli-comuni-pa-locali
+1 78
+http://www.agid.klan.it/admin/structure/views/view/galleria_media/edit
+1 17
+http://www.agid.klan.it/news/abdo-commodo-euismod-iriure-pagus-probo-tum-utinam
+1 3
+http://www.agid.klan.it/alloggi-erp-housing-sociale
+1 2
+http://www.agid.klan.it/admin/config/user-interface/jammer
+1 7
+http://www.agid.klan.it/admin/structure/types/manage/scheda-personale
+1 4
+http://www.agid.klan.it/polizia-locale
+1 2
+http://www.agid.klan.it/lavori-pubblici-mobilita-urbana
+1 2
+http://www.agid.klan.it/modules/filter/filter.css
+1 6
+http://www.agid.klan.it/admin/structure/block/manage/block/17/configure
+1 6
+http://www.agid.klan.it/calendario-eventi
+1 61
+http://www.agid.klan.it/sites/all/modules/adminimal_admin_menu/js/slicknav/slicknav.css
+1 57
+http://www.agid.klan.it/file/524/edit
+1 1
+http://www.agid.klan.it/node/220/edit
+1 114
+http://www.agid.klan.it/admin/structure/menu/item/977/edit
+1 2
+http://www.agid.klan.it/user/241/password
+1 4
+http://www.agid.klan.it/node/274/edit
+1 39
+http://www.agid.klan.it/node/260/edit
+1 16
+http://www.agid.klan.it/sezione-opzionale
+1 5
+http://www.agid.klan.it/admin/structure/file-types/manage/document/fields/field_settore_comunale/widget-type
+1 2
+http://www.agid.klan.it/node/132/edit
+1 14
+http://www.agid.klan.it/servizi-demografici
+1 2
+http://www.agid.klan.it/node/156/edit
+1 2
+http://www.agid.klan.it/admin/structure/views/view/calendario/edit/block_2
+1 1
+http://www.agid.klan.it/admin/structure/types
+1 15
+http://www.agid.klan.it/admin/structure/types/manage/evento/fields/field_teaser_image
+1 2
+http://www.agid.klan.it/taxonomy/term/16/edit
+1 2
+http://www.agid.klan.it/calendario-eventi/giorno
+1 4
+http://www.agid.klan.it/aree-tematiche/ambiente-ed-ecologia
+1 5
+http://www.agid.klan.it/admin/update/ready
+1 2
+http://www.agid.klan.it/taxonomy/term/9/edit
+1 2
+http://www.agid.klan.it/aree-tematiche
+1 749
+http://www.agid.klan.it/admin/structure/file-types/manage/document/fields/field_descrizione/field-settings
+1 3
+http://www.agid.klan.it/area-tematica/ambiente-ed-ecologia
+1 21
+http://www.agid.klan.it/node/284/webform/components/new/textfield
+1 25
+http://www.agid.klan.it/node/284/outline
+1 18
+http://www.agid.klan.it/admin/structure/views/view/schede_personali/edit/page_4
+1 19
+http://www.agid.klan.it/aree-tematiche/servizi-sociali
+1 3
+http://www.agid.klan.it/area-tematica/casa
+1 4
+http://www.agid.klan.it/admin/structure/types/manage/struttura-organizzativa/fields/field_area_tematica/field-settings
+1 1
+http://www.agid.klan.it/modules/system/system.base.css
+1 34
+http://www.agid.klan.it/evento/humo-velit
+1 36
+http://www.agid.klan.it/node/add/banner
+1 2
+http://www.agid.klan.it/
+1 1802
+http://www.agid.klan.it/aree-tematiche/segreteria-generale
+1 3
+http://www.agid.klan.it/user/242/password
+1 3
+http://www.agid.klan.it/node/276/edit
+1 8
+http://www.agid.klan.it/admin/config
+1 2
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields/field_data_scadenza_in_evidenza_
+1 9
+http://www.agid.klan.it/sites/all/libraries/fontawesome/css/font-awesome.css
+1 47
+http://www.agid.klan.it/node/284/webform/emails/new
+1 25
+http://www.agid.klan.it/area-tematica/alloggi-erp-housing-sociale
+1 125
+http://www.agid.klan.it/admin/structure/types/manage/galleria-immagini
+1 3
+http://www.agid.klan.it/admin/structure/views/view/calendario/edit/page_1
+1 2
+http://www.agid.klan.it/admin/structure/views/import
+1 120
+http://www.agid.klan.it/amministrazione/statuto-comunale
+1 4
+http://www.agid.klan.it/calendario-eventi/mese/2018-06
+1 5
+http://www.agid.klan.it/patrimonio
+1 2
+http://www.agid.klan.it/admin/structure/menu/manage/menu-sezioni-principali
+1 1
+http://www.agid.klan.it/admin/people/permissions
+1 220
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields/field_area_tematica
+1 1
+http://www.agid.klan.it/taxonomy/term/5/edit
+1 28
+http://www.agid.klan.it/admin/config/media/image-styles/edit/medium
+1 7
+http://www.agid.klan.it/admin/people/permissions/6
+1 9
+http://www.agid.klan.it/sites/all/modules/module_filter/css/modules.css
+1 9
+http://www.agid.klan.it/area-tematica/tempo-libero-sport-cultura
+1 2
+http://www.agid.klan.it/area-tematica/polizia-locale
+1 3
+http://www.agid.klan.it/admin/structure/types/manage/patch
+1 3
+http://www.agid.klan.it/admin/people/permissions/roles
+1 11
+http://www.agid.klan.it/admin/structure/block/manage/views/elenco_settori_comunali-block_1/configure
+1 4
+http://www.agid.klan.it/comunicare-lamministrazione
+1 2
+http://www.agid.klan.it/admin/structure/types/manage/pagina/fields/field_teaser_image
+1 2
+http://www.agid.klan.it/node/283/edit
+1 55
+- (Direct Request)
+0 2457
+http://www.agid.klan.it/calendario-eventi/giorno/2018-05-22
+1 5
+http://www.agid.klan.it/user/242/edit
+1 6
+http://www.agid.klan.it/eventi/abluo-metuo-odio-patria-utinam-velit
+1 2
+http://www.agid.klan.it/node/284/edit
+1 44
+http://www.agid.klan.it/node/270/edit
+1 10
+http://www.agid.klan.it/node/219/webform
+1 4
+http://www.agid.klan.it/admin/structure/views/view/aree/edit/block_1
+1 67
+http://www.agid.klan.it/modules/shortcut/shortcut.css
+1 12
+http://www.agid.klan.it//admin/structure/file-types/manage/document/fields
+1 1
+http://www.agid.klan.it/admin/config/content/node_export
+1 2
+http://www.agid.klan.it/tributi
+1 2
+http://www.agid.klan.it/admin/structure/block/manage/block/17
+1 21
+http://www.agid.klan.it/admin/structure/types/manage/articolo/display
+1 4
+http://www.agid.klan.it/archivio-documenti
+1 38
+http://www.agid.klan.it/node/152/edit
+1 18
+http://www.agid.klan.it/admin/structure/types/manage/comune_informa
+1 5
+http://www.agid.klan.it/taxonomy/term/17/edit
+1 2
+http://www.agid.klan.it/aree-tematiche/servizi-demografici
+1 3
+http://www.agid.klan.it/node/262/delete
+1 2
+http://www.agid.klan.it/admin/structure/types/manage/struttura_organizzativa
+1 4
+http://www.agid.klan.it/aree-tematiche/tributi
+1 3
+http://www.agid.klan.it/node/153/delete
+1 2
+http://www.agid.klan.it/admin/structure/menu/manage/menu-amm-trasparente
+1 29
+http://www.agid.klan.it/media/browser
+1 190
+http://www.agid.klan.it/node/273/edit
+1 8
+http://www.agid.klan.it/node/260/delete
+1 2
+http://www.agid.klan.it/admin/structure/menu
+1 2
+http://www.agid.klan.it/node/284/webform/configure
+1 36
+http://www.agid.klan.it/aree-tematiche/servizi-cimiteriali
+1 3
+http://www.agid.klan.it/area-tematica/servizi-scolastici-linfanzia
+1 2
+http://www.agid.klan.it/calendario-eventi/giorno/2018-05-21
+1 3
+http://www.agid.klan.it/amministrazione-trasparente
+1 1
+http://www.agid.klan.it/admin/modules/list/confirm
+1 2
+http://www.agid.klan.it/admin/appearance
+1 7
+http://www.agid.klan.it/admin/structure/views
+1 52
+http://www.agid.klan.it/node/add/webform
+1 11
+http://www.agid.klan.it/node/284/webform/emails
+1 25
+http://www.agid.klan.it/taxonomy/term/10/edit
+1 2
+http://www.agid.klan.it/calendario-eventi/giorno/2018-05-16
+1 3
+http://www.agid.klan.it/node/262/edit
+1 2
+http://www.agid.klan.it/admin/structure/taxonomy/settore_comunale_uffici_
+1 5
+http://www.agid.klan.it/admin/structure/types/manage/banner
+1 9
+http://www.agid.klan.it/admin/config/user-interface/shortcut/shortcut-set-1
+1 1
+http://www.agid.klan.it/admin/reports/updates
+1 16
+http://www.agid.klan.it/admin/config/development/logging
+1 3
+http://www.agid.klan.it/admin/structure/block/manage/views/calendario-block_1/configure
+1 5
+http://www.agid.klan.it/modules/system/system.admin.css
+1 17
+http://www.agid.klan.it/node/284/webform-results/analysis
+1 30
+http://www.agid.klan.it/calendario-eventi/giorno/2019-03-06
+1 2
+http://www.agid.klan.it/node/263/delete
+1 2
+http://www.agid.klan.it/admin/structure/menu/item/3045/edit
+1 2
+http://www.agid.klan.it/webform/questionario
+1 64
+http://www.agid.klan.it/admin/structure/types/manage/galleria_immagini
+1 5
+http://www.agid.klan.it/eventi/gemino-iusto-lucidus-quia-ratis-tation-virtus
+1 49
+http://www.agid.klan.it/admin/structure/block/manage/views/news-articles/configure
+1 21
+http://www.agid.klan.it/admin/structure/views/view/schede_personali/edit/page_3
+1 14
+http://www.agid.klan.it/denunce/alloggi-erp-housing-sociale
+1 22
+http://www.agid.klan.it/node/277/edit
+1 8
+http://www.agid.klan.it/calendario-eventi/giorno/2018-05-01
+1 7
+http://www.agid.klan.it/admin/structure/types/manage/pagina/fields
+1 2
+http://www.agid.klan.it/evento/lorem-ipsum-dolor
+1 11
+http://www.agid.klan.it/modules/system/system.messages.css
+1 25
+http://www.agid.klan.it/amministrazione/staff-del-sindaco
+1 2
+http://www.agid.klan.it/area-tematica/segreteria-generale
+1 38
+http://www.agid.klan.it/calendario-eventi/mese/2018-07
+1 1
+http://www.agid.klan.it/admin/structure/types/manage/struttura_organizzativa/display
+1 4
+http://www.agid.klan.it/taxonomy/term/7/edit
+1 2
+http://www.agid.klan.it/update.php
+1 20
+http://www.agid.klan.it/admin/structure/menu/manage/main-menu
+1 7
+http://www.agid.klan.it/admin/structure/views/view/calendario/edit/page_2
+1 75
+http://www.agid.klan.it/admin/structure/taxonomy/aree_tematiche
+1 26
+http://www.agid.klan.it/admin/structure/types/manage/comune-informa
+1 3
+http://www.agid.klan.it/admin/structure/views/view/banner_homepage/edit/block
+1 41
+http://www.agid.klan.it/admin/structure/types/manage/struttura-organizzativa
+1 3
+http://www.agid.klan.it/node/add/node_export
+1 46
+http://www.agid.klan.it/admin/structure/views/view/primo_piano/edit
+1 3
+http://www.agid.klan.it/servizi-cimiteriali
+1 2
+http://www.agid.klan.it/news/mauris-pagus
+1 2
+http://www.agid.klan.it/settore-comunale-uffici/settore-comunale-due
+1 4
+http://www.agid.klan.it/amministrazione/sindaco
+1 4
+http://www.agid.klan.it/admin/structure/block/manage/block/15/configure
+1 23
+http://www.agid.klan.it/admin/structure/views/view/aree/edit
+1 4
+http://www.agid.klan.it/node/158/delete
+1 2
+http://www.agid.klan.it/node/264/edit
+1 26
+http://www.agid.klan.it/permessi-ztl-invalidi
+1 2
+http://www.agid.klan.it/news/commodo-genitus-patria-premo-tincidunt
+1 5
+http://www.agid.klan.it/admin/structure/file-types/manage/document/fields
+1 6
+http://www.agid.klan.it/themes/seven/style.css
+1 26
+http://www.agid.klan.it/node/261/delete
+1 2
+http://www.agid.klan.it/taxonomy/term/8/edit
+1 2
+http://www.agid.klan.it/admin/structure/views/view/calendario/edit/block_1
+1 7
+http://www.agid.klan.it/segreteria-generale
+1 2
+http://www.agid.klan.it/tempo-libero-sport-cultura
+1 2
+http://www.agid.klan.it/modules/system/system.theme.css
+1 25
+http://www.agid.klan.it/calendario-eventi/anno
+1 29
+http://www.agid.klan.it/admin/structure/views/view/news/edit/events
+1 17
+http://www.agid.klan.it/node/284/webform
+1 43
+http://www.agid.klan.it/admin/structure/types/manage/scheda_personale
+1 6
+http://www.agid.klan.it/aree-tematiche/servizi-scolastici-linfanzia
+1 3
+http://www.agid.klan.it/admin/people/create
+1 2
+http://www.agid.klan.it/node/add/galleria-immagini
+1 12
+http://www.agid.klan.it/sites/all/modules/views/css/views-admin.theme.css
+1 17
+http://www.agid.klan.it/calendario-eventi/settimana
+1 4
+http://www.agid.klan.it/galleriaimmagini/fere-ullamcorper
+1 18
+http://www.agid.klan.it/node/add/struttura-organizzativa
+1 3
+http://www.agid.klan.it/admin/structure/types/manage/evento/fields
+1 37
+http://www.agid.klan.it/admin/structure/taxonomy
+1 8
+http://www.agid.klan.it/admin/content
+1 146
+http://www.agid.klan.it/admin/structure/views/view/news/export
+1 2
+http://www.agid.klan.it/servizi
+1 1
+http://www.agid.klan.it/webform/test-webform
+1 18
+http://www.agid.klan.it/admin/structure/types/manage/feed
+1 3
+http://www.agid.klan.it/news/lorem-ipsum-dolor-sit-amet-consectetuer-adipiscing-elit
+1 4
+http://www.agid.klan.it/notizie
+1 63
+http://www.agid.klan.it/taxonomy/term/21/edit
+1 6
+http://www.agid.klan.it/node/add
+1 5
+http://www.agid.klan.it/batch
+1 113
+http://www.agid.klan.it/taxonomy/term/13/edit
+1 2
+http://www.agid.klan.it/aree-tematiche/lavori-pubblici-mobilita-urbana
+1 3
+http://www.agid.klan.it/node/add/comune-informa
+1 3
+http://www.agid.klan.it/area-tematica/patrimonio
+1 32
+http://www.agid.klan.it/sites/all/modules/menu_block/menu-block.admin.css
+1 2
+http://www.agid.klan.it/aree-tematiche/tempo-libero-sport-cultura
+1 3
+http://www.agid.klan.it/admin/structure/file-types/manage/document/fields/field_area_tematica/widget-type
+1 2
+http://www.agid.klan.it/admin/content/file/thumbnails
+1 69
+http://www.agid.klan.it/node/220/revisions
+1 2
+http://www.agid.klan.it/admin/structure/block/add-menu-block
+1 4
+http://www.agid.klan.it/admin/structure/types/manage/articolo
+1 50
+http://www.agid.klan.it/aree-tematiche/permessi-ztl-invalidi
+1 3
+http://www.agid.klan.it/vivere-comune/scheda-della-citta
+1 54
+http://www.agid.klan.it/node/280/edit
+1 3
+http://www.agid.klan.it/area-tematica/lavori-pubblici-mobilita-urbana
+1 11
+http://www.agid.klan.it/admin/structure/types/manage/struttura-organizzativa/fields/field_area_tematica
+1 1
+http://www.agid.klan.it/node
+1 45
+http://www.agid.klan.it/admin/content/file
+1 134
+http://www.agid.klan.it/node/284/webform-results
+1 13
+http://www.agid.klan.it/node/284/webform/conditionals
+1 53
+http://www.agid.klan.it/eventi/valetudo
+1 4
+http://www.agid.klan.it/scheda-personale/autem-singularis
+1 19
+http://www.agid.klan.it/admin/config/media/image-styles/edit/medium/add/image_scale_and_crop
+1 2
+http://www.agid.klan.it/taxonomy/term/6/edit
+1 2
+http://www.agid.klan.it/sites/all/modules/plupload/plupload.css
+1 15
+http://www.agid.klan.it/admin/structure/views/view/archivio_documenti/edit
+1 3
+http://www.agid.klan.it/users/operatore
+1 51
+http://www.agid.klan.it/amministrazione
+1 83
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields/field_image
+1 14
+http://www.agid.klan.it/admin/structure/views/view/settori_comunali/edit/page
+1 13
+http://www.agid.klan.it/admin/structure/views/view/schede_personali/edit
+1 4
+http://www.agid.klan.it/admin/structure/file-types/manage/document/fields/field_descrizione
+1 3
+http://www.agid.klan.it/node/177/edit
+1 4
+http://www.agid.klan.it/admin/content/file/library
+1 4
+http://www.agid.klan.it/eventi/elit-enim-premo-proprius-singularis-te
+1 2
+http://www.agid.klan.it/admin/structure/feeds
+1 1
+http://www.agid.klan.it/eventi
+1 30
+http://www.agid.klan.it/admin/appearance/settings/agid
+1 5
+http://www.agid.klan.it/admin/structure/menu/manage/main-menu/edit
+1 3
+http://www.agid.klan.it/admin/structure/types/manage/feed-item
+1 3
+http://www.agid.klan.it/taxonomy/term/12/edit
+1 2
+http://www.agid.klan.it/node/add/articolo
+1 52
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields/field_area_tematica/widget-type
+1 2
+http://www.agid.klan.it/taxonomy/term/14/edit
+1 2
+http://www.agid.klan.it/taxonomy/term/22/edit
+1 2
+http://www.agid.klan.it/admin/structure/types/manage/evento/fields/field_area_tematica/widget-type
+1 2
+http://www.agid.klan.it/admin/people
+1 22
+http://www.agid.klan.it/admin/structure/views/view/calendario/edit
+1 19
+http://www.agid.klan.it/file/525/edit
+1 1
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields/field_area_tematica/field-settings
+1 1
+http://www.agid.klan.it/themes/seven/jquery.ui.theme.css
+1 12
+http://www.agid.klan.it/area-tematica/comunicare-lamministrazione
+1 6
+http://www.agid.klan.it/sites/all/modules/jquery_update/replace/ui/themes/base/jquery.ui.theme.css
+1 4
+http://www.agid.klan.it/admin/content/book
+1 1
+http://www.agid.klan.it/admin/structure/types/manage/evento
+1 8
+http://www.agid.klan.it/modulistica
+1 95
+http://www.agid.klan.it/news/accumsan-blandit-praesent-si-ullamcorper
+1 31
+http://www.agid.klan.it/taxonomy/term/11/edit
+1 2
+http://www.agid.klan.it/user
+1 165
+http://www.agid.klan.it/node/275/edit
+1 8
+http://www.agid.klan.it/admin/structure/types/manage/pagina/fields/field_image
+1 2
+http://www.agid.klan.it/file/add
+1 10
+http://www.agid.klan.it/node/269/edit
+1 37
+http://www.agid.klan.it/ambiente/raccolta-dei-rifiuti/isole-ecologiche
+1 1
+http://www.agid.klan.it/admin/config/media/image-styles
+1 1
+http://www.agid.klan.it/user/1/edit
+1 2
+http://www.agid.klan.it/sites/all/modules/calendar/css/calendar-overlap.css
+1 2
+http://www.agid.klan.it/node/add/evento
+1 32
+http://www.agid.klan.it/admin/structure/feeds/eventi/mapping
+1 1
+http://www.agid.klan.it/admin/structure/menu/manage/menu-amm-trasparente/list
+1 2
+http://www.agid.klan.it/admin/content/file/edit-multiple/525
+1 3
+http://www.agid.klan.it/servizi-scolastici-linfanzia
+1 2
+http://www.agid.klan.it/node/271/edit
+1 8
+http://www.agid.klan.it/vivere-comune
+1 208
+http://www.agid.klan.it/calendario-eventi/mese
+1 16
+http://www.agid.klan.it/calendario-eventi/giorno/2018-05-10
+1 1
+http://www.agid.klan.it/node/267/edit
+1 10
+http://yandex.ru/clck/jsredir
+0 46
+http://www.agid.klan.it/admin/modules
+1 145
+http://www.agid.klan.it/area-tematica/permessi-ztl-invalidi
+1 4
+http://www.agid.klan.it/amministrazione/consiglio-comunale
+1 7
+http://www.agid.klan.it/admin/structure/types/manage/articolo/fields/field_data_scadenza_in_evidenza_/field-settings
+1 3
+http://www.agid.klan.it//admin/structure/block/manage/menu_block/4/configure
+1 3
+http://www.agid.klan.it/admin/structure/menu/manage/main-menu/add
+1 2
+http://www.agid.klan.it/cookie
+1 56
+http://www.agid.klan.it/node/259/edit
+1 6
+http://www.agid.klan.it/user/241/edit
+1 4
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MAAU; MAAU)
+0 30
+Mozilla/5.0 (compatible; YandexImages/3.0; +http://yandex.com/bots)
+0 13
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; Touch; MAARJS)
+0 39
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MANM)
+0 29
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Touch; MASMJS)
+0 60
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36
+0 69
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; Touch; MASMJS)
+0 46
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152
+0 30
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+0 3765
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; Touch; MASEJS)
+0 30
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; Touch; MAARJS)
+0 30
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; Touch; MASMJS)
+0 70
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; MASBJS)
+0 30
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; MANM)
+0 30
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+0 768
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; MAAU; MAAU)
+0 30
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+0 3301
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36
+0 54
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; MASPJS)
+0 30
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+0 106
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; MDDCJS)
+0 30
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CL
+0 208
+Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)
+0 753
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; Touch; MALNJS)
+0 60
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safar
+0 734
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MATMJS)
+0 30
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 Google Favicon
+0 3
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MDDCJS)
+0 30
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25
+0 197
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; MAAU; MAAU)
+0 67
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MASPJS)
+0 30
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; Touch; MASEJS)
+0 30
+Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5
+0 2
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; MASBJS)
+0 30
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+0 43
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; MANM)
+0 39
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.3
+0 199
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0; MASBJS)
+0 30
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; Touch; MAARJS)
+0 60
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0
+0 99
+Ruby
+0 4
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0; MASMJS)
+0 30
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

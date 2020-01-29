@@ -1,0 +1,11 @@
+name = Klan View Clone type view
+description = Clonare una vista di tipo pagina in una vista di tipo blocco
+package = Klan
+core = 7.x
+files[] = klan_view_clone.module
+
+
+; Information added by drupal.org packaging script on 2010-03-21
+version = "7.x-1.x-dev"
+project = "klan"
+datestamp = "1269192313"

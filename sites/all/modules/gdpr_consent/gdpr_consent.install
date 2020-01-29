@@ -1,0 +1,182 @@
+<?php
+
+/**
+ * @file
+ * Installation and update functions for the Consent module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function gdpr_consent_schema() {
+  $schema['gdpr_consent_conditions'] = array(
+    'fields'      => array(
+      'tc_id'      => array(
+        'type'       => 'serial',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+      ),
+      'version'    => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'revision'   => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'language'   => array(
+        'description' => '',
+        'type'        => 'varchar',
+        'length'      => '12',
+        'not null'    => TRUE,
+        'default'     => '',
+      ),
+      'conditions' => array(
+        'type'     => 'text',
+        'size'     => 'big',
+        'not null' => TRUE,
+      ),
+      'data_details' => array(
+        'type'     => 'text',
+        'size'     => 'big',
+        'not null' => FALSE,
+      ),
+      'date'       => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'changes'    => array('type' => 'text'),
+      'format'     => array(
+        'type'     => 'varchar',
+        'not null' => FALSE,
+        'length'   => 255,
+      ),
+      'format_Details'     => array(
+        'type'     => 'varchar',
+        'not null' => FALSE,
+        'length'   => 255,
+      ),
+    ),
+    'primary key' => array('tc_id'),
+  );
+
+  $schema['gdpr_consent_accepted'] = array(
+    'fields'      => array(
+      'gdpr_consent_id' => array(
+        'type'       => 'serial',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+      ),
+      'version'  => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'revision' => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'language' => array(
+        'description' => '',
+        'type'        => 'varchar',
+        'length'      => '12',
+        'not null'    => TRUE,
+        'default'     => '',
+      ),
+      'uid'      => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'accepted' => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'revoked' => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+      'tc_id'    => array(
+        'type'       => 'int',
+        'unsigned'   => FALSE,
+        'not null'   => TRUE,
+        'default'    => 0,
+      ),
+    ),
+    'indexes'     => array('uid' => array('uid')),
+    'primary key' => array('gdpr_consent_id'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function gdpr_consent_uninstall() {
+  variable_del('gdpr_consent_display');
+  variable_del('gdpr_consent_accept_every_login');
+  variable_del('gdpr_consent_link_target');
+  variable_del('gdpr_consent_disallow_without');
+  variable_del('gdpr_consent_nag_message');
+  variable_del('gdpr_consent_block_admin');
+}
+
+/**
+ * Add the new database field.
+ */
+function gdpr_consent_update_7100() {
+  $spec = array(
+    'type'       => 'int',
+    'unsigned'   => FALSE,
+    'not null'   => TRUE,
+    'default'    => 0,
+    'disp-width' => 11,
+  );
+  db_add_field('gdpr_consent_accepted', 'revoked', $spec);
+}
+
+/**
+ * Add the new database field for technical details.
+ */
+function gdpr_consent_update_7101() {
+  $spec = array(
+    'type'     => 'text',
+    'size'     => 'big',
+    'not null' => FALSE,
+  );
+  db_add_field('gdpr_consent_conditions', 'data_details', $spec);
+
+  $spec_details = array(
+    'type'     => 'varchar',
+    'not null' => FALSE,
+    'length'   => 255,
+  );
+  db_add_field('gdpr_consent_conditions', 'format_details', $spec_details);
+}
+
+/**
+ * Add the new database field for technical details format.
+ */
+function gdpr_consent_update_7102() {
+  $spec = array(
+    'type'     => 'varchar',
+    'not null' => FALSE,
+    'length'   => 255,
+  );
+  db_add_field('gdpr_consent_conditions', 'format_details', $spec);
+}

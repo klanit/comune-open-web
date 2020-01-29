@@ -1,0 +1,65 @@
+body {background-color: #FFFFFF;}
+INPUT
+{
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 10px;
+	scrollbar-track-color:#4B4B4B;scrollbar-highlight-color:#333333;scrollbar-face-color:#333333;scrollbar-arrow-color:#CCCCCC;scrollbar-3dlight-color:#333333;
+	scrollbar-darkshadow-color:#333333;scrollbar-shadow-color:#333333;
+}
+
+A
+{
+	text-decoration: none;
+; color: #000000
+}
+
+A:link
+{
+	color: #666666;
+	font-size: 10px;
+}
+
+A:visited
+{
+	color: #666666;
+	font-size: 10px;
+}
+
+A:active
+{
+	color: #666666;
+	font-size: 10px;
+}
+
+A:hover
+{
+	color: #666666;
+	font-size: 10px;
+}FORM { 
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 10px;
+	scrollbar-track-color:#4B4B4B;scrollbar-highlight-color:#333333;scrollbar-face-color:#333333;scrollbar-arrow-color:#CCCCCC;scrollbar-3dlight-color:#333333;
+	scrollbar-darkshadow-color:#333333;scrollbar-shadow-color:#333333;
+; color: #000000} 
+BODY { 
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 10px;
+	scrollbar-track-color:#4B4B4B;scrollbar-highlight-color:#333333;scrollbar-face-color:#333333;scrollbar-arrow-color:#CCCCCC;scrollbar-3dlight-color:#333333;
+	scrollbar-darkshadow-color:#333333;scrollbar-shadow-color:#333333;
+; color: #000000} UL { 
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 10px;
+	scrollbar-track-color:#4B4B4B;scrollbar-highlight-color:#333333;scrollbar-face-color:#333333;scrollbar-arrow-color:#CCCCCC;scrollbar-3dlight-color:#333333;
+	scrollbar-darkshadow-color:#333333;scrollbar-shadow-color:#333333;
+; color: #000000} P { 
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 10px;
+	scrollbar-track-color:#4B4B4B;scrollbar-highlight-color:#333333;scrollbar-face-color:#333333;scrollbar-arrow-color:#CCCCCC;scrollbar-3dlight-color:#333333;
+	scrollbar-darkshadow-color:#333333;scrollbar-shadow-color:#333333;
+; color: #000000} 
+LI { 
+	font-family: verdana, geneva, arial, helvetica, sans-serif;
+	font-size: 10px;
+	scrollbar-track-color:#4B4B4B;scrollbar-highlight-color:#333333;scrollbar-face-color:#333333;scrollbar-arrow-color:#CCCCCC;scrollbar-3dlight-color:#333333;
+	scrollbar-darkshadow-color:#333333;scrollbar-shadow-color:#333333;
+ } 
