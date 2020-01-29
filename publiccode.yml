@@ -130,7 +130,7 @@ it:
     pagopa: false
     spid: false
   riuso:
-    codiceIPA: c_a116
+    codiceIPA:
 landingURL: 'https://github.com/klanit/comune-open-web'
 legal:
   license: GPL-2.0-only
