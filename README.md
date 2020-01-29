@@ -6,26 +6,15 @@ WebPA è l'evoluzione del progetto che ha ideato e sviluppato <a href="https://w
 
 ## Descrizione
 
-![Homepage di Comunweb](https://www.awesomescreenshot.com/image/4202824/4595d1d9f80fc2e56ce45d7f875c8152)
-E' un modello di portale web avanzato, adatto a promuovere i contenuti di un ente pubblico in modalità multi-canale (pc, tablet,
-smartphone, totem). Conforme alle Linee Guida di design per i servizi web della PA e sviluppato utilizzando i KIT di Designers
-Italia, il sistema guida i redattori a creare e pubblicare contenuti strutturati, che vengono inseriti una sola volta nel sistema e
-possono essere rappresentati automaticamente in gallerie fotografiche, calendari, mappe, grafici interattivi, aree riservate. In base
-ai permessi, il contenuto diventa disponibile agli utenti anche attraverso un motore di ricerca unico, dotato di filtri progressivi e di
-suggerimenti automatici. Strumento ideale per le redazioni distribuite: ciascun redattore detiene permessi e ruoli in base alla
-competenza.
+WebPA permette alle amministrazioni pubbliche di utilizzare una piattaforma CMS conforme alle normative vigenti, accessibile e in linea con le direttive AgID.
+I redattori (funzionari, dirigenti, amministrazioni, associazioni) possono inserire e organizzare facilmente i contenuti, che saranno visualizzati anche con calendari, mappe, elenchi di documenti.
 
 ## Altri riferimenti
 
 Per maggiori informazioni è possibile consultare: 
 
- * [Demo](https://opencity.openpa.opencontent.io)
- * [Manuale utente](https://comunweb-il-sito-comunale.readthedocs.io)
-
-## API 
-
- * [API della Demo](https://opencity.openpa.opencontent.io/api/opendata/)
- * [Documentazione API](https://documenter.getpostman.com/view/7046499/S17tPncG)
+ * [Demo](https://agid2.klan.it/)
+ * [Manuale utente](https://sites.google.com/view/agidpercomuni-guida/home)
 
 
 ## Project Status
@@ -34,23 +23,12 @@ Il prodotto è *stabile* e *production ready* e usato in produzione in diverse c
 
 ## Informazioni tecniche
 
-L'applicazione è sviluppata sul CMS Ez Publish e consta di codice PHP, 
-il dump del database contenente una installazione pienamente funzionante
-dell'applicativo e i file di configurazione necessari per il motore di 
-ricerca.
+L'applicazione è sviluppata come personalizzazione del CMS Drupal 7 e consta di codice PHP, il dump del database contenente una installazione pienamente funzionante dell'applicativo comprensiva della struttura interna di navigazione.
 
 ### Struttura del Repository
 
 Il repository contiene i seguenti file:
-```
-composer.json
-composer.lock
-```
-Il repository non contiene direttamente il codice applicativo, contiene 
-invece il file delle dipendenze PHP (`composer.json`) che elenca tutti i componenti 
-necessari all'applicazione: il CMS Ez Publish, le estensioni dello stesso 
-utilizzate e tra queste l'estensione opencity che implementa le funzionalità 
-più rilevanti. Con un comando `composer install` dalla stessa directory è possibile ottenere il codice dell'applicativo pronto all'uso (si veda anche [Dockerfile, L3](https://gitlab.com/opencontent/opencity/blob/master/Dockerfile#L3))
+
 
 Le directory
 ```
