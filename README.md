@@ -57,8 +57,13 @@ Il prototipo di Comune Open Web sarà disponibile ai seguenti indirizzi:
 
 
 La connessione è criptata tramite protocollo di cifratura TLS
+## Account demo
 
+Username: admin
+Password: Zfq?3&Z.mcs
 
+Username: Responsabile
+Password: nSMDyh.%P2G
 
 ### Deploy in produzione
 
