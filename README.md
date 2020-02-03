@@ -3,6 +3,26 @@
 
 Comune Open Web è l'evoluzione del progetto che ha ideato e sviluppato <a href="https://www.klan.it">Klan.IT</a> una piattaforma conforme alle nuove <a class="XqQF9c" href="https://www.google.com/url?q=https%3A%2F%2Fdocs.italia.it%2Fitalia%2Fdesigners-italia%2Fdesign-linee-guida-docs%2Fit%2Fstabile%2Findex.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHvpOY6rd3bcMGG6I9e5PrmByqzdw" target="_blank">linee guida AGID</a>
 
+## Dipendenze
+
+Questo progetto nasce come evulozione del progetto presente sul portale del ruo
+
+## Framework utilizzato
+
+Drupal 7.69
+
+## Librerie incluse
+
+Le seguenti librerie o componenti sono già incluse nel pacchetto distribuito:
+
+Framework CSS: Bootstrap 3.3.x
+
+Font: Font Titillium Web, Font Awesome 4.7.x
+
+Framework JS : JQuery 1.x (fornito con Drupal)
+
+Plugin JS: CKEditor 4.5.x, JQuery Easing 1.3, Plupload 1.5.8, Masonry 3.3.2,jQuery Images Loaded	4.1, jQuery Masonry	3.3.2, jQuery Update	jQuery 1.10.2, jQuery UI 1.10.2, TCPDF Library version.
+
 
 ## Descrizione
 
