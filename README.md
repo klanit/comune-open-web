@@ -5,7 +5,8 @@ Comune Open Web è l'evoluzione del progetto che ha ideato e sviluppato <a href=
 
 ## Dipendenze
 
-Questo progetto nasce come evulozione del progetto presente sul portale del ruo
+Questo progetto nasce come evulozione del progetto <a href="https://github.com/piattaformeweb/drupalcsi">"CMS Drupal 7 per i siti web dei comuni"</a> applicando le nuove <a href="https://docs.google.com/spreadsheets/d/1bE0Ns0LsU0VDvCBT1WXZ5_yIxJU5AbUYcu_F8yMfpHQ/edit#gid=1225072581">linee guida dell'architettura dell'informazione dei siti web dei comuni italiani</a> redatte dal Team per la Trasformazione Digitale - <a href="https://designers.italia.it">Designers Italia</a>.
+
 
 ## Framework utilizzato
 
