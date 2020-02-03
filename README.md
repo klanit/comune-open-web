@@ -3,7 +3,7 @@
 
 Comune Open Web è l'evoluzione del progetto che ha ideato e sviluppato <a href="https://www.klan.it">Klan.IT</a> una piattaforma conforme alle nuove <a class="XqQF9c" href="https://www.google.com/url?q=https%3A%2F%2Fdocs.italia.it%2Fitalia%2Fdesigners-italia%2Fdesign-linee-guida-docs%2Fit%2Fstabile%2Findex.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHvpOY6rd3bcMGG6I9e5PrmByqzdw" target="_blank">linee guida AGID</a>
 
-## Dipendenze
+## Riferimenti
 
 Questo progetto nasce come evulozione del progetto <a href="https://github.com/piattaformeweb/drupalcsi">"CMS Drupal 7 per i siti web dei comuni"</a> applicando le nuove <a href="https://docs.google.com/spreadsheets/d/1bE0Ns0LsU0VDvCBT1WXZ5_yIxJU5AbUYcu_F8yMfpHQ/edit#gid=1225072581">linee guida dell'architettura dell'informazione dei siti web dei comuni italiani</a> redatte dal Team per la Trasformazione Digitale - <a href="https://designers.italia.it">Designers Italia</a>.
 
