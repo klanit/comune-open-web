@@ -74,7 +74,7 @@ Lo stack minimo di WebPA è il seguente:
 
 Il prototipo di Comune Open Web sarà disponibile ai seguenti indirizzi:
 
-* [agid2.klan.it/](https://agid2.klan.it/)
+* [demo.comune-openweb.it/](http://demo.comune-openweb.it/)
 
 
 La connessione è criptata tramite protocollo di cifratura TLS
