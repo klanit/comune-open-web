@@ -34,7 +34,7 @@ I redattori (funzionari, dirigenti, amministrazioni, associazioni) possono inser
 
 Per maggiori informazioni è possibile consultare: 
 
- * [Demo](https://agid2.klan.it/)
+ * [Demo](http://demo.comune-openweb.it/)
  * [Manuale utente](https://sites.google.com/view/agidpercomuni-guida/home)
 
 
